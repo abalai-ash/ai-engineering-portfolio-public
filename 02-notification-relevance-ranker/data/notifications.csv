@@ -1,0 +1,6 @@
+notification_id,title,tags,urgency,freshness,channel
+n1,New AI portfolio task,ai;python;portfolio,3,5,email
+n2,Cloud deployment reminder,cloud;backend;deployment,2,4,email
+n3,Science plot review,science;visualization;data,2,5,email
+n4,Interview prep checklist,career;jobs;interview,3,4,push
+n5,General newsletter,news;updates,1,2,email

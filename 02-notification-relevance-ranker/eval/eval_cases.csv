@@ -1,0 +1,4 @@
+user_id,expected_top_notification,reason
+u1,n1,AI Python portfolio notification should match the AI/Python user best
+u2,n3,Science visualization notification should match the science/data user best
+u3,n4,Interview checklist should match the career/jobs/interview user best
