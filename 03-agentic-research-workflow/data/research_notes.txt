@@ -1,0 +1,11 @@
+Project Notes
+
+RAG systems work better when answers stay connected to source material. A useful workflow should retrieve notes, summarize only the relevant parts, and avoid making unsupported claims.
+
+Ranking systems are useful when a product needs to decide what to show first. Simple ranking signals can include interest match, urgency, freshness, and user preference.
+
+Agentic workflows break a task into smaller steps. A tool-using assistant may search notes, summarize findings, create a checklist, and draft an update. Human review is important before sending or publishing the final result.
+
+Cloud-ready AI projects should keep code, settings, and secrets separate. A small project can still include clear run instructions, logging notes, and a simple evaluation plan.
+
+Scientific computing projects often need careful documentation. A good update explains what was tested, what worked, what failed, and what should be checked next.
