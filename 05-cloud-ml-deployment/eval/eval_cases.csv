@@ -1,0 +1,5 @@
+message,expected_label
+urgent model deployment error please check api,high
+please review cloud pipeline update,medium
+general newsletter for later,low
+security failure blocked deployment,high
