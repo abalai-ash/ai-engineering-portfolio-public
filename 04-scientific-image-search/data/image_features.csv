@@ -1,0 +1,7 @@
+image_id,title,object_type,brightness,contrast,roundness,ring_score,edge_score
+img1,bright ring disk,disk,8,7,9,9,6
+img2,faint smooth disk,disk,4,3,8,7,2
+img3,compact star source,star,9,5,9,1,3
+img4,noisy jet feature,jet,5,8,2,1,9
+img5,binary star pair,binary,7,6,4,1,5
+img6,edge-on disk,disk,5,7,3,6,8
