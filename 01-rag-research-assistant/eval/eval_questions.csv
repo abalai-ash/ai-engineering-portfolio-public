@@ -1,0 +1,6 @@
+question,expected_source,what_good_retrieval_should_find
+Why should conclusions stay cautious when evidence is incomplete?,public_science_notes.txt,incomplete evidence and cautious conclusions
+Why is it useful to check sensor data before using it?,sensor_notes.txt,missing readings errors tables or plots
+Why should API keys not be committed to GitHub?,cloud_notes.txt,secrets API keys environment variables
+Why are visual checks useful for sensor data?,sensor_notes.txt,plots sudden jumps flat sections or missing measurements
+What makes cloud deployment useful for AI projects?,cloud_notes.txt,sharing testing and running the app outside your computer

@@ -1,0 +1,11 @@
+Cloud Notes
+
+Cloud deployment means running an application somewhere other than your own computer. For AI and machine learning projects, this can make a demo easier to share, test, and maintain.
+
+A simple cloud-ready project should keep code, data, settings, and secrets separate. API keys should not be committed to GitHub. Environment variables are one common way to keep secrets out of the code.
+
+A basic deployed app may include a backend API, a simple frontend, logging, and notes explaining how to run the project locally. For an early version, the goal is not perfect scale. The goal is a clear structure that could grow later.
+
+Monitoring matters because software can fail quietly. A project should keep track of errors, unexpected inputs, and examples where the output looked wrong or incomplete.
+
+Good deployment notes explain what the app does, how to run it, what assumptions it makes, and what would need to change before using it in a real production setting.

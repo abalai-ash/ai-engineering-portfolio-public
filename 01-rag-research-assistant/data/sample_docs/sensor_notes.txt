@@ -1,0 +1,11 @@
+Sensor Notes
+
+A small sensor project can be used to practice working with real-world data. For example, a simple device might record temperature, light level, or motion at regular time intervals.
+
+Sensor data is often messy. Readings can be missing, repeated, delayed, or affected by the environment. Before using the data, it helps to check for obvious errors and look at the values in a simple table or plot.
+
+A useful workflow starts by asking a clear question. For example: did the temperature rise during the afternoon, did the light level drop after sunset, or did the motion sensor detect activity at the expected time?
+
+Visual checks are important because they can reveal problems that a single number may hide. A plot can show sudden jumps, flat sections, or missing measurements.
+
+A limitation of small sensor projects is that the data may not represent every situation. Good notes should explain when the data was collected, what might have affected it, and what would need to be tested next.
