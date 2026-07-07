@@ -76,7 +76,7 @@ Human review required: yes
 ## Current v2 test result
 
 ```text
-Evaluation complete: 4/4 passed
+Evaluation complete: 5/5 passed
 ```
 
 ## Notes

@@ -58,7 +58,7 @@ python eval/evaluate.py
 ## Current result
 
 ```text
-Evaluation complete: 4/4 passed
+Evaluation complete: 5/5 passed
 ```
 
 ## What I am practicing
@@ -82,7 +82,7 @@ project_update
 safety_review
 ```
 
-The v2 workflow also keeps a small local memory file of recent query routes and adds a basic safety review path for queries that mention secrets, API keys, tokens, credentials, or private data.
+The v2 workflow also keeps a small local memory file of recent query routes and adds a basic safety review path for queries that mention secrets, API keys, tokens, credentials, private data, or prompt-injection style requests.
 
 To run v2 locally:
 
@@ -99,7 +99,7 @@ python eval/evaluate_v2.py
 Current v2 result:
 
 ```text
-Evaluation complete: 4/4 passed
+Evaluation complete: 5/5 passed
 ```
 
 ## Current limitations

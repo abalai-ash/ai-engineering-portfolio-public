@@ -13,7 +13,12 @@ PRIVATE_WORDS = {
     "credential",
     "private data",
     "ssn",
-    "token"
+    "token",
+    "ignore previous instructions",
+    "system prompt",
+    "hidden instructions",
+    "bypass",
+    "leak"
 }
 
 
