@@ -68,6 +68,40 @@ Evaluation complete: 4/4 passed
 - Keeping the output tied to the notes
 - Adding a human review step before sharing the result
 
+
+## Version 2 update
+
+Version 2 adds a simple agent router. Before creating the final output, the workflow chooses a route based on the query.
+
+Current routes:
+
+```text
+research_summary
+checklist
+project_update
+safety_review
+```
+
+The v2 workflow also keeps a small local memory file of recent query routes and adds a basic safety review path for queries that mention secrets, API keys, tokens, credentials, or private data.
+
+To run v2 locally:
+
+```bash
+python src/workflow_v2.py
+```
+
+To run the v2 evaluation:
+
+```bash
+python eval/evaluate_v2.py
+```
+
+Current v2 result:
+
+```text
+Evaluation complete: 4/4 passed
+```
+
 ## Current limitations
 
 - This version uses fake notes.
