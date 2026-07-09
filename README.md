@@ -26,6 +26,10 @@ A visual search demo that connects scientific image analysis with feature extrac
 
 A small AI/ML app built with cloud deployment in mind. This project focuses on APIs, environment variables, logging, deployment notes, and simple monitoring.
 
+### 06. RL Agent Evaluation Loop
+
+A small reinforcement-learning-style agent evaluation demo. This project focuses on action selection, reward scoring, safety-aware behavior checks, and evaluation of expected agent decisions.
+
 ## What I am practicing
 
 - Retrieval-augmented generation
