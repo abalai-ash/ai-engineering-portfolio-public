@@ -75,3 +75,40 @@ Evaluation complete: 3/3 passed
 ## Status
 
 Version 1 complete. The project currently supports feature-based image search, distance ranking, and a small evaluation script.
+
+## Version 2 update
+
+Version 2 adds a more inspectable scientific image retrieval workflow.
+
+The v2 search now includes:
+
+- weighted feature similarity
+- query interpretation
+- target feature vector
+- top-k ranked results
+- similarity score
+- match explanation for each result
+
+This keeps the project simple while making the retrieval decision easier to inspect.
+
+To run v2 locally:
+
+```bash
+python src/search_v2.py
+```
+
+To run the v2 evaluation:
+
+```bash
+python eval/evaluate_v2.py
+```
+
+Current v2 result:
+
+```text
+Evaluation complete: 3/3 passed
+```
+
+The v2 evaluation checks the expected top image, object type availability, query interpretation, and match explanation.
+
+This project uses synthetic image features only. It does not include private research images or real scientific image files.
