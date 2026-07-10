@@ -44,3 +44,8 @@ A small reinforcement-learning-style agent evaluation demo. This project focuses
 ## Safety and Data Notes
 
 This repo uses synthetic data, public datasets, or small demo examples. Private data, credentials, and unpublished research files are intentionally kept out.
+
+### 07. Sparse Linear Algebra Engine
+
+A small sparse matrix and iterative ranking demo. This project focuses on sparse matrix representation, matrix-vector multiplication, PageRank-style scoring, convergence checks, and evaluation of numerical behavior.
+

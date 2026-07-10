@@ -1,41 +1,61 @@
 # Notification Relevance Ranker
 
-Goal: Build a small ranking demo that chooses which notification is most useful for a user.
+This project is a small ranking-system demo that chooses which notification is most useful for a user.
 
-This project practices a simple version of recommendation and relevance ranking. The first version uses fake users and fake notifications, then scores each notification based on interest match, urgency, freshness, and preferred channel.
+It uses fake users and fake notifications, then scores each notification based on interest match, urgency, freshness, and preferred channel. The goal is to practice the basic structure behind recommendation, notification, search, and product-ranking systems.
 
 ## Why this project matters
 
-Many AI and product systems need to choose what to show first. This can apply to notifications, search results, recommendations, job matches, or user-facing reminders.
+Many AI and product systems need to decide what to show first. This can apply to:
+
+- notifications
+- search results
+- recommendations
+- job matches
+- user-facing reminders
+- feed ranking
+
+A good ranking system should not only return a result, but also make the decision inspectable. This project includes a score breakdown so each ranking decision can be reviewed.
 
 ## Project structure
 
 ```text
 02-notification-relevance-ranker/
-├── README.md
-├── data/
-│   ├── notifications.csv
-│   └── users.csv
-├── eval/
-│   ├── eval_cases.csv
-│   ├── eval_results.md
-│   └── evaluate.py
-├── examples/
-└── src/
-    └── ranker_v1.py
+  README.md
+  data/
+    notifications.csv
+    users.csv
+  eval/
+    eval_cases.csv
+    eval_results.md
+    evaluate.py
+  examples/
+    example_outputs.md
+  src/
+    ranker_v1.py
 ```
 
 ## Current features
 
-- Loads fake user and notification data
-- Scores notifications using simple ranking signals
-- Uses interest match, urgency, freshness, and channel preference
-- Sorts notifications from most relevant to least relevant
-- Includes a small evaluation script
+- loads fake user and notification data
+- scores notifications using multiple ranking signals
+- uses interest match, urgency, freshness, and channel preference
+- returns a ranked list from most relevant to least relevant
+- prints matching tags and score breakdowns
+- includes an evaluation script for expected top-ranked results
 
-## How to run locally
+## Ranking signals
 
-From this folder, run:
+The current hand-written scoring uses:
+
+- interest match
+- urgency
+- freshness
+- preferred channel match
+
+Each notification receives a total score. The ranker also prints the score breakdown so the ranking is easier to inspect.
+
+## Run locally
 
 ```bash
 python src/ranker_v1.py
@@ -53,20 +73,23 @@ To run the evaluation:
 python eval/evaluate.py
 ```
 
-## What I am learning
+## Current evaluation result
 
-- How ranking systems use simple signals
-- How different weights affect the final order
-- How to test whether the top result matches an expected result
-- How product ML connects to user-facing relevance
+```text
+Passed: 3/3
+```
 
-## Current limitations
+The evaluation checks whether the highest-ranked notification matches the expected top notification for each fake user. It also records the top score and matching tags.
 
-- This version uses fake data.
-- The scoring weights are simple and hand-written.
-- It does not learn from real user behavior.
-- It only checks the top result, not the full ranked list.
+## What this project demonstrates
 
-## Status
+- ranking logic
+- feature-style scoring
+- score breakdowns
+- simple evaluation
+- user-context matching
+- product ML thinking
 
-Version 1 in progress.
+## Limitations
+
+This is a small demo with fake data and hand-written weights. It does not train on real user behavior and does not claim to be a production notification system.

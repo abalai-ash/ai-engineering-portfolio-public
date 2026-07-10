@@ -112,3 +112,37 @@ Evaluation complete: 5/5 passed
 ## Status
 
 Version 1 complete. The project currently supports note search, a short summary, checklist creation, draft update generation, and a basic evaluation script.
+
+## Version 3 update
+
+Version 3 adds a source-grounded agent output.
+
+The workflow now returns:
+
+- selected route
+- private-risk flag
+- source snippets from the local notes
+- grounded answer
+- human review requirement
+
+This makes the project closer to a small RAG-style or agentic AI workflow because the answer is tied back to retrieved source notes instead of only giving a generic response.
+
+To run v3 locally:
+
+```bash
+python src/workflow_v3.py
+```
+
+To run the v3 evaluation:
+
+```bash
+python eval/evaluate_v3.py
+```
+
+Current v3 result:
+
+```text
+Evaluation complete: 4/4 passed
+```
+
+The v3 evaluation checks route selection, grounded answer content, source snippet use, safety routing, and human review.
