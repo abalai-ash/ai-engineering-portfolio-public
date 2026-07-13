@@ -114,3 +114,28 @@ Why are visual checks useful for sensor data?
 ## Status
 
 Version 1 complete. The project currently supports simple keyword retrieval, source checking, short source-based answers, and a basic evaluation script.
+
+## Version 2: stronger local retrieval
+
+Version 1 remains available in `src/rag_v1.py`.
+
+Version 2 adds a separate retrieval path with:
+
+- overlapping chunks so information near a chunk boundary is less likely to be lost
+- weighted unigram and bigram matching
+- exact-phrase bonuses
+- normalized retrieval scores
+- a minimum evidence threshold
+- explicit abstention when the documents do not support an answer
+- harder evaluation cases, including an unanswerable question
+
+Version 2 still uses only local, public-safe sample documents and does not
+require an API key.
+
+Run version 2:
+
+    python src/rag_v2.py
+
+Run its evaluation:
+
+    python eval/evaluate_v2.py

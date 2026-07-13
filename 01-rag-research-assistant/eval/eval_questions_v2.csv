@@ -1,0 +1,8 @@
+question,expected_source,expected_status
+Why should conclusions stay cautious when evidence is incomplete?,public_science_notes.txt,answered
+Why should API keys not be committed to GitHub?,cloud_notes.txt,answered
+Why are visual checks useful for sensor data?,sensor_notes.txt,answered
+What can cause missing or delayed sensor readings?,sensor_notes.txt,answered
+What should good deployment notes explain?,cloud_notes.txt,answered
+Why should public science examples avoid overstating evidence?,public_science_notes.txt,answered
+Who founded the North Ridge Observatory?,NONE,abstained
