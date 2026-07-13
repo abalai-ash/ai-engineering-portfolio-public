@@ -61,3 +61,36 @@ This is not a production reinforcement learning system. It does not train a neur
 - Add a simple training loop
 - Add logging for each decision
 - Add cloud or container deployment notes
+
+## Version 2: research-run reliability infrastructure
+
+Version 2 adds a small reliability layer without replacing the original
+decision-loop demo.
+
+It includes:
+
+- deterministic experiment settings and seeds
+- run identifiers
+- structured JSON episode records
+- timing and summary metrics
+- retries for temporary failures
+- periodic checkpoints
+- resumable runs
+- automated reliability checks
+
+Run the original evaluation:
+
+    python eval/evaluate.py
+
+Run the infrastructure evaluation:
+
+    python eval/evaluate_v2.py
+
+Current results:
+
+    Original evaluation: 4/4 passed
+    Infrastructure evaluation: 6/6 passed
+
+This is still a small local research-engineering project. It does not claim to
+provide large-scale distributed RL training, GPU orchestration, or production
+RL infrastructure.

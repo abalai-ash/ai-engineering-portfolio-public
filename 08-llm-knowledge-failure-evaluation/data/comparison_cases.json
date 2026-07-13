@@ -1,0 +1,26 @@
+[
+  {
+    "comparison_id": "supported_vs_hallucinated",
+    "prompt": "Who designed the observatory?",
+    "source": "The North Ridge Observatory began operations in 1998.",
+    "response_a": "The observatory was designed by Elena Park.",
+    "response_b": "The source does not say who designed the observatory.",
+    "expected_winner": "B"
+  },
+  {
+    "comparison_id": "concise_vs_extra_claim",
+    "prompt": "Answer in one sentence: What happened in 2012?",
+    "source": "The North Ridge Observatory was upgraded in 2012.",
+    "response_a": "The observatory was upgraded in 2012.",
+    "response_b": "The observatory was upgraded in 2012. It became the most advanced observatory in the region.",
+    "expected_winner": "A"
+  },
+  {
+    "comparison_id": "grounded_vs_wrong_date",
+    "prompt": "When did the observatory begin operations?",
+    "source": "The North Ridge Observatory began operations in 1998.",
+    "response_a": "The observatory began operations in 1998.",
+    "response_b": "The observatory began operations in 2001.",
+    "expected_winner": "A"
+  }
+]

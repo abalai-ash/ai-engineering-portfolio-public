@@ -1,0 +1,74 @@
+[
+  {
+    "case_id": "grounded_supported_answer",
+    "prompt": "What year did the observatory begin operations?",
+    "source": "The North Ridge Observatory began operations in 1998. It was upgraded in 2012.",
+    "response": "The observatory began operations in 1998.",
+    "expected": {
+      "grounded": true,
+      "has_unsupported_claim": false,
+      "follows_instruction": true,
+      "expresses_uncertainty": false
+    }
+  },
+  {
+    "case_id": "unsupported_extra_claim",
+    "prompt": "What year did the observatory begin operations?",
+    "source": "The North Ridge Observatory began operations in 1998.",
+    "response": "The observatory began operations in 1998 and was the largest facility in the country.",
+    "expected": {
+      "grounded": false,
+      "has_unsupported_claim": true,
+      "follows_instruction": true,
+      "expresses_uncertainty": false
+    }
+  },
+  {
+    "case_id": "missing_evidence",
+    "prompt": "Who designed the observatory?",
+    "source": "The North Ridge Observatory began operations in 1998.",
+    "response": "The source does not say who designed the observatory.",
+    "expected": {
+      "grounded": true,
+      "has_unsupported_claim": false,
+      "follows_instruction": true,
+      "expresses_uncertainty": true
+    }
+  },
+  {
+    "case_id": "hallucinated_missing_answer",
+    "prompt": "Who designed the observatory?",
+    "source": "The North Ridge Observatory began operations in 1998.",
+    "response": "The observatory was designed by Elena Park.",
+    "expected": {
+      "grounded": false,
+      "has_unsupported_claim": true,
+      "follows_instruction": true,
+      "expresses_uncertainty": false
+    }
+  },
+  {
+    "case_id": "concise_instruction_followed",
+    "prompt": "Answer in one sentence: What happened in 2012?",
+    "source": "The North Ridge Observatory began operations in 1998. It was upgraded in 2012.",
+    "response": "The observatory was upgraded in 2012.",
+    "expected": {
+      "grounded": true,
+      "has_unsupported_claim": false,
+      "follows_instruction": true,
+      "expresses_uncertainty": false
+    }
+  },
+  {
+    "case_id": "concise_instruction_broken",
+    "prompt": "Answer in one sentence: What happened in 2012?",
+    "source": "The North Ridge Observatory began operations in 1998. It was upgraded in 2012.",
+    "response": "The observatory was upgraded in 2012. This was an important improvement.",
+    "expected": {
+      "grounded": false,
+      "has_unsupported_claim": true,
+      "follows_instruction": false,
+      "expresses_uncertainty": false
+    }
+  }
+]

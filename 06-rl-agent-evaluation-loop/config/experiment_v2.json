@@ -1,0 +1,7 @@
+{
+  "experiment_name": "rl_agent_reliability_v2",
+  "seed": 42,
+  "max_retries": 2,
+  "checkpoint_every": 2,
+  "simulate_failure_once": true
+}
