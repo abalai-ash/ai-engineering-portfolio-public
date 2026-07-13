@@ -146,3 +146,35 @@ Evaluation complete: 4/4 passed
 ```
 
 The v3 evaluation checks route selection, grounded answer content, source snippet use, safety routing, and human review.
+
+## Version 4: Explainable deterministic routing
+
+Version 4 adds an explainable routing layer while preserving the earlier workflow versions.
+
+The router:
+
+- scores transparent keyword signals for each supported route
+- gives safety-related queries priority over normal task routing
+- records the routing method, confidence, reason, and signal scores
+- uses a deterministic fallback when no route has a strong match
+- compares its route with the existing Version 3 workflow route
+- preserves source-grounded output and required human review
+
+Supported routes include:
+
+- `research_summary`
+- `checklist`
+- `project_update`
+- `safety_review`
+
+Version 4 remains local and rule-based. It does not call an external LLM, use private accounts, or include unpublished research data.
+
+Run Version 4:
+
+    python src/workflow_v4.py
+
+Run the Version 4 evaluation:
+
+    python eval/evaluate_v4.py
+
+Current Version 4 evaluation result: **6/6 passed**.
