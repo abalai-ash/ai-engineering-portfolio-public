@@ -8,44 +8,54 @@ My background is in computational astrophysics, Python-based research workflows,
 
 ### 01. RAG Research Assistant
 
-A small assistant that answers questions using a set of source documents. This project focuses on chunking, retrieval, grounded answers, and checking whether the answer actually uses the right source material.
+A source-grounded research assistant that answers questions using a collection of documents. The project includes document chunking, retrieval scoring, source attribution, abstention when evidence is insufficient, grounded answers, and retrieval evaluation.
 
 ### 02. Notification Relevance Ranker
 
-A small ranking demo that decides which notification or message is most relevant for a user. This project focuses on user context, item metadata, freshness, urgency, and simple evaluation.
+An explainable ranking system that decides which notification or message is most relevant to a user. It scores user-interest match, urgency, freshness, and channel preference, then returns a per-signal score breakdown that can be inspected and evaluated.
 
 ### 03. Agentic Research Workflow
 
-A tool-using workflow for research tasks such as searching notes, summarizing information, making checklists, and drafting structured updates with human review.
+A source-grounded agentic workflow for research-style tasks such as searching notes, summarizing relevant material, creating checklists, and drafting structured updates. It includes route selection, source snippets, safety checks, deterministic fallback behavior, human-review requirements, and explainable routing scores.
 
 ### 04. Scientific Image Search
 
-A visual search demo that connects scientific image analysis with feature extraction and similarity search.
+A scientific image-retrieval prototype using weighted feature similarity. It converts a text query into a target feature vector, ranks synthetic scientific-image records, returns top matches with similarity scores, and explains which features contributed to each result.
 
 ### 05. Cloud ML Deployment
 
-A small AI/ML app built with cloud deployment in mind. This project focuses on APIs, environment variables, logging, deployment notes, and simple monitoring.
+A small ML-style service built with cloud deployment in mind. It includes environment-based configuration, structured prediction responses, health and readiness endpoints, request validation, batch processing, error handling, evaluation, logging notes, and deployment-oriented documentation.
 
 ### 06. RL Agent Evaluation Loop
 
-A small reinforcement-learning-style agent evaluation demo. This project focuses on action selection, reward scoring, safety-aware behavior checks, and evaluation of expected agent decisions.
+A reinforcement-learning-style agent evaluation demo focused on action selection, reward scoring, safety-aware behavior checks, and evaluation of expected agent decisions. It demonstrates the structure of an agent behavior loop without claiming to be a production-trained RL model.
+
+### 07. Sparse Linear Algebra Engine
+
+A sparse matrix and iterative ranking project covering coordinate-format storage, matrix-vector multiplication, PageRank-style scoring, convergence checks, dense-versus-sparse comparison, and evaluation of numerical behavior.
+
+### 08. LLM Knowledge and Failure Evaluation
+
+A small evaluation framework for checking whether an AI answer is supported by a provided source. It evaluates grounding, unsupported information, missing evidence, citation consistency, confidence behavior, and common failure modes in systems that rely on retrieved or external knowledge.
 
 ## What I am practicing
 
 - Retrieval-augmented generation
-- Embeddings and search
+- Source-grounded answers and abstention
+- Embeddings, retrieval, and search concepts
 - Ranking and recommendation logic
-- Agentic workflows and tool use
-- Evaluation and failure cases
+- Agentic workflows and tool routing
+- Explainable deterministic decision systems
+- Evaluation design and failure cases
+- LLM grounding and reliability evaluation
+- Safety-aware behavior checks
 - Scientific machine learning
-- Cloud-ready app structure
+- Sparse linear algebra
+- Cloud-ready application structure
 - Clear technical documentation
 
 ## Safety and Data Notes
 
-This repo uses synthetic data, public datasets, or small demo examples. Private data, credentials, and unpublished research files are intentionally kept out.
+This repo uses synthetic data, public datasets, or small demo examples. Private data, credentials, API keys, unpublished research files, and private account information are intentionally kept out.
 
-### 07. Sparse Linear Algebra Engine
-
-A small sparse matrix and iterative ranking demo. This project focuses on sparse matrix representation, matrix-vector multiplication, PageRank-style scoring, convergence checks, and evaluation of numerical behavior.
-
+The projects are learning and portfolio demonstrations. Their READMEs document current limitations and distinguish local rule-based prototypes from production-trained models or externally deployed services.
