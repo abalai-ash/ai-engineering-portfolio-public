@@ -78,3 +78,37 @@ Evaluation complete: 4/4 passed
 ## Status
 
 Version 1 complete. The project currently supports local prediction, environment-based settings, structured output, and a basic evaluation script.
+
+## Version 2: local prediction service
+
+Version 2 keeps the original classifier but places it behind a small local HTTP service. This makes it possible to practice request validation, service health checks, batch handling, request IDs, structured responses, and clear error behavior.
+
+### Version 2 routes
+
+- `GET /health`
+- `GET /ready`
+- `POST /predict`
+- `POST /predict/batch`
+
+Run the service:
+
+```bash
+python src/service_v2.py
+```
+
+Run the service evaluation:
+
+```bash
+python eval/evaluate_v2.py
+```
+
+The Version 2 evaluation starts the service temporarily and checks:
+
+- health and readiness
+- a valid prediction
+- rejection of an empty message
+- partial success in a mixed batch
+- handling of an unknown route
+
+This remains a small local demo. It does not claim to provide a trained production model, autoscaling, distributed inference, authentication, or a real cloud deployment.
+
