@@ -250,3 +250,8 @@ __pycache__/
 ai/
 .venv/
 venv/
+
+# Generated experiment runs
+**/runs/
+# Generated experiment runs
+06-rl-agent-evaluation-loop/runs/
