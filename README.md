@@ -1,5 +1,8 @@
 # AI Engineering Portfolio
 
+[![Portfolio Checks](https://github.com/abalai-ash/ai-engineering-portfolio-public/actions/workflows/portfolio-checks.yml/badge.svg)](https://github.com/abalai-ash/ai-engineering-portfolio-public/actions/workflows/portfolio-checks.yml)
+
+
 This repo is a collection of small AI engineering projects I am building to practice and show applied machine learning, scientific computing, ranking systems, RAG, agentic workflows, evaluation, and cloud deployment.
 
 My background is in computational astrophysics, Python-based research workflows, data analysis, and scientific modeling. The goal of this portfolio is to show how I build practical AI systems step by step: define the problem, make a working prototype, test the result, and write down what worked and what still needs improvement.
