@@ -1,0 +1,36 @@
+name: Portfolio Checks
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  run-evaluations:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Show Python version
+        run: python --version
+
+      - name: Compile portfolio runner
+        run: python -m py_compile run_portfolio_checks.py
+
+      - name: Run portfolio evaluations
+        run: python run_portfolio_checks.py
