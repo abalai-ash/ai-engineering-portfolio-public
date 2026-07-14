@@ -28,6 +28,16 @@ For a fast review, see [PORTFOLIO_SUMMARY.md](PORTFOLIO_SUMMARY.md).
 | 07. Sparse Linear Algebra Engine | Numerical computing and performance foundations | Sparse storage, matrix-vector multiplication, iterative scoring, convergence |
 | 08. LLM Knowledge and Failure Evaluation | LLM reliability | Groundedness checks, unsupported-claim detection, response comparison |
 
+## Portfolio Checks
+
+Run the main local evaluation checks from the repository root:
+
+```bash
+python3 run_portfolio_checks.py
+```
+
+This runs the primary public-safe evaluation scripts across the projects and reports a pass/fail summary. It does not call external APIs, use credentials, or require private data.
+
 ## Projects
 
 ### 01. RAG Research Assistant
