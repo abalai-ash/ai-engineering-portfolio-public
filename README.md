@@ -4,6 +4,30 @@ This repo is a collection of small AI engineering projects I am building to prac
 
 My background is in computational astrophysics, Python-based research workflows, data analysis, and scientific modeling. The goal of this portfolio is to show how I build practical AI systems step by step: define the problem, make a working prototype, test the result, and write down what worked and what still needs improvement.
 
+## Quick Review Guide
+
+For a fast review, see [PORTFOLIO_SUMMARY.md](PORTFOLIO_SUMMARY.md).
+
+| Role Direction | Most Relevant Projects |
+|---|---|
+| AI research engineering | 01, 03, 06, 08 |
+| LLM evaluation and agentic AI | 03, 06, 08 |
+| ML systems and performance foundations | 05, 06, 07 |
+| AI success, technical adoption, and applied AI | 01, 02, 03, 05 |
+
+## Project Map
+
+| Project | Main Focus | What it Demonstrates |
+|---|---|---|
+| 01. RAG Research Assistant | Retrieval and grounded answers | Chunking, retrieval scoring, source attribution, abstention, evaluation |
+| 02. Notification Relevance Ranker | Ranking systems | Explainable scoring, user-interest matching, urgency/freshness signals |
+| 03. Agentic Research Workflow | Agentic routing and research workflows | Route selection, source snippets, safety checks, deterministic fallback |
+| 04. Scientific Image Search | Similarity search | Query-to-feature mapping, weighted similarity, top-k ranking |
+| 05. Cloud ML Deployment | Service reliability | Health checks, request validation, batch prediction, error handling |
+| 06. RL Agent Evaluation Loop | Agent behavior evaluation | Reward scoring, action selection, safety-aware behavior checks |
+| 07. Sparse Linear Algebra Engine | Numerical computing and performance foundations | Sparse storage, matrix-vector multiplication, iterative scoring, convergence |
+| 08. LLM Knowledge and Failure Evaluation | LLM reliability | Groundedness checks, unsupported-claim detection, response comparison |
+
 ## Projects
 
 ### 01. RAG Research Assistant
