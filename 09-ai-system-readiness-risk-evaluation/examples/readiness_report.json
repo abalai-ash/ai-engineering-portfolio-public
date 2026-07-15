@@ -1,0 +1,174 @@
+[
+  {
+    "id": "research_assistant_ready",
+    "name": "Grounded Research Assistant",
+    "domain": "research",
+    "risk_score": 0,
+    "recommendation": "approve",
+    "finding_count": 0,
+    "findings": []
+  },
+  {
+    "id": "clinical_summary_incomplete",
+    "name": "Clinical Note Summary Helper",
+    "domain": "healthcare",
+    "risk_score": 16,
+    "recommendation": "block",
+    "finding_count": 6,
+    "findings": [
+      {
+        "category": "privacy",
+        "severity": "critical",
+        "message": "Sensitive content may be written to logs.",
+        "recommended_action": "Redact or disable sensitive-content logging.",
+        "points": 5
+      },
+      {
+        "category": "failure_behavior",
+        "severity": "high",
+        "message": "The system has no clear abstention or uncertainty behavior.",
+        "recommended_action": "Add a safe fallback when evidence is weak or missing.",
+        "points": 3
+      },
+      {
+        "category": "security",
+        "severity": "high",
+        "message": "Prompt-injection or instruction-conflict checks are missing.",
+        "recommended_action": "Add input screening and instruction-boundary tests.",
+        "points": 3
+      },
+      {
+        "category": "operations",
+        "severity": "high",
+        "message": "Post-launch monitoring is not defined.",
+        "recommended_action": "Add quality, failure, latency, and drift monitoring.",
+        "points": 3
+      },
+      {
+        "category": "performance",
+        "severity": "low",
+        "message": "No latency target is defined.",
+        "recommended_action": "Set and measure an acceptable response-time target.",
+        "points": 1
+      },
+      {
+        "category": "evidence",
+        "severity": "low",
+        "message": "Evidence is usable but still limited.",
+        "recommended_action": "Expand evaluation coverage and document remaining gaps.",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "id": "financial_risk_high",
+    "name": "Automated Financial Decision Tool",
+    "domain": "financial",
+    "risk_score": 34,
+    "recommendation": "block",
+    "finding_count": 10,
+    "findings": [
+      {
+        "category": "security",
+        "severity": "critical",
+        "message": "Sensitive data is used without access controls.",
+        "recommended_action": "Add role-based access controls before launch.",
+        "points": 5
+      },
+      {
+        "category": "privacy",
+        "severity": "critical",
+        "message": "Sensitive content may be written to logs.",
+        "recommended_action": "Redact or disable sensitive-content logging.",
+        "points": 5
+      },
+      {
+        "category": "human_review",
+        "severity": "critical",
+        "message": "A high-impact workflow has no required human review.",
+        "recommended_action": "Require qualified human review for consequential decisions.",
+        "points": 5
+      },
+      {
+        "category": "grounding",
+        "severity": "high",
+        "message": "Outputs are not tied to inspectable source evidence.",
+        "recommended_action": "Add source references or evidence traces.",
+        "points": 3
+      },
+      {
+        "category": "failure_behavior",
+        "severity": "high",
+        "message": "The system has no clear abstention or uncertainty behavior.",
+        "recommended_action": "Add a safe fallback when evidence is weak or missing.",
+        "points": 3
+      },
+      {
+        "category": "security",
+        "severity": "high",
+        "message": "Prompt-injection or instruction-conflict checks are missing.",
+        "recommended_action": "Add input screening and instruction-boundary tests.",
+        "points": 3
+      },
+      {
+        "category": "operations",
+        "severity": "high",
+        "message": "Post-launch monitoring is not defined.",
+        "recommended_action": "Add quality, failure, latency, and drift monitoring.",
+        "points": 3
+      },
+      {
+        "category": "reliability",
+        "severity": "medium",
+        "message": "No rollback plan is documented.",
+        "recommended_action": "Define rollback triggers and a recovery procedure.",
+        "points": 2
+      },
+      {
+        "category": "ownership",
+        "severity": "medium",
+        "message": "No accountable system owner is listed.",
+        "recommended_action": "Assign an owner for incidents, reviews, and updates.",
+        "points": 2
+      },
+      {
+        "category": "evidence",
+        "severity": "high",
+        "message": "Evidence quality is too weak for the proposed use.",
+        "recommended_action": "Collect stronger evaluation evidence before launch.",
+        "points": 3
+      }
+    ]
+  },
+  {
+    "id": "agent_workflow_review",
+    "name": "Multi-step Support Agent",
+    "domain": "general_ai",
+    "risk_score": 4,
+    "recommendation": "needs_review",
+    "finding_count": 3,
+    "findings": [
+      {
+        "category": "reliability",
+        "severity": "medium",
+        "message": "No rollback plan is documented.",
+        "recommended_action": "Define rollback triggers and a recovery procedure.",
+        "points": 2
+      },
+      {
+        "category": "performance",
+        "severity": "low",
+        "message": "No latency target is defined.",
+        "recommended_action": "Set and measure an acceptable response-time target.",
+        "points": 1
+      },
+      {
+        "category": "evidence",
+        "severity": "low",
+        "message": "Evidence is usable but still limited.",
+        "recommended_action": "Expand evaluation coverage and document remaining gaps.",
+        "points": 1
+      }
+    ]
+  }
+]

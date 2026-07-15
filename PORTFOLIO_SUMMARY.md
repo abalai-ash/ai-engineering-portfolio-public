@@ -84,6 +84,23 @@ Skills shown:
 | 06. RL Agent Evaluation Loop | Agent behavior evaluation | Reward scoring, action selection, safety-aware behavior checks |
 | 07. Sparse Linear Algebra Engine | Numerical computing and performance foundations | Sparse storage, matrix-vector multiplication, iterative scoring, convergence |
 | 08. LLM Knowledge and Failure Evaluation | LLM reliability | Groundedness checks, unsupported-claim detection, response comparison |
+| 09. AI System Readiness and Risk Evaluation | AI system launch review | Safety, evidence, privacy, human review, monitoring, and rollback checks |
+
+### AI Safety, Reliability, and Product Risk
+
+Relevant projects:
+- 03. Agentic Research Workflow
+- 06. RL Agent Evaluation Loop
+- 08. LLM Knowledge and Failure Evaluation
+- 09. AI System Readiness and Risk Evaluation
+
+Skills shown:
+- explainable launch-readiness evaluation
+- evidence and groundedness requirements
+- sensitive-data and access-control checks
+- human-review requirements
+- monitoring, rollback, and ownership criteria
+- prioritized remediation recommendations
 
 ## Safety and Privacy
 

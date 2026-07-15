@@ -30,6 +30,7 @@ For a fast review, see [PORTFOLIO_SUMMARY.md](PORTFOLIO_SUMMARY.md).
 | 06. RL Agent Evaluation Loop | Agent behavior evaluation | Reward scoring, action selection, safety-aware behavior checks |
 | 07. Sparse Linear Algebra Engine | Numerical computing and performance foundations | Sparse storage, matrix-vector multiplication, iterative scoring, convergence |
 | 08. LLM Knowledge and Failure Evaluation | LLM reliability | Groundedness checks, unsupported-claim detection, response comparison |
+| 09. AI System Readiness and Risk Evaluation | AI safety and launch readiness | Evidence, privacy, human review, monitoring, rollback, and risk recommendations |
 
 ## Portfolio Checks
 
@@ -74,6 +75,10 @@ A sparse matrix and iterative ranking project covering coordinate-format storage
 ### 08. LLM Knowledge and Failure Evaluation
 
 A small evaluation framework for checking whether an AI answer is supported by a provided source. It evaluates grounding, unsupported information, missing evidence, citation consistency, confidence behavior, and common failure modes in systems that rely on retrieved or external knowledge.
+
+### 09. AI System Readiness and Risk Evaluation
+
+A transparent rule-based framework that reviews synthetic AI and machine-learning system proposals for grounding, evidence quality, sensitive-data handling, human review, monitoring, rollback planning, ownership, performance targets, and launch readiness. It produces explainable `approve`, `needs_review`, or `block` recommendations with structured remediation steps.
 
 ## What I am practicing
 

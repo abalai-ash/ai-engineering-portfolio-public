@@ -72,6 +72,11 @@ CHECKS = [
         path="08-llm-knowledge-failure-evaluation/eval/evaluate_comparisons.py",
         reason="candidate response comparison and failure-report behavior",
     ),
+    Check(
+        name="09 AI System Readiness and Risk Evaluation",
+        path="09-ai-system-readiness-risk-evaluation/eval/evaluate.py",
+        reason="launch readiness, safety, evidence, human review, and operational risk checks",
+    ),
 ]
 
 

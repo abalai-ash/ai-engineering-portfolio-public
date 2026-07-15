@@ -93,6 +93,15 @@ python3 08-llm-knowledge-failure-evaluation/eval/evaluate_comparisons.py
 
 Demonstrates groundedness checks, unsupported-claim detection, instruction following, uncertainty behavior, and response comparison.
 
+### 09. AI System Readiness and Risk Evaluation
+
+```bash
+python3 09-ai-system-readiness-risk-evaluation/src/readiness_evaluator.py
+python3 09-ai-system-readiness-risk-evaluation/eval/evaluate.py
+```
+
+Demonstrates explainable launch-readiness evaluation, safety and privacy findings, evidence requirements, human-review checks, monitoring, rollback planning, and structured recommendations.
+
 ## Notes
 
 These are small local portfolio demonstrations, not production services or trained frontier models. Each project README explains its current scope and limitations.
