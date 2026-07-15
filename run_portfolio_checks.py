@@ -77,6 +77,11 @@ CHECKS = [
         path="09-ai-system-readiness-risk-evaluation/eval/evaluate.py",
         reason="launch readiness, safety, evidence, human review, and operational risk checks",
     ),
+    Check(
+        name="09 AI System Readiness and Risk Evaluation v2",
+        path="09-ai-system-readiness-risk-evaluation/eval/evaluate_v2.py",
+        reason="controlled safeguard changes, malformed-input handling, deterministic checks, and before-after risk evaluation",
+    ),
 ]
 
 

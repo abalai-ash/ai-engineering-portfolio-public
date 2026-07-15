@@ -99,30 +99,3 @@ Evaluation complete: 4/4 passed
 This is a local portfolio prototype. It is not a production security scanner, compliance system, medical device, clinical review tool, financial decision system, or substitute for qualified human review.
 
 The current scoring rules are hand-written and intentionally simple. A production system would require domain experts, broader testing, policy review, real monitoring, access-control validation, and organization-specific launch standards.
-
-## Version 2: Controlled stress testing
-
-Version 2 extends the original readiness review with controlled before-and-after tests.
-It checks whether adding or removing specific safeguards changes the recommendation
-and risk score in the expected direction.
-
-It includes:
-
-- controlled safeguard changes
-- before-and-after risk comparisons
-- malformed-input handling
-- deterministic repeat checks
-- recommendation counts
-- severity summaries
-- common risk-category summaries
-- separate JSON and Markdown reports
-
-Run Version 2 from the repository root:
-
-```bash
-python3 09-ai-system-readiness-risk-evaluation/src/readiness_evaluator_v2.py
-python3 09-ai-system-readiness-risk-evaluation/eval/evaluate_v2.py
-```
-
-Version 2 remains a local, synthetic, rule-based portfolio demonstration.
-It is not a production security, compliance, clinical, or financial review system.
