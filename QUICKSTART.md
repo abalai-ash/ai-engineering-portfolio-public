@@ -102,6 +102,24 @@ python3 09-ai-system-readiness-risk-evaluation/eval/evaluate.py
 
 Demonstrates explainable launch-readiness evaluation, safety and privacy findings, evidence requirements, human-review checks, monitoring, rollback planning, and structured recommendations.
 
+## 10. Enterprise AI Delivery Workflow
+
+Run from the repository root:
+
+    python3 10-enterprise-ai-delivery-workflow/src/discovery_engine.py
+    python3 10-enterprise-ai-delivery-workflow/src/solution_planner.py
+    python3 10-enterprise-ai-delivery-workflow/eval/evaluate.py
+    python3 10-enterprise-ai-delivery-workflow/src/delivery_report.py
+
+This project demonstrates technical discovery, cross-domain architecture
+planning, restricted-data review, robotics reliability planning,
+scientific benchmarking, deterministic evaluation, and stakeholder
+reporting.
+
+Expected project result:
+
+    Evaluation complete: 9/9 passed
+
 ## Notes
 
 These are small local portfolio demonstrations, not production services or trained frontier models. Each project README explains its current scope and limitations.

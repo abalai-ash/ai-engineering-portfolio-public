@@ -105,3 +105,27 @@ Skills shown:
 ## Safety and Privacy
 
 No private research data, credentials, API keys, unpublished materials, or private account information are included. The public version is intended to show engineering habits and project structure without exposing confidential work.
+
+## Project 10: Enterprise AI Delivery Workflow
+
+**Main focus:** Technical discovery and cross-domain solution delivery.
+
+**What it demonstrates:**
+
+- converting vague requests into measurable technical requirements
+- planning structured and unstructured data pipelines
+- retrieval, grounding, access-control, and human-review requirements
+- localization, calibration, uncertainty, and sensor-failure planning
+- scientific benchmarking, hardware tradeoffs, and reproducible experiments
+- architecture components, risk registers, mitigations, and launch gates
+- deterministic evaluation and malformed-request handling
+- reporting for technical and nontechnical stakeholders
+
+**Role alignment:** Forward-deployed engineering, applied generative AI,
+solutions engineering, RAG and enterprise data systems, ML platform
+reliability, robotics and localization, scientific computing, algorithm
+evaluation, and technical customer communication.
+
+This is a synthetic local demonstration rather than a production
+deployment, customer engagement, operational robotics system, or
+quantum-hardware experiment.

@@ -101,3 +101,26 @@ A transparent rule-based framework that reviews synthetic AI and machine-learnin
 This repo uses synthetic data, public datasets, or small demo examples. Private data, credentials, API keys, unpublished research files, and private account information are intentionally kept out.
 
 The projects are learning and portfolio demonstrations. Their READMEs document current limitations and distinguish local rule-based prototypes from production-trained models or externally deployed services.
+
+## 10. Enterprise AI Delivery Workflow
+
+A synthetic cross-domain workflow that turns an unclear technical
+request into discovery questions, architecture, risk evaluation,
+staged deployment decisions, and a stakeholder-facing report.
+
+The included cases cover:
+
+- enterprise retrieval across structured and unstructured data
+- robot localization, calibration, sensor failure, and map mismatch planning
+- scientific algorithm benchmarking, uncertainty, and reproducibility
+
+The project demonstrates technical discovery, solution planning,
+evaluation, operational safeguards, deterministic testing, and clear
+technical communication.
+
+It does not claim a real customer deployment, production SLAM system,
+or quantum-hardware implementation.
+
+See
+[`10-enterprise-ai-delivery-workflow/README.md`]
+(10-enterprise-ai-delivery-workflow/README.md).

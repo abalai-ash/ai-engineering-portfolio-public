@@ -1,0 +1,130 @@
+[
+  {
+    "request_id": "enterprise_knowledge_assistant",
+    "domain": "enterprise_ai",
+    "goal": "Help employees find reliable answers across internal policies, support notes, and structured account records.",
+    "users": [
+      "support specialists",
+      "operations staff"
+    ],
+    "data_sources": [
+      {
+        "name": "policy documents",
+        "type": "unstructured",
+        "sensitivity": "internal"
+      },
+      {
+        "name": "support notes",
+        "type": "unstructured",
+        "sensitivity": "restricted"
+      },
+      {
+        "name": "account records",
+        "type": "structured",
+        "sensitivity": "restricted"
+      }
+    ],
+    "requirements": {
+      "grounded_answers": true,
+      "citations": true,
+      "human_review": true,
+      "access_control": true,
+      "latency_target_ms": 2500,
+      "rollback_plan": true,
+      "monitoring": true
+    },
+    "success_metrics": [
+      "answer supported by retrieved evidence",
+      "correct access permissions",
+      "useful answer or clear abstention",
+      "response within latency target"
+    ]
+  },
+  {
+    "request_id": "robot_localization_support",
+    "domain": "robotics",
+    "goal": "Estimate a delivery robot's position reliably across changing indoor and outdoor environments.",
+    "users": [
+      "robotics engineers",
+      "fleet operators"
+    ],
+    "data_sources": [
+      {
+        "name": "lidar scans",
+        "type": "sensor",
+        "sensitivity": "internal"
+      },
+      {
+        "name": "camera observations",
+        "type": "sensor",
+        "sensitivity": "internal"
+      },
+      {
+        "name": "wheel odometry",
+        "type": "structured",
+        "sensitivity": "internal"
+      },
+      {
+        "name": "reference maps",
+        "type": "spatial",
+        "sensitivity": "internal"
+      }
+    ],
+    "requirements": {
+      "calibration_checks": true,
+      "uncertainty_estimation": true,
+      "sensor_dropout_handling": true,
+      "map_mismatch_detection": true,
+      "latency_target_ms": 120,
+      "rollback_plan": true,
+      "monitoring": true
+    },
+    "success_metrics": [
+      "bounded localization error",
+      "stable estimate during temporary sensor loss",
+      "detect degraded calibration",
+      "response within latency target"
+    ]
+  },
+  {
+    "request_id": "scientific_workload_benchmark",
+    "domain": "scientific_computing",
+    "goal": "Compare candidate algorithms for a noisy scientific workload before selecting an implementation path.",
+    "users": [
+      "research engineers",
+      "scientific collaborators"
+    ],
+    "data_sources": [
+      {
+        "name": "synthetic benchmark cases",
+        "type": "structured",
+        "sensitivity": "public_safe"
+      },
+      {
+        "name": "hardware timing summaries",
+        "type": "structured",
+        "sensitivity": "internal"
+      },
+      {
+        "name": "experiment notes",
+        "type": "unstructured",
+        "sensitivity": "internal"
+      }
+    ],
+    "requirements": {
+      "reproducible_runs": true,
+      "baseline_comparison": true,
+      "noise_analysis": true,
+      "hardware_constraints": true,
+      "versioned_outputs": true,
+      "rollback_plan": false,
+      "monitoring": true
+    },
+    "success_metrics": [
+      "reproducible benchmark result",
+      "clear baseline comparison",
+      "reported uncertainty",
+      "documented performance tradeoffs"
+    ]
+  }
+]

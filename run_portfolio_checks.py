@@ -82,6 +82,15 @@ CHECKS = [
         path="09-ai-system-readiness-risk-evaluation/eval/evaluate_v2.py",
         reason="controlled safeguard changes, malformed-input handling, deterministic checks, and before-after risk evaluation",
     ),
+    Check(
+        name="10 Enterprise AI Delivery Workflow",
+        path="10-enterprise-ai-delivery-workflow/eval/evaluate.py",
+        reason=(
+            "technical discovery, cross-domain architecture planning, "
+            "risk evaluation, deterministic checks, and stakeholder reporting"
+        ),
+    ),
+
 ]
 
 

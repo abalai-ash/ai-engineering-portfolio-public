@@ -1,0 +1,52 @@
+{
+  "passed": 9,
+  "total": 9,
+  "all_passed": true,
+  "results": [
+    {
+      "name": "all requests reach solution planning",
+      "passed": true,
+      "details": "3 reports checked"
+    },
+    {
+      "name": "restricted enterprise sources are detected",
+      "passed": true,
+      "details": "['support notes', 'account records']"
+    },
+    {
+      "name": "robotics plan includes failure recovery",
+      "passed": true,
+      "details": "pilot_ready"
+    },
+    {
+      "name": "scientific case identifies missing rollback plan",
+      "passed": true,
+      "details": "['rollback_plan']"
+    },
+    {
+      "name": "enterprise_knowledge_assistant recommendation",
+      "passed": true,
+      "details": "expected=needs_review actual=needs_review"
+    },
+    {
+      "name": "robot_localization_support recommendation",
+      "passed": true,
+      "details": "expected=pilot_ready actual=pilot_ready"
+    },
+    {
+      "name": "scientific_workload_benchmark recommendation",
+      "passed": true,
+      "details": "expected=needs_review actual=needs_review"
+    },
+    {
+      "name": "incomplete request is rejected",
+      "passed": true,
+      "details": "invalid_request"
+    },
+    {
+      "name": "solution planning is deterministic",
+      "passed": true,
+      "details": "equal=True"
+    }
+  ]
+}

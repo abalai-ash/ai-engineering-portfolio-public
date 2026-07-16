@@ -1,0 +1,164 @@
+[
+  {
+    "request_id": "enterprise_knowledge_assistant",
+    "domain": "enterprise_ai",
+    "goal": "Help employees find reliable answers across internal policies, support notes, and structured account records.",
+    "architecture": {
+      "components": [
+        "document ingestion",
+        "structured data connector",
+        "access-aware retrieval",
+        "vector search",
+        "grounded response service",
+        "citation formatter",
+        "human review queue",
+        "monitoring and audit logs"
+      ],
+      "evaluation_checks": [
+        "retrieval relevance",
+        "answer grounding",
+        "citation correctness",
+        "permission enforcement",
+        "abstention quality",
+        "latency"
+      ],
+      "deployment_path": [
+        "offline evaluation",
+        "internal pilot",
+        "limited user rollout",
+        "monitored expansion"
+      ]
+    },
+    "risk_level": "medium",
+    "risk_register": [
+      {
+        "risk": "Sensitive source exposure: support notes",
+        "mitigation": "Use access checks, restricted logs, and source-level permission enforcement."
+      },
+      {
+        "risk": "Sensitive source exposure: account records",
+        "mitigation": "Use access checks, restricted logs, and source-level permission enforcement."
+      },
+      {
+        "risk": "Unsupported or weakly grounded answer",
+        "mitigation": "Require retrieved evidence, citations, and abstention when evidence is insufficient."
+      },
+      {
+        "risk": "Incorrect access to restricted information",
+        "mitigation": "Apply user-level authorization before retrieval."
+      }
+    ],
+    "launch_recommendation": "needs_review",
+    "next_actions": [
+      "Resolve open discovery questions.",
+      "Confirm measurable success thresholds.",
+      "Build the smallest testable prototype.",
+      "Run offline evaluation before any pilot.",
+      "Document rollback or stopping conditions."
+    ]
+  },
+  {
+    "request_id": "robot_localization_support",
+    "domain": "robotics",
+    "goal": "Estimate a delivery robot's position reliably across changing indoor and outdoor environments.",
+    "architecture": {
+      "components": [
+        "sensor ingestion",
+        "timestamp synchronization",
+        "calibration validator",
+        "localization estimator",
+        "uncertainty tracker",
+        "map mismatch detector",
+        "sensor health monitor",
+        "fallback state estimator"
+      ],
+      "evaluation_checks": [
+        "position error",
+        "orientation error",
+        "sensor dropout recovery",
+        "calibration drift detection",
+        "map mismatch detection",
+        "latency"
+      ],
+      "deployment_path": [
+        "synthetic replay tests",
+        "recorded sensor runs",
+        "controlled environment trial",
+        "limited fleet pilot"
+      ]
+    },
+    "risk_level": "medium",
+    "risk_register": [
+      {
+        "risk": "Localization failure during sensor dropout",
+        "mitigation": "Track uncertainty and use a tested fallback estimate."
+      },
+      {
+        "risk": "Map or calibration drift",
+        "mitigation": "Monitor residuals and stop deployment when thresholds are exceeded."
+      }
+    ],
+    "launch_recommendation": "pilot_ready",
+    "next_actions": [
+      "Resolve open discovery questions.",
+      "Confirm measurable success thresholds.",
+      "Build the smallest testable prototype.",
+      "Run offline evaluation before any pilot.",
+      "Document rollback or stopping conditions."
+    ]
+  },
+  {
+    "request_id": "scientific_workload_benchmark",
+    "domain": "scientific_computing",
+    "goal": "Compare candidate algorithms for a noisy scientific workload before selecting an implementation path.",
+    "architecture": {
+      "components": [
+        "benchmark case loader",
+        "baseline implementation",
+        "candidate algorithm runner",
+        "hardware timing collector",
+        "noise and uncertainty analyzer",
+        "result comparison",
+        "versioned experiment outputs",
+        "reproducibility report"
+      ],
+      "evaluation_checks": [
+        "correctness against baseline",
+        "runtime",
+        "memory use",
+        "repeatability",
+        "noise sensitivity",
+        "hardware tradeoffs"
+      ],
+      "deployment_path": [
+        "small benchmark suite",
+        "repeated local runs",
+        "hardware comparison",
+        "documented implementation decision"
+      ]
+    },
+    "risk_level": "medium",
+    "risk_register": [
+      {
+        "risk": "Missing required control: rollback_plan",
+        "mitigation": "Define and test rollback_plan before launch."
+      },
+      {
+        "risk": "Selecting a faster but inaccurate method",
+        "mitigation": "Compare all candidates against a trusted baseline."
+      },
+      {
+        "risk": "Results depend on one run or one machine",
+        "mitigation": "Repeat runs and record hardware, software, and seed information."
+      }
+    ],
+    "launch_recommendation": "needs_review",
+    "next_actions": [
+      "Resolve open discovery questions.",
+      "Confirm measurable success thresholds.",
+      "Build the smallest testable prototype.",
+      "Run offline evaluation before any pilot.",
+      "Document rollback or stopping conditions."
+    ]
+  }
+]

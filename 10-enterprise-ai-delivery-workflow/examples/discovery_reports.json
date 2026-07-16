@@ -1,0 +1,120 @@
+[
+  {
+    "request_id": "enterprise_knowledge_assistant",
+    "domain": "enterprise_ai",
+    "goal": "Help employees find reliable answers across internal policies, support notes, and structured account records.",
+    "users": [
+      "support specialists",
+      "operations staff"
+    ],
+    "data_summary": {
+      "source_count": 3,
+      "source_types": {
+        "unstructured": 2,
+        "structured": 1
+      },
+      "sensitive_sources": [
+        "support notes",
+        "account records"
+      ]
+    },
+    "success_metrics": [
+      "answer supported by retrieved evidence",
+      "correct access permissions",
+      "useful answer or clear abstention",
+      "response within latency target"
+    ],
+    "open_questions": [
+      "Which sources are allowed to support an answer?",
+      "Which users may access each source?",
+      "When should the system abstain instead of answering?",
+      "Who reviews high-impact or uncertain responses?",
+      "How will retrieval quality and answer grounding be measured?",
+      "Who owns the system after launch?",
+      "Which metric determines whether the project is successful?",
+      "What failure would require stopping or rolling back the system?",
+      "Which logs and outputs must be retained?",
+      "Which assumptions still need to be validated?",
+      "How will sensitive sources be protected in storage, retrieval, and logs?"
+    ],
+    "missing_controls": [],
+    "status": "ready_for_solution_planning"
+  },
+  {
+    "request_id": "robot_localization_support",
+    "domain": "robotics",
+    "goal": "Estimate a delivery robot's position reliably across changing indoor and outdoor environments.",
+    "users": [
+      "robotics engineers",
+      "fleet operators"
+    ],
+    "data_summary": {
+      "source_count": 4,
+      "source_types": {
+        "sensor": 2,
+        "structured": 1,
+        "spatial": 1
+      },
+      "sensitive_sources": []
+    },
+    "success_metrics": [
+      "bounded localization error",
+      "stable estimate during temporary sensor loss",
+      "detect degraded calibration",
+      "response within latency target"
+    ],
+    "open_questions": [
+      "Which coordinate frames and map conventions are used?",
+      "How is each sensor calibrated and time-synchronized?",
+      "What localization error is acceptable?",
+      "How should the system respond to sensor dropout?",
+      "How will map mismatch or environmental change be detected?",
+      "Who owns the system after launch?",
+      "Which metric determines whether the project is successful?",
+      "What failure would require stopping or rolling back the system?",
+      "Which logs and outputs must be retained?",
+      "Which assumptions still need to be validated?"
+    ],
+    "missing_controls": [],
+    "status": "ready_for_solution_planning"
+  },
+  {
+    "request_id": "scientific_workload_benchmark",
+    "domain": "scientific_computing",
+    "goal": "Compare candidate algorithms for a noisy scientific workload before selecting an implementation path.",
+    "users": [
+      "research engineers",
+      "scientific collaborators"
+    ],
+    "data_summary": {
+      "source_count": 3,
+      "source_types": {
+        "structured": 2,
+        "unstructured": 1
+      },
+      "sensitive_sources": []
+    },
+    "success_metrics": [
+      "reproducible benchmark result",
+      "clear baseline comparison",
+      "reported uncertainty",
+      "documented performance tradeoffs"
+    ],
+    "open_questions": [
+      "Which baseline should each method be compared against?",
+      "Which hardware and runtime limits matter?",
+      "How many repeated runs are needed?",
+      "How will uncertainty and numerical error be reported?",
+      "What evidence is required before selecting a method?",
+      "Who owns the system after launch?",
+      "Which metric determines whether the project is successful?",
+      "What failure would require stopping or rolling back the system?",
+      "Which logs and outputs must be retained?",
+      "Which assumptions still need to be validated?"
+    ],
+    "missing_controls": [
+      "rollback_plan"
+    ],
+    "status": "ready_for_solution_planning"
+  }
+]
