@@ -91,6 +91,15 @@ CHECKS = [
         ),
     ),
 
+    Check(
+        name="03 Agentic Workflow Reliability",
+        path="03-agentic-research-workflow/eval/evaluate_reliability.py",
+        reason=(
+            "checkpointing, bounded retries, simulated tool failures, "
+            "resume behavior, safe stopping, and policy comparison"
+        ),
+    ),
+
 ]
 
 

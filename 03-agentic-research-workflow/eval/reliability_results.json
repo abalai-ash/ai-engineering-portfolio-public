@@ -1,0 +1,57 @@
+{
+  "passed": 10,
+  "total": 10,
+  "all_passed": true,
+  "results": [
+    {
+      "name": "retry policy completes after recoverable failures",
+      "passed": true,
+      "details": "completed"
+    },
+    {
+      "name": "all workflow steps complete",
+      "passed": true,
+      "details": "5/5"
+    },
+    {
+      "name": "recovered failures are counted",
+      "passed": true,
+      "details": "2"
+    },
+    {
+      "name": "fail-fast policy stops immediately",
+      "passed": true,
+      "details": "failed"
+    },
+    {
+      "name": "fail-fast records one unrecovered failure",
+      "passed": true,
+      "details": "1"
+    },
+    {
+      "name": "retry exhaustion stops safely",
+      "passed": true,
+      "details": "failed"
+    },
+    {
+      "name": "checkpoint preserves completed steps",
+      "passed": true,
+      "details": "['route_query', 'retrieve_notes']"
+    },
+    {
+      "name": "workflow resumes and completes",
+      "passed": true,
+      "details": "completed"
+    },
+    {
+      "name": "resumed workflow does not repeat completed steps",
+      "passed": true,
+      "details": "{'route_query': 1, 'retrieve_notes': 1, 'summarize_evidence': 2, 'build_checklist': 1, 'draft_update': 1}"
+    },
+    {
+      "name": "simulated reliability evaluation is deterministic",
+      "passed": true,
+      "details": "equal=True"
+    }
+  ]
+}

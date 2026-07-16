@@ -178,3 +178,25 @@ Run the Version 4 evaluation:
     python eval/evaluate_v4.py
 
 Current Version 4 evaluation result: **6/6 passed**.
+
+## Reliability upgrade
+
+The workflow now includes a separate reliability layer built on top of the existing v4 routing and grounded-agent behavior.
+
+It demonstrates:
+
+- checkpointed workflow state
+- bounded retries
+- deterministic simulated tool failures
+- safe stopping after retry exhaustion
+- resume from the last completed step
+- structured JSONL event logs
+- comparison between `fail_fast` and `retry_then_resume`
+- deterministic reliability evaluation
+
+The reliability layer does not call external services. Failures are simulated so recovery behavior can be tested repeatedly and explained clearly.
+
+### Run the reliability demo
+
+```bash
+python3 03-agentic-research-workflow/src/reliable_workflow.py
