@@ -112,3 +112,30 @@ The Version 2 evaluation starts the service temporarily and checks:
 
 This remains a small local demo. It does not claim to provide a trained production model, autoscaling, distributed inference, authentication, or a real cloud deployment.
 
+
+## Version 3: operational readiness evaluation
+
+Version 3 adds a separate operational-readiness layer around the local prediction service.
+
+It uses synthetic request observations to measure:
+
+- request volume
+- P95 latency
+- service error rate
+- timeout rate
+- dependency failure rate
+- liveness and readiness separately
+- deployment readiness
+- continue, hold, and rollback recommendations
+- invalid threshold configuration
+- deterministic repeated evaluation
+
+Run the scenario demonstration:
+
+    python3 src/operational_readiness.py
+
+Run the evaluation:
+
+    python3 eval/evaluate_operational_readiness.py
+
+This remains a local deterministic demonstration. It does not claim production deployment, autoscaling, distributed inference, authentication, or use of private infrastructure.

@@ -53,6 +53,11 @@ CHECKS = [
         reason="health/readiness checks, validation, batch behavior, and error handling",
     ),
     Check(
+        name="05 Cloud ML Operational Readiness",
+        path="05-cloud-ml-deployment/eval/evaluate_operational_readiness.py",
+        reason="latency, error, timeout, dependency-failure, readiness, rollback, and deterministic operational checks",
+    ),
+    Check(
         name="06 RL Agent Evaluation Loop v2",
         path="06-rl-agent-evaluation-loop/eval/evaluate_v2.py",
         reason="agent decisions, reward scoring, safety-aware behavior, and reliability checks",

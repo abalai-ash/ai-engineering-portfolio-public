@@ -1,0 +1,46 @@
+{
+  "passed": 8,
+  "total": 8,
+  "results": [
+    {
+      "check": "healthy service remains ready",
+      "passed": true,
+      "details": "status=ready recommendation=continue_deployment"
+    },
+    {
+      "check": "moderate latency holds deployment",
+      "passed": true,
+      "details": "p95=340.0 recommendation=hold_deployment"
+    },
+    {
+      "check": "dependency degradation recommends rollback",
+      "passed": true,
+      "details": "dependency_failure_rate=0.2 recommendation=rollback"
+    },
+    {
+      "check": "timeout spike recommends rollback",
+      "passed": true,
+      "details": "timeout_rate=0.2 recommendation=rollback"
+    },
+    {
+      "check": "missing observations hold deployment",
+      "passed": true,
+      "details": "status=insufficient_data recommendation=hold_deployment"
+    },
+    {
+      "check": "invalid thresholds block deployment",
+      "passed": true,
+      "details": "status=invalid_configuration recommendation=block_deployment"
+    },
+    {
+      "check": "evaluation is deterministic",
+      "passed": true,
+      "details": "equal=True"
+    },
+    {
+      "check": "liveness and readiness remain distinct",
+      "passed": true,
+      "details": "liveness=True readiness=False"
+    }
+  ]
+}
