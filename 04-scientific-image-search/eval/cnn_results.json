@@ -1,0 +1,122 @@
+{
+  "project": "Scientific Image Search CNN Demo",
+  "scope": "Synthetic images only; no private research images.",
+  "device": "mps",
+  "classes": [
+    "compact",
+    "rings",
+    "spirals"
+  ],
+  "seed": 42,
+  "epochs": 12,
+  "batch_size": 16,
+  "learning_rate": 0.001,
+  "best_validation_accuracy": 1.0,
+  "test_loss": 1.087389,
+  "test_accuracy": 1.0,
+  "confusion_matrix": [
+    [
+      15,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0
+    ]
+  ],
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.142971,
+      "train_accuracy": 0.0,
+      "validation_loss": 1.087186,
+      "validation_accuracy": 1.0
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.044072,
+      "train_accuracy": 1.0,
+      "validation_loss": 0.946509,
+      "validation_accuracy": 1.0
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.869771,
+      "train_accuracy": 1.0,
+      "validation_loss": 0.705032,
+      "validation_accuracy": 1.0
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.592356,
+      "train_accuracy": 1.0,
+      "validation_loss": 0.375558,
+      "validation_accuracy": 1.0
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.266676,
+      "train_accuracy": 1.0,
+      "validation_loss": 0.103706,
+      "validation_accuracy": 1.0
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.060356,
+      "train_accuracy": 1.0,
+      "validation_loss": 0.013519,
+      "validation_accuracy": 1.0
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.007504,
+      "train_accuracy": 1.0,
+      "validation_loss": 0.00137,
+      "validation_accuracy": 1.0
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.000756,
+      "train_accuracy": 1.0,
+      "validation_loss": 0.000173,
+      "validation_accuracy": 1.0
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.0001,
+      "train_accuracy": 1.0,
+      "validation_loss": 3.2e-05,
+      "validation_accuracy": 1.0
+    },
+    {
+      "epoch": 10,
+      "train_loss": 1.9e-05,
+      "train_accuracy": 1.0,
+      "validation_loss": 8e-06,
+      "validation_accuracy": 1.0
+    },
+    {
+      "epoch": 11,
+      "train_loss": 5e-06,
+      "train_accuracy": 1.0,
+      "validation_loss": 3e-06,
+      "validation_accuracy": 1.0
+    },
+    {
+      "epoch": 12,
+      "train_loss": 2e-06,
+      "train_accuracy": 1.0,
+      "validation_loss": 1e-06,
+      "validation_accuracy": 1.0
+    }
+  ],
+  "elapsed_seconds": 3.38,
+  "checkpoint": "models/cnn_demo_best.pt"
+}

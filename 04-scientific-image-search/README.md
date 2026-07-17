@@ -112,3 +112,26 @@ Evaluation complete: 3/3 passed
 The v2 evaluation checks the expected top image, object type availability, query interpretation, and match explanation.
 
 This project uses synthetic image features only. It does not include private research images or real scientific image files.
+
+## Version 3: CNN image classification
+
+Version 3 adds a small PyTorch convolutional neural network trained on deterministic synthetic images.
+
+It demonstrates:
+
+- synthetic image-dataset generation
+- train, validation, and test separation
+- convolutional feature learning
+- checkpoint saving
+- accuracy and loss reporting
+- confusion-matrix evaluation
+- deterministic local execution
+
+Run the CNN evaluation:
+
+    python3 eval/evaluate_cnn.py
+
+The generated model checkpoint is excluded from Git. The public project includes the training and evaluation code, compact result reports, and synthetic-data description without including private research images.
+
+This is a local portfolio demonstration rather than a production computer-vision system.
+

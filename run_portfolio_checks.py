@@ -53,6 +53,11 @@ CHECKS = [
         reason="weighted similarity search, top-k ranking, and explanations",
     ),
     Check(
+        name="04 Scientific Image Search CNN",
+        path="04-scientific-image-search/eval/evaluate_cnn.py",
+        reason="PyTorch CNN training, synthetic image classification, confusion matrix, and deterministic evaluation",
+    ),
+    Check(
         name="05 Cloud ML Deployment v2",
         path="05-cloud-ml-deployment/eval/evaluate_v2.py",
         reason="health/readiness checks, validation, batch behavior, and error handling",
