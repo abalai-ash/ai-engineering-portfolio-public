@@ -54,7 +54,7 @@ CHECKS = [
     ),
     Check(
         name="04 Scientific Image Search CNN",
-        path="04-scientific-image-search/eval/evaluate_cnn.py",
+        path="04-scientific-image-search/eval/run_cnn_ci.py",
         reason="PyTorch CNN training, synthetic image classification, confusion matrix, and deterministic evaluation",
     ),
     Check(
