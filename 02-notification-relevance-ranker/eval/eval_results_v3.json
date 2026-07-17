@@ -1,0 +1,70 @@
+{
+  "ablation_metrics": {
+    "channel_match": {
+      "mrr": 0.871111,
+      "ndcg_at_3": 0.892382,
+      "top1_accuracy": 0.777778
+    },
+    "freshness": {
+      "mrr": 0.813704,
+      "ndcg_at_3": 0.881452,
+      "top1_accuracy": 0.688889
+    },
+    "interest_match": {
+      "mrr": 0.75,
+      "ndcg_at_3": 0.801266,
+      "top1_accuracy": 0.555556
+    },
+    "urgency": {
+      "mrr": 0.712963,
+      "ndcg_at_3": 0.83743,
+      "top1_accuracy": 0.511111
+    }
+  },
+  "baseline_metrics": {
+    "mrr": 0.911111,
+    "ndcg_at_3": 0.943753,
+    "top1_accuracy": 0.822222
+  },
+  "candidates_per_query": 6,
+  "checks": {
+    "importance_has_all_features": true,
+    "latency_recorded": true,
+    "learned_mrr_not_below_baseline": true,
+    "learned_ndcg_not_below_baseline": true,
+    "learned_top1_not_below_baseline": true,
+    "predictions_are_deterministic": true
+  },
+  "deterministic_predictions": true,
+  "feature_importance": {
+    "channel_match": 0.277692,
+    "freshness": 0.162091,
+    "interest_match": 0.293339,
+    "urgency": 0.266879
+  },
+  "learned_metrics": {
+    "mrr": 0.922222,
+    "ndcg_at_3": 0.961187,
+    "top1_accuracy": 0.844444
+  },
+  "learned_minus_baseline": {
+    "mrr": 0.011111,
+    "ndcg_at_3": 0.017434,
+    "top1_accuracy": 0.022222
+  },
+  "limitations": [
+    "Synthetic relevance judgments",
+    "No real user behavior",
+    "No online experimentation",
+    "No production deployment"
+  ],
+  "model": "XGBoost rank:pairwise",
+  "passed_checks": 6,
+  "prediction_latency_ms": 0.001844,
+  "project": "Notification Relevance Ranker Version 3",
+  "seed": 42,
+  "test_queries": 45,
+  "total_checks": 6,
+  "training_queries": 135,
+  "training_seconds": 0.013052
+}

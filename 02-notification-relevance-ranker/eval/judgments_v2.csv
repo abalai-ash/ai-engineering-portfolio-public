@@ -1,0 +1,16 @@
+user_id,notification_id,relevance
+u1,n1,3
+u1,n2,1
+u1,n3,0
+u1,n4,0
+u1,n5,0
+u2,n1,0
+u2,n2,1
+u2,n3,3
+u2,n4,0
+u2,n5,0
+u3,n1,0
+u3,n2,0
+u3,n3,0
+u3,n4,3
+u3,n5,0

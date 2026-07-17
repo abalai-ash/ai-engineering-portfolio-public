@@ -38,6 +38,11 @@ CHECKS = [
         reason="explainable ranking and expected top-result behavior",
     ),
     Check(
+        name="02 Notification Relevance Ranker v3",
+        path="02-notification-relevance-ranker/eval/evaluate_v3_xgboost.py",
+        reason="learned ranking, held-out metrics, baseline comparison, feature ablation, and deterministic evaluation",
+    ),
+    Check(
         name="03 Agentic Research Workflow v4",
         path="03-agentic-research-workflow/eval/evaluate_v4.py",
         reason="deterministic routing, safety checks, and grounded workflow behavior",

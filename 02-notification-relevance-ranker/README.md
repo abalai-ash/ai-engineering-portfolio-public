@@ -93,3 +93,28 @@ The evaluation checks whether the highest-ranked notification matches the expect
 ## Limitations
 
 This is a small demo with fake data and hand-written weights. It does not train on real user behavior and does not claim to be a production notification system.
+
+## Version 3: learned ranking evaluation
+
+Version 3 compares the original hand-written ranking logic with a learned XGBoost ranker on deterministic synthetic judgments.
+
+It demonstrates:
+
+- grouped train and held-out evaluation data
+- Top-1 accuracy, MRR, and NDCG@3
+- comparison against a non-personalized baseline
+- feature-importance and feature-ablation analysis
+- deterministic repeated predictions
+- local training and prediction latency measurements
+
+In the current held-out evaluation, the learned ranker improves over the hand-written baseline across Top-1 accuracy, MRR, and NDCG@3.
+
+The public project reports the experiment design and measured results without presenting it as a production ranking recipe or a model trained on real users.
+
+Run the evaluation:
+
+```bash
+python3 eval/evaluate_v3.py
+```
+
+See `model_card_v3.md` and `eval/eval_results_v3.md` for scope, results, and limitations.

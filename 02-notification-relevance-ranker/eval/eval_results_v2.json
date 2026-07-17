@@ -1,0 +1,329 @@
+{
+  "full_model": {
+    "hit_at_1": 1.0,
+    "mrr": 1.0,
+    "ndcg_at_3": 0.9724398042376524,
+    "rows": [
+      {
+        "user_id": "u1",
+        "expected_top": "n1",
+        "actual_top": "n1",
+        "hit_at_1": 1,
+        "reciprocal_rank": 1.0,
+        "ndcg_at_3": 1.0,
+        "ranked_ids": [
+          "n1",
+          "n2",
+          "n3",
+          "n4",
+          "n5"
+        ]
+      },
+      {
+        "user_id": "u2",
+        "expected_top": "n3",
+        "actual_top": "n3",
+        "hit_at_1": 1,
+        "reciprocal_rank": 1.0,
+        "ndcg_at_3": 0.9173194127129571,
+        "ranked_ids": [
+          "n3",
+          "n1",
+          "n4",
+          "n2",
+          "n5"
+        ]
+      },
+      {
+        "user_id": "u3",
+        "expected_top": "n4",
+        "actual_top": "n4",
+        "hit_at_1": 1,
+        "reciprocal_rank": 1.0,
+        "ndcg_at_3": 1.0,
+        "ranked_ids": [
+          "n4",
+          "n1",
+          "n3",
+          "n2",
+          "n5"
+        ]
+      }
+    ]
+  },
+  "baseline": {
+    "hit_at_1": 0.3333333333333333,
+    "mrr": 0.611111111111111,
+    "ndcg_at_3": 0.668969624213631,
+    "rows": [
+      {
+        "user_id": "u1",
+        "expected_top": "n1",
+        "actual_top": "n1",
+        "hit_at_1": 1,
+        "reciprocal_rank": 1.0,
+        "ndcg_at_3": 0.9173194127129571,
+        "ranked_ids": [
+          "n1",
+          "n4",
+          "n3",
+          "n2",
+          "n5"
+        ]
+      },
+      {
+        "user_id": "u2",
+        "expected_top": "n3",
+        "actual_top": "n1",
+        "hit_at_1": 0,
+        "reciprocal_rank": 0.3333333333333333,
+        "ndcg_at_3": 0.45865970635647857,
+        "ranked_ids": [
+          "n1",
+          "n4",
+          "n3",
+          "n2",
+          "n5"
+        ]
+      },
+      {
+        "user_id": "u3",
+        "expected_top": "n4",
+        "actual_top": "n1",
+        "hit_at_1": 0,
+        "reciprocal_rank": 0.5,
+        "ndcg_at_3": 0.6309297535714575,
+        "ranked_ids": [
+          "n1",
+          "n4",
+          "n3",
+          "n2",
+          "n5"
+        ]
+      }
+    ]
+  },
+  "ablations": {
+    "interest": {
+      "hit_at_1": 0.3333333333333333,
+      "mrr": 0.6666666666666666,
+      "ndcg_at_3": 0.7090044257645717,
+      "rows": [
+        {
+          "user_id": "u1",
+          "expected_top": "n1",
+          "actual_top": "n1",
+          "hit_at_1": 1,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_3": 0.9173194127129571,
+          "ranked_ids": [
+            "n1",
+            "n3",
+            "n4",
+            "n2",
+            "n5"
+          ]
+        },
+        {
+          "user_id": "u2",
+          "expected_top": "n3",
+          "actual_top": "n1",
+          "hit_at_1": 0,
+          "reciprocal_rank": 0.5,
+          "ndcg_at_3": 0.5787641110093001,
+          "ranked_ids": [
+            "n1",
+            "n3",
+            "n4",
+            "n2",
+            "n5"
+          ]
+        },
+        {
+          "user_id": "u3",
+          "expected_top": "n4",
+          "actual_top": "n1",
+          "hit_at_1": 0,
+          "reciprocal_rank": 0.5,
+          "ndcg_at_3": 0.6309297535714575,
+          "ranked_ids": [
+            "n1",
+            "n4",
+            "n3",
+            "n2",
+            "n5"
+          ]
+        }
+      ]
+    },
+    "urgency": {
+      "hit_at_1": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_3": 0.9942807426355799,
+      "rows": [
+        {
+          "user_id": "u1",
+          "expected_top": "n1",
+          "actual_top": "n1",
+          "hit_at_1": 1,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_3": 1.0,
+          "ranked_ids": [
+            "n1",
+            "n2",
+            "n3",
+            "n4",
+            "n5"
+          ]
+        },
+        {
+          "user_id": "u2",
+          "expected_top": "n3",
+          "actual_top": "n3",
+          "hit_at_1": 1,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_3": 0.9828422279067397,
+          "ranked_ids": [
+            "n3",
+            "n1",
+            "n2",
+            "n4",
+            "n5"
+          ]
+        },
+        {
+          "user_id": "u3",
+          "expected_top": "n4",
+          "actual_top": "n4",
+          "hit_at_1": 1,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_3": 1.0,
+          "ranked_ids": [
+            "n4",
+            "n1",
+            "n3",
+            "n2",
+            "n5"
+          ]
+        }
+      ]
+    },
+    "freshness": {
+      "hit_at_1": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_3": 0.9724398042376524,
+      "rows": [
+        {
+          "user_id": "u1",
+          "expected_top": "n1",
+          "actual_top": "n1",
+          "hit_at_1": 1,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_3": 1.0,
+          "ranked_ids": [
+            "n1",
+            "n2",
+            "n4",
+            "n3",
+            "n5"
+          ]
+        },
+        {
+          "user_id": "u2",
+          "expected_top": "n3",
+          "actual_top": "n3",
+          "hit_at_1": 1,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_3": 0.9173194127129571,
+          "ranked_ids": [
+            "n3",
+            "n1",
+            "n4",
+            "n2",
+            "n5"
+          ]
+        },
+        {
+          "user_id": "u3",
+          "expected_top": "n4",
+          "actual_top": "n4",
+          "hit_at_1": 1,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_3": 1.0,
+          "ranked_ids": [
+            "n4",
+            "n1",
+            "n2",
+            "n3",
+            "n5"
+          ]
+        }
+      ]
+    },
+    "channel": {
+      "hit_at_1": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_3": 0.9724398042376524,
+      "rows": [
+        {
+          "user_id": "u1",
+          "expected_top": "n1",
+          "actual_top": "n1",
+          "hit_at_1": 1,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_3": 1.0,
+          "ranked_ids": [
+            "n1",
+            "n2",
+            "n4",
+            "n3",
+            "n5"
+          ]
+        },
+        {
+          "user_id": "u2",
+          "expected_top": "n3",
+          "actual_top": "n3",
+          "hit_at_1": 1,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_3": 0.9173194127129571,
+          "ranked_ids": [
+            "n3",
+            "n1",
+            "n4",
+            "n2",
+            "n5"
+          ]
+        },
+        {
+          "user_id": "u3",
+          "expected_top": "n4",
+          "actual_top": "n4",
+          "hit_at_1": 1,
+          "reciprocal_rank": 1.0,
+          "ndcg_at_3": 1.0,
+          "ranked_ids": [
+            "n4",
+            "n1",
+            "n3",
+            "n2",
+            "n5"
+          ]
+        }
+      ]
+    }
+  },
+  "latency": {
+    "repetitions": 500,
+    "median_ms": 0.047582999968653894,
+    "p95_ms": 0.051833000043188804
+  },
+  "checks": {
+    "full_hit_at_1": true,
+    "full_beats_baseline": true,
+    "full_mrr": true,
+    "deterministic": true,
+    "latency_recorded": true
+  },
+  "scope": "Synthetic deterministic ranking evaluation. This does not use real user behavior or production traffic."
+}
