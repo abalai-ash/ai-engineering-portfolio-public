@@ -68,6 +68,11 @@ CHECKS = [
         reason="latency, error, timeout, dependency-failure, readiness, rollback, and deterministic operational checks",
     ),
     Check(
+        name="05 Cloud ML Performance and Rollout Evaluation",
+        path="05-cloud-ml-deployment/eval/evaluate_performance_rollout_v4.py",
+        reason="local benchmarking, service objectives, deterministic canary routing, feature flags, and rollback decisions",
+    ),
+    Check(
         name="06 RL Agent Evaluation Loop v2",
         path="06-rl-agent-evaluation-loop/eval/evaluate_v2.py",
         reason="agent decisions, reward scoring, safety-aware behavior, and reliability checks",

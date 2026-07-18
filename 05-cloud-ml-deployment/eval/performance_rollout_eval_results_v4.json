@@ -1,0 +1,47 @@
+{
+  "passed": 8,
+  "total": 8,
+  "results": [
+    {
+      "check": "baseline predictions use valid labels",
+      "passed": true,
+      "details": "labels=['high', 'low', 'medium']"
+    },
+    {
+      "check": "candidate predictions use valid labels",
+      "passed": true,
+      "details": "labels=['high', 'low', 'medium']"
+    },
+    {
+      "check": "canary routing is deterministic",
+      "passed": true,
+      "details": "first={'baseline': 76, 'candidate': 24} second={'baseline': 76, 'candidate': 24}"
+    },
+    {
+      "check": "disabled feature flag routes to baseline",
+      "passed": true,
+      "details": "routes=['baseline']"
+    },
+    {
+      "check": "healthy candidate continues rollout",
+      "passed": true,
+      "details": "decision=continue_rollout"
+    },
+    {
+      "check": "latency or throughput regression holds rollout",
+      "passed": true,
+      "details": "decision=hold reasons=['candidate p95 latency exceeds the service objective', 'candidate throughput is below the service objective', 'candidate latency regressed by more than 25 percent']"
+    },
+    {
+      "check": "high error rate triggers rollback",
+      "passed": true,
+      "details": "decision=rollback reasons=['candidate error rate exceeds the service objective', 'candidate error rate is worse than the baseline']"
+    },
+    {
+      "check": "invalid rollout percentage is rejected",
+      "passed": true,
+      "details": "rejected=True"
+    }
+  ],
+  "scope": "This deterministic local evaluation uses synthetic metrics and requests. It checks routing, feature flags, service objectives, and rollout decisions rather than production-scale performance."
+}
