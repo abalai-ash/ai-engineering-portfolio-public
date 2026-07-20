@@ -210,3 +210,7 @@ wheels/
 # Local patch and inspection backups
 *.before_*
 *.before
+
+# Generated local performance evaluation outputs
+05-cloud-ml-deployment/eval/performance_rollout_eval_results_v4.md
+05-cloud-ml-deployment/eval/performance_rollout_results_v4.json
