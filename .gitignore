@@ -206,3 +206,7 @@ var/
 venv.bak/
 venv/
 wheels/
+
+# Local patch and inspection backups
+*.before_*
+*.before

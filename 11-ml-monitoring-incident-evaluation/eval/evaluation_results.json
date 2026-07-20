@@ -1,0 +1,43 @@
+{
+  "baseline_version": "baseline-v1",
+  "current_version": "candidate-v2",
+  "alerts": [
+    {
+      "metric": "accuracy",
+      "level": "high",
+      "message": "accuracy dropped by 0.080; allowed drop is 0.050"
+    },
+    {
+      "metric": "precision",
+      "level": "high",
+      "message": "precision dropped by 0.100; allowed drop is 0.060"
+    },
+    {
+      "metric": "recall",
+      "level": "high",
+      "message": "recall dropped by 0.140; allowed drop is 0.080"
+    },
+    {
+      "metric": "p95_latency_ms",
+      "level": "medium",
+      "message": "p95 latency increased by 64.3%"
+    },
+    {
+      "metric": "error_rate",
+      "level": "high",
+      "message": "error rate is 0.035; limit is 0.020"
+    },
+    {
+      "metric": "positive_prediction_rate",
+      "level": "medium",
+      "message": "positive prediction rate changed by 0.170"
+    }
+  ],
+  "decision": {
+    "action": "rollback",
+    "high_alerts": 4,
+    "medium_alerts": 2,
+    "alert_count": 6
+  },
+  "scope": "This local example uses synthetic metrics. It demonstrates monitoring rules and incident decisions. It is not a production monitoring service."
+}

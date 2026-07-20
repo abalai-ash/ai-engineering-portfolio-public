@@ -1,0 +1,243 @@
+[
+  {
+    "id": "service-payment-api",
+    "type": "service",
+    "title": "Payment API",
+    "text": "Handles payment requests. It depends on the identity service for session validation and writes transaction events to the event store.",
+    "tags": [
+      "payments",
+      "requests",
+      "transactions",
+      "latency"
+    ],
+    "links": [
+      {
+        "target": "service-identity",
+        "relation": "depends_on"
+      },
+      {
+        "target": "service-event-store",
+        "relation": "writes_to"
+      },
+      {
+        "target": "incident-payment-timeouts",
+        "relation": "affected_by"
+      }
+    ]
+  },
+  {
+    "id": "service-identity",
+    "type": "service",
+    "title": "Identity Service",
+    "text": "Validates sessions and access tokens for internal services. Slow validation can delay dependent requests.",
+    "tags": [
+      "identity",
+      "sessions",
+      "tokens",
+      "authentication",
+      "validation"
+    ],
+    "links": [
+      {
+        "target": "service-payment-api",
+        "relation": "supports"
+      },
+      {
+        "target": "incident-identity-slowdown",
+        "relation": "affected_by"
+      },
+      {
+        "target": "runbook-identity-capacity",
+        "relation": "handled_by"
+      }
+    ]
+  },
+  {
+    "id": "service-event-store",
+    "type": "service",
+    "title": "Event Store",
+    "text": "Stores transaction events and supports asynchronous processing by worker services.",
+    "tags": [
+      "events",
+      "transactions",
+      "storage",
+      "workers",
+      "queue"
+    ],
+    "links": [
+      {
+        "target": "incident-event-backlog",
+        "relation": "affected_by"
+      },
+      {
+        "target": "runbook-event-backlog",
+        "relation": "handled_by"
+      }
+    ]
+  },
+  {
+    "id": "incident-identity-slowdown",
+    "type": "incident",
+    "title": "Identity Service Slowdown",
+    "text": "High database connection use caused slow token validation. Dependent services experienced increased latency and request timeouts.",
+    "tags": [
+      "identity",
+      "database",
+      "connections",
+      "latency",
+      "timeouts"
+    ],
+    "links": [
+      {
+        "target": "service-identity",
+        "relation": "impacts"
+      },
+      {
+        "target": "incident-payment-timeouts",
+        "relation": "contributes_to"
+      },
+      {
+        "target": "runbook-identity-capacity",
+        "relation": "mitigated_by"
+      }
+    ]
+  },
+  {
+    "id": "incident-payment-timeouts",
+    "type": "incident",
+    "title": "Payment Request Timeouts",
+    "text": "Payment requests timed out while waiting for identity checks. Repeated retries increased request pressure and made latency worse.",
+    "tags": [
+      "payments",
+      "timeouts",
+      "identity",
+      "retries",
+      "latency"
+    ],
+    "links": [
+      {
+        "target": "service-payment-api",
+        "relation": "impacts"
+      },
+      {
+        "target": "incident-identity-slowdown",
+        "relation": "related_to"
+      },
+      {
+        "target": "runbook-retry-pressure",
+        "relation": "mitigated_by"
+      }
+    ]
+  },
+  {
+    "id": "incident-event-backlog",
+    "type": "incident",
+    "title": "Delayed Event Processing",
+    "text": "A worker backlog delayed transaction event processing. Identity validation remained healthy during this incident.",
+    "tags": [
+      "events",
+      "workers",
+      "backlog",
+      "delay",
+      "queue"
+    ],
+    "links": [
+      {
+        "target": "service-event-store",
+        "relation": "impacts"
+      },
+      {
+        "target": "runbook-event-backlog",
+        "relation": "mitigated_by"
+      }
+    ]
+  },
+  {
+    "id": "incident-false-dashboard-alarm",
+    "type": "incident",
+    "title": "False Payment Dashboard Alarm",
+    "text": "A dashboard display error showed elevated payment failures. Request logs and service metrics showed normal behavior, so no payment outage occurred.",
+    "tags": [
+      "payments",
+      "dashboard",
+      "false-alarm",
+      "normal",
+      "verification"
+    ],
+    "links": [
+      {
+        "target": "service-payment-api",
+        "relation": "observed_on"
+      }
+    ]
+  },
+  {
+    "id": "runbook-identity-capacity",
+    "type": "runbook",
+    "title": "Identity Capacity Check",
+    "text": "Check database connection use, token-validation latency, worker saturation, and dependent-service timeouts before adding capacity.",
+    "tags": [
+      "identity",
+      "capacity",
+      "database",
+      "latency",
+      "workers"
+    ],
+    "links": [
+      {
+        "target": "service-identity",
+        "relation": "applies_to"
+      },
+      {
+        "target": "incident-identity-slowdown",
+        "relation": "responds_to"
+      }
+    ]
+  },
+  {
+    "id": "runbook-retry-pressure",
+    "type": "runbook",
+    "title": "Retry Pressure Response",
+    "text": "Reduce repeated retries, inspect timeout settings, confirm dependency recovery, and restore traffic gradually.",
+    "tags": [
+      "retries",
+      "timeouts",
+      "recovery",
+      "traffic",
+      "payments"
+    ],
+    "links": [
+      {
+        "target": "incident-payment-timeouts",
+        "relation": "responds_to"
+      },
+      {
+        "target": "service-payment-api",
+        "relation": "applies_to"
+      }
+    ]
+  },
+  {
+    "id": "runbook-event-backlog",
+    "type": "runbook",
+    "title": "Event Backlog Response",
+    "text": "Inspect queue depth, worker health, processing failures, and recent throughput before increasing worker capacity.",
+    "tags": [
+      "events",
+      "queue",
+      "workers",
+      "backlog",
+      "throughput"
+    ],
+    "links": [
+      {
+        "target": "incident-event-backlog",
+        "relation": "responds_to"
+      },
+      {
+        "target": "service-event-store",
+        "relation": "applies_to"
+      }
+    ]
+  }
+]
