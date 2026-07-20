@@ -3,9 +3,9 @@
 [![Portfolio Checks](https://github.com/abalai-ash/ai-engineering-portfolio-public/actions/workflows/portfolio-checks.yml/badge.svg)](https://github.com/abalai-ash/ai-engineering-portfolio-public/actions/workflows/portfolio-checks.yml)
 
 
-This repo is a collection of small AI engineering projects I am building to practice and show applied machine learning, scientific computing, ranking systems, RAG, agentic workflows, evaluation, and cloud deployment.
+This repository contains small AI engineering projects I built to practice applied machine learning, scientific computing, ranking, retrieval, agent workflows, evaluation, monitoring, and deployment.
 
-My background is in computational astrophysics, Python-based research workflows, data analysis, and scientific modeling. The goal of this portfolio is to show how I build practical AI systems step by step: define the problem, make a working prototype, test the result, and write down what worked and what still needs improvement.
+My background is in computational astrophysics, Python research workflows, data analysis, and scientific modeling. I use these projects to practice the full process: define a problem, build a working version, test it, and document what worked and what still needs improvement.
 
 ## Quick Review Guide
 
@@ -13,10 +13,10 @@ For a fast review, see [PORTFOLIO_SUMMARY.md](PORTFOLIO_SUMMARY.md).
 
 | Role Direction | Most Relevant Projects |
 |---|---|
-| AI research engineering | 01, 03, 06, 08 |
-| LLM evaluation and agentic AI | 03, 06, 08 |
-| ML systems and performance foundations | 05, 06, 07 |
-| AI success, technical adoption, and applied AI | 01, 02, 03, 05 |
+| AI research engineering | 01, 03, 06, 08, 12 |
+| LLM evaluation and agentic AI | 03, 06, 08, 12 |
+| ML systems and performance foundations | 05, 06, 07, 11 |
+| AI success, technical adoption, and applied AI | 01, 02, 03, 05, 10, 11 |
 
 ## Project Map
 
@@ -31,6 +31,9 @@ For a fast review, see [PORTFOLIO_SUMMARY.md](PORTFOLIO_SUMMARY.md).
 | 07. Sparse Linear Algebra Engine | Numerical computing and performance foundations | Sparse storage, matrix-vector multiplication, iterative scoring, convergence |
 | 08. LLM Knowledge and Failure Evaluation | LLM reliability | Groundedness checks, unsupported-claim detection, response comparison |
 | 09. AI System Readiness and Risk Evaluation | AI safety and launch readiness | Evidence, privacy, human review, monitoring, rollback, and risk recommendations |
+| 10. Enterprise AI Delivery Workflow | Technical delivery planning | Discovery questions, architecture planning, risk review, staged rollout decisions |
+| 11. ML Monitoring and Incident Evaluation | Model monitoring and incident response | Baseline comparison, quality and latency alerts, rollback decisions, deterministic evaluation |
+| 12. Hybrid Knowledge Search | Grounded retrieval and answer safety | Lexical and hybrid search, evidence paths, citations, and abstention |
 
 ## Portfolio Checks
 
@@ -124,3 +127,33 @@ or quantum-hardware implementation.
 See
 [`10-enterprise-ai-delivery-workflow/README.md`]
 (10-enterprise-ai-delivery-workflow/README.md).
+
+### 11. ML Monitoring and Incident Evaluation
+
+This project compares a set of current model metrics with a saved baseline. It
+checks changes in accuracy, precision, recall, latency, error rate, and the
+positive-prediction rate. The alerts are then used to choose whether to
+continue, review the change, or roll it back.
+
+The example uses synthetic metrics and fixed rules so the same input produces
+the same result each time. It is a local exercise, not a live monitoring
+service.
+
+See
+[`11-ml-monitoring-incident-evaluation/README.md`](11-ml-monitoring-incident-evaluation/README.md).
+
+### 12. Hybrid Knowledge Search
+
+This project searches a small collection of service notes, incident reports,
+and runbooks. It combines direct word matching with links between related
+records, then shows which records supported the answer.
+
+I also added checks for questions that the records cannot answer. In those
+cases, the program returns an insufficient-evidence response instead of
+filling in a missing detail.
+
+The private project contains the full evaluation set. The public repository
+contains a smaller runnable example with the same main behavior.
+
+See
+[`12-hybrid-knowledge-search/README.md`](12-hybrid-knowledge-search/README.md).
