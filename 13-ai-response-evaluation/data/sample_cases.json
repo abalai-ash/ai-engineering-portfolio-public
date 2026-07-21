@@ -1,0 +1,75 @@
+{
+  "cases": [
+    {
+      "case_id": "supported-answer",
+      "question": "Why did payment requests time out?",
+      "evidence": [
+        {
+          "id": "incident-101",
+          "text": "Payment requests timed out while waiting for identity validation."
+        }
+      ],
+      "response": {
+        "answer": "Payment requests timed out while waiting for identity validation.",
+        "claims": [
+          {
+            "text": "Payment requests timed out while waiting for identity validation.",
+            "evidence_ids": [
+              "incident-101"
+            ]
+          }
+        ]
+      },
+      "expected_status": "pass"
+    },
+    {
+      "case_id": "invalid-citation",
+      "question": "Why did payment requests time out?",
+      "evidence": [
+        {
+          "id": "incident-202",
+          "text": "Payment requests timed out while waiting for identity validation."
+        }
+      ],
+      "response": {
+        "answer": "Payment requests timed out while waiting for identity validation.",
+        "claims": [
+          {
+            "text": "Payment requests timed out while waiting for identity validation.",
+            "evidence_ids": [
+              "missing-record"
+            ]
+          }
+        ]
+      },
+      "expected_status": "review"
+    },
+    {
+      "case_id": "contradicted-answer",
+      "question": "Was the identity service healthy?",
+      "evidence": [
+        {
+          "id": "incident-303",
+          "text": "The identity service was degraded during the incident."
+        }
+      ],
+      "response": {
+        "answer": "The identity service was healthy.",
+        "claims": [
+          {
+            "text": "The identity service was healthy.",
+            "evidence_ids": [
+              "incident-303"
+            ]
+          }
+        ]
+      },
+      "expected_status": "fail"
+    }
+  ],
+  "reviewer_scores": [
+    8,
+    5,
+    7
+  ]
+}
