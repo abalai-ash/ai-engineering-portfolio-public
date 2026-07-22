@@ -165,7 +165,7 @@ These original portfolio projects were created and maintained by the
 repository owner. This repository is publicly viewable for professional review. No license or reuse permission is granted.
 
 <!-- day-13-project-entry -->
-## Day 13: AI Response Evaluation
+## 13. AI Response Evaluation
 
 A small deterministic review workflow for checking evidence support, direct
 contradictions, invalid citations, appropriate abstention, and reviewer
@@ -174,7 +174,7 @@ disagreement.
 Project directory: [`13-ai-response-evaluation`](13-ai-response-evaluation)
 
 <!-- day-14-project-entry -->
-## Day 14: Automated Measurement Validation
+## 14. Automated Measurement Validation
 
 A compact synthetic measurement-validation example that classifies stable
 readings, identifies gradual drift, and fails safely when a measurement is
