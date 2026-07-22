@@ -172,3 +172,18 @@ contradictions, invalid citations, appropriate abstention, and reviewer
 disagreement.
 
 Project directory: [`13-ai-response-evaluation`](13-ai-response-evaluation)
+
+<!-- day-14-project-entry -->
+## Day 14: Automated Measurement Validation
+
+A compact synthetic measurement-validation example that classifies stable
+readings, identifies gradual drift, and fails safely when a measurement is
+interrupted.
+
+The public version is intentionally limited and demonstrates deterministic
+collection, engineering limits, structured outcomes, and automated testing
+without exposing the complete instrument-control design or full validation
+process.
+
+Project directory:
+[`14-automated-measurement-validation`](14-automated-measurement-validation)
