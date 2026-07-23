@@ -1,0 +1,49 @@
+{
+  "requirements": [
+    {
+      "id": "REQ-101",
+      "parameter": "signal_level",
+      "unit": "V",
+      "minimum": 4.5,
+      "maximum": 5.5,
+      "configuration": "baseline"
+    },
+    {
+      "id": "REQ-102",
+      "parameter": "response_time",
+      "unit": "ms",
+      "minimum": 0.0,
+      "maximum": 80.0,
+      "configuration": "baseline"
+    },
+    {
+      "id": "REQ-103",
+      "parameter": "thermal_margin",
+      "unit": "C",
+      "minimum": 10.0,
+      "maximum": 40.0,
+      "configuration": "thermal-check"
+    }
+  ],
+  "tests": [
+    {
+      "id": "TEST-101",
+      "requirement_id": "REQ-101",
+      "parameter": "signal_level",
+      "unit": "V",
+      "configuration": "baseline",
+      "value": 5.1,
+      "expected_status": "pass"
+    },
+    {
+      "id": "TEST-102",
+      "requirement_id": "REQ-102",
+      "parameter": "response_time",
+      "unit": "ms",
+      "configuration": "baseline",
+      "value": 77.0,
+      "review_margin": 5.0,
+      "expected_status": "review"
+    }
+  ]
+}

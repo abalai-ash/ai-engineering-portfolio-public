@@ -1,0 +1,33 @@
+{
+  "requirement_count": 3,
+  "test_count": 2,
+  "pass_count": 1,
+  "review_count": 2,
+  "fail_count": 0,
+  "all_expected_checks_passed": true,
+  "results": [
+    {
+      "requirement_id": "REQ-101",
+      "test_id": "TEST-101",
+      "status": "pass",
+      "reason": "The result satisfied the requirement.",
+      "expected_status": "pass",
+      "expected_check_passed": true
+    },
+    {
+      "requirement_id": "REQ-102",
+      "test_id": "TEST-102",
+      "status": "review",
+      "reason": "The result is close to a limit.",
+      "expected_status": "review",
+      "expected_check_passed": true
+    },
+    {
+      "requirement_id": "REQ-103",
+      "test_id": null,
+      "status": "review",
+      "reason": "No test is linked to the requirement."
+    }
+  ],
+  "scope": "Limited synthetic public portfolio example."
+}

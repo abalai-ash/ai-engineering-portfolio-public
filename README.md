@@ -187,3 +187,15 @@ process.
 
 Project directory:
 [`14-automated-measurement-validation`](14-automated-measurement-validation)
+
+<!-- project-15-entry -->
+## 15. Engineering Test and Verification
+
+A compact synthetic example that links engineering requirements to test
+results and classifies outcomes as pass, review, or fail.
+
+The public version demonstrates traceability, configuration checking, and
+missing-test handling without exposing the full private verification workflow.
+
+Project directory:
+[`15-engineering-test-verification`](15-engineering-test-verification)
