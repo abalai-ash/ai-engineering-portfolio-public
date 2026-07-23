@@ -1,0 +1,33 @@
+{
+  "requirements": [
+    {"id": "REQ-001", "method": "test"},
+    {"id": "REQ-002", "method": "inspection"},
+    {"id": "REQ-003", "method": "analysis"}
+  ],
+  "verification_cases": [
+    {
+      "id": "CASE-001",
+      "requirement_id": "REQ-001",
+      "acceptance": "error <= 0.5",
+      "observation": "error = 0.3",
+      "status": "pass",
+      "anomaly": null
+    },
+    {
+      "id": "CASE-002",
+      "requirement_id": "REQ-002",
+      "acceptance": "label present",
+      "observation": "label present",
+      "status": "pass",
+      "anomaly": null
+    },
+    {
+      "id": "CASE-003",
+      "requirement_id": "REQ-003",
+      "acceptance": "trend confirmed",
+      "observation": "additional review required",
+      "status": "review",
+      "anomaly": "ANOM-001"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "requirements": [
+    {
+      "id": "SYS-001",
+      "text": "The system shall record temperature measurements.",
+      "parent": "NEED-001",
+      "component": "measurement_unit"
+    },
+    {
+      "id": "SUB-001",
+      "text": "The measurement unit shall sample once per minute.",
+      "parent": "SYS-001",
+      "component": "measurement_unit"
+    },
+    {
+      "id": "SUB-002",
+      "text": "The storage unit shall retain accepted measurements.",
+      "parent": "SYS-001",
+      "component": "storage_unit"
+    }
+  ],
+  "verification_cases": [
+    {
+      "id": "VER-001",
+      "requirement_ids": ["SYS-001", "SUB-001"],
+      "outcome": "pass"
+    }
+  ]
+}

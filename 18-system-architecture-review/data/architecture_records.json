@@ -1,0 +1,14 @@
+{
+  "functions": [
+    {"id": "FUN-001", "name": "Collect measurements", "component": "sensor_controller"},
+    {"id": "FUN-002", "name": "Store accepted records", "component": "data_service"},
+    {"id": "FUN-003", "name": "Report system status", "component": null}
+  ],
+  "components": [
+    {"id": "sensor_controller", "resource": "processor_a"},
+    {"id": "data_service", "resource": "processor_b"}
+  ],
+  "interfaces": [
+    {"source": "sensor_controller", "target": "data_service", "type": "measurement_data"}
+  ]
+}
