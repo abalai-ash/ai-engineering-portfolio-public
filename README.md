@@ -199,3 +199,15 @@ missing-test handling without exposing the full private verification workflow.
 
 Project directory:
 [`15-engineering-test-verification`](15-engineering-test-verification)
+
+<!-- project-16-entry -->
+## 16. Simulation Model Validation
+
+A compact synthetic example that compares a numerical damped-motion simulation
+with a reference solution and classifies the result as pass, review, or fail.
+
+The public version demonstrates deterministic simulation, numerical error
+measurement, invalid-input handling, and automated testing.
+
+Project directory:
+[`16-simulation-model-validation`](16-simulation-model-validation)
