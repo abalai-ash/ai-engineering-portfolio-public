@@ -158,31 +158,6 @@ contains a smaller runnable example with the same main behavior.
 See
 [`12-hybrid-knowledge-search/README.md`](12-hybrid-knowledge-search/README.md).
 
-## 17. Systems Traceability
-
-A compact requirements-traceability demonstration for a synthetic monitoring system. It connects stakeholder needs, system requirements, subsystem requirements, verification cases, and recorded outcomes while identifying missing links and incomplete coverage.
-
-Project directory: [`17-systems-traceability`](17-systems-traceability)
-
-## 18. System Architecture Review
-
-A synthetic architecture-review example that maps system functions to logical components and physical resources. It checks component allocations, interfaces, dependencies, and incomplete architecture records.
-
-Project directory: [`18-system-architecture-review`](18-system-architecture-review)
-
-## 19. Verification Planning and Evidence
-
-A compact verification workflow connecting requirements to methods, planned cases, acceptance criteria, observations, anomalies, and closure status. It reports unresolved evidence and incomplete verification work.
-
-Project directory: [`19-verification-planning-evidence`](19-verification-planning-evidence)
-
-## 20. Engineering Baseline Control
-
-A synthetic configuration-control example that compares an approved baseline with a proposed release. It checks changed items, affected records, required approvals, rollback readiness, and release status.
-
-Project directory: [`20-engineering-baseline-control`](20-engineering-baseline-control)
-
-
 <!-- portfolio-owner-notice -->
 ## Portfolio ownership
 
@@ -236,3 +211,27 @@ measurement, invalid-input handling, and automated testing.
 
 Project directory:
 [`16-simulation-model-validation`](16-simulation-model-validation)
+
+## 17. Systems Traceability
+
+A compact requirements-traceability demonstration for a synthetic monitoring system. It connects stakeholder needs, system requirements, subsystem requirements, verification cases, and recorded outcomes while identifying missing links and incomplete coverage.
+
+Project directory: [`17-systems-traceability`](17-systems-traceability)
+
+## 18. System Architecture Review
+
+A synthetic architecture-review example that maps system functions to logical components and physical resources. It checks component allocations, interfaces, dependencies, and incomplete architecture records.
+
+Project directory: [`18-system-architecture-review`](18-system-architecture-review)
+
+## 19. Verification Planning and Evidence
+
+A compact verification workflow connecting requirements to methods, planned cases, acceptance criteria, observations, anomalies, and closure status. It reports unresolved evidence and incomplete verification work.
+
+Project directory: [`19-verification-planning-evidence`](19-verification-planning-evidence)
+
+## 20. Engineering Baseline Control
+
+A synthetic configuration-control example that compares an approved baseline with a proposed release. It checks changed items, affected records, required approvals, rollback readiness, and release status.
+
+Project directory: [`20-engineering-baseline-control`](20-engineering-baseline-control)
