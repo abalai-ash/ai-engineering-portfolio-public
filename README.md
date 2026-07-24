@@ -235,3 +235,16 @@ Project directory: [`19-verification-planning-evidence`](19-verification-plannin
 A synthetic configuration-control example that compares an approved baseline with a proposed release. It checks changed items, affected records, required approvals, rollback readiness, and release status.
 
 Project directory: [`20-engineering-baseline-control`](20-engineering-baseline-control)
+
+<!-- project-21-entry -->
+## 21. Embedded Sensor Fault Management
+
+A compact C++17 demonstration of an embedded-style sensor controller using
+synthetic measurements.
+
+The public version checks nominal values, invalid and non-finite input,
+excessive measurement changes, safe-state entry, blocked processing while safe,
+and explicit recovery with valid data.
+
+Project directory:
+[`21-embedded-sensor-fault-management`](21-embedded-sensor-fault-management)
