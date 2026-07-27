@@ -1,0 +1,138 @@
+{
+  "scenario_count": 5,
+  "workflow_steps": 5,
+  "policy_summary": {
+    "fail_fast": {
+      "completed": 1,
+      "total": 5,
+      "completion_rate": 0.2,
+      "average_attempts": 3.4
+    },
+    "retry_then_resume": {
+      "completed": 4,
+      "total": 5,
+      "completion_rate": 0.8,
+      "average_attempts": 5.6
+    }
+  },
+  "checkpoint_resume": {
+    "initial_completed_steps": [
+      "route_query",
+      "retrieve_notes"
+    ],
+    "resumed_status": "completed",
+    "steps_not_repeated": 2
+  },
+  "results": [
+    {
+      "scenario": "no_failure",
+      "policy": "fail_fast",
+      "status": "completed",
+      "completed_steps": 5,
+      "completion_rate": 1.0,
+      "total_attempts": 5,
+      "recovered_failures": 0,
+      "unrecovered_failures": 0,
+      "failure_category": "none"
+    },
+    {
+      "scenario": "no_failure",
+      "policy": "retry_then_resume",
+      "status": "completed",
+      "completed_steps": 5,
+      "completion_rate": 1.0,
+      "total_attempts": 5,
+      "recovered_failures": 0,
+      "unrecovered_failures": 0,
+      "failure_category": "none"
+    },
+    {
+      "scenario": "early_transient",
+      "policy": "fail_fast",
+      "status": "failed",
+      "completed_steps": 1,
+      "completion_rate": 0.2,
+      "total_attempts": 2,
+      "recovered_failures": 0,
+      "unrecovered_failures": 1,
+      "failure_category": "stopped_on_failure"
+    },
+    {
+      "scenario": "early_transient",
+      "policy": "retry_then_resume",
+      "status": "completed",
+      "completed_steps": 5,
+      "completion_rate": 1.0,
+      "total_attempts": 6,
+      "recovered_failures": 1,
+      "unrecovered_failures": 0,
+      "failure_category": "recovered_transient"
+    },
+    {
+      "scenario": "two_transient_failures",
+      "policy": "fail_fast",
+      "status": "failed",
+      "completed_steps": 1,
+      "completion_rate": 0.2,
+      "total_attempts": 2,
+      "recovered_failures": 0,
+      "unrecovered_failures": 1,
+      "failure_category": "stopped_on_failure"
+    },
+    {
+      "scenario": "two_transient_failures",
+      "policy": "retry_then_resume",
+      "status": "completed",
+      "completed_steps": 5,
+      "completion_rate": 1.0,
+      "total_attempts": 7,
+      "recovered_failures": 2,
+      "unrecovered_failures": 0,
+      "failure_category": "recovered_transient"
+    },
+    {
+      "scenario": "late_transient",
+      "policy": "fail_fast",
+      "status": "failed",
+      "completed_steps": 4,
+      "completion_rate": 0.8,
+      "total_attempts": 5,
+      "recovered_failures": 0,
+      "unrecovered_failures": 1,
+      "failure_category": "stopped_on_failure"
+    },
+    {
+      "scenario": "late_transient",
+      "policy": "retry_then_resume",
+      "status": "completed",
+      "completed_steps": 5,
+      "completion_rate": 1.0,
+      "total_attempts": 6,
+      "recovered_failures": 1,
+      "unrecovered_failures": 0,
+      "failure_category": "recovered_transient"
+    },
+    {
+      "scenario": "retry_exhausted",
+      "policy": "fail_fast",
+      "status": "failed",
+      "completed_steps": 2,
+      "completion_rate": 0.4,
+      "total_attempts": 3,
+      "recovered_failures": 0,
+      "unrecovered_failures": 1,
+      "failure_category": "stopped_on_failure"
+    },
+    {
+      "scenario": "retry_exhausted",
+      "policy": "retry_then_resume",
+      "status": "failed",
+      "completed_steps": 2,
+      "completion_rate": 0.4,
+      "total_attempts": 4,
+      "recovered_failures": 1,
+      "unrecovered_failures": 1,
+      "failure_category": "retry_exhausted"
+    }
+  ]
+}

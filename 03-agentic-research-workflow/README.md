@@ -58,7 +58,7 @@ python eval/evaluate.py
 ## Current result
 
 ```text
-Evaluation complete: 5/5 passed
+Evaluation complete: 4/4 passed
 ```
 
 ## What I am practicing
@@ -200,3 +200,31 @@ The reliability layer does not call external services. Failures are simulated so
 
 ```bash
 python3 03-agentic-research-workflow/src/reliable_workflow.py
+```
+
+### Run the reliability evaluation
+
+```bash
+python3 03-agentic-research-workflow/eval/evaluate_reliability.py
+```
+
+Current reliability evaluation result: **10/10 passed**.
+
+The evaluation compares fail-fast behavior with retry-and-resume behavior, verifies safe stopping after retry exhaustion, and confirms that completed checkpointed steps are not repeated.
+
+## Strategy comparison benchmark
+
+A repeatable benchmark compares the two error-handling policies across five simulated failure scenarios.
+
+- `fail_fast` completed 1 of 5 scenarios.
+- `retry_then_resume` completed 4 of 5 scenarios.
+- The remaining retry-and-resume case stopped after reaching the retry limit.
+- The resume test preserved two completed steps instead of running them again.
+
+Run the benchmark:
+
+```bash
+python3 03-agentic-research-workflow/eval/evaluate_strategy_comparison.py
+```
+
+The test uses local, simulated failures. It does not call an external model or estimate token cost.

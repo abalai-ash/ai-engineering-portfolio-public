@@ -1,2 +1,3 @@
 runtime/checkpoints/
 runtime/logs/
+data/workflow_memory.txt
