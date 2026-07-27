@@ -55,11 +55,9 @@ This is not a production reinforcement learning system. It does not train a neur
 
 ## Future improvements
 
-- Add more scenarios
-- Track negative reward cases
-- Add policy comparison between two agent versions
+- Expand the scenario suite
 - Add a simple training loop
-- Add logging for each decision
+- Add more detailed decision logging
 - Add cloud or container deployment notes
 
 ## Version 2: research-run reliability infrastructure
@@ -94,3 +92,30 @@ Current results:
 This is still a small local research-engineering project. It does not claim to
 provide large-scale distributed RL training, GPU orchestration, or production
 RL infrastructure.
+
+## Policy comparison benchmark
+
+The project compares the current safety-aware policy with a simpler risk-only baseline across eight synthetic scenarios.
+
+The benchmark measures:
+
+- correct decision rate
+- total and average reward
+- unsafe actions
+- missed clarification requests
+- missed medium-risk escalations
+
+Current comparison:
+
+```text
+risk_only_baseline: 4/8 passed, total reward 10
+safety_aware_policy: 8/8 passed, total reward 80
+```
+
+Run the comparison:
+
+```bash
+python eval/evaluate_policy_comparison.py
+```
+
+The comparison is local and deterministic. It uses synthetic requests and a hand-written reward function rather than a learned reward model.
