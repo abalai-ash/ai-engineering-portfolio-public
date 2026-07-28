@@ -35,6 +35,7 @@ whether the source actually supports it.
 ├── src/
 │   └── evaluator.py
 └── README.md
+```
 
 ## Response comparison
 
@@ -53,3 +54,30 @@ Run the comparison evaluation:
 Current result:
 
     Evaluation complete: 3/3 passed
+
+## Adversarial evaluation
+
+A separate benchmark checks six synthetic cases designed to expose common weaknesses in source-grounded answers.
+
+The cases cover:
+
+- supported factual answers
+- fabricated names
+- fabricated dates
+- appropriate missing-evidence responses
+- one-sentence format violations
+- a simple meaning reversal caused by negation
+
+Run the benchmark:
+
+```bash
+python3 08-llm-knowledge-failure-evaluation/eval/evaluate_adversarial.py
+```
+
+Current result:
+
+```text
+Adversarial evaluation: 6/6 cases, 24/24 checks
+```
+
+The benchmark uses synthetic examples and local, rule-based checks. It does not use a trained language model or claim complete semantic understanding.

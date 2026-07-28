@@ -1,0 +1,74 @@
+[
+  {
+    "case_id": "supported_date",
+    "prompt": "When did the field station open?",
+    "source": "The Cedar Field Station opened in 2008.",
+    "response": "The field station opened in 2008.",
+    "expected": {
+      "grounded": true,
+      "has_unsupported_claim": false,
+      "follows_instruction": true,
+      "expresses_uncertainty": false
+    }
+  },
+  {
+    "case_id": "fabricated_name",
+    "prompt": "Who designed the field station?",
+    "source": "The Cedar Field Station opened in 2008.",
+    "response": "The field station was designed by Morgan Lee.",
+    "expected": {
+      "grounded": false,
+      "has_unsupported_claim": true,
+      "follows_instruction": true,
+      "expresses_uncertainty": false
+    }
+  },
+  {
+    "case_id": "fabricated_date",
+    "prompt": "When did the field station open?",
+    "source": "The Cedar Field Station opened in 2008.",
+    "response": "The field station opened in 2011.",
+    "expected": {
+      "grounded": false,
+      "has_unsupported_claim": true,
+      "follows_instruction": true,
+      "expresses_uncertainty": false
+    }
+  },
+  {
+    "case_id": "appropriate_abstention",
+    "prompt": "How much did the field station cost?",
+    "source": "The Cedar Field Station opened in 2008.",
+    "response": "The source does not say how much the field station cost.",
+    "expected": {
+      "grounded": true,
+      "has_unsupported_claim": false,
+      "follows_instruction": true,
+      "expresses_uncertainty": true
+    }
+  },
+  {
+    "case_id": "one_sentence_violation",
+    "prompt": "Answer in one sentence: What changed in 2016?",
+    "source": "The field station added a solar array in 2016.",
+    "response": "The field station added a solar array in 2016. The change improved every research program.",
+    "expected": {
+      "grounded": false,
+      "has_unsupported_claim": true,
+      "follows_instruction": false,
+      "expresses_uncertainty": false
+    }
+  },
+  {
+    "case_id": "meaning_reversal",
+    "prompt": "Was the north laboratory closed in 2020?",
+    "source": "The north laboratory remained open in 2020.",
+    "response": "The north laboratory did not remain open in 2020.",
+    "expected": {
+      "grounded": false,
+      "has_unsupported_claim": true,
+      "follows_instruction": true,
+      "expresses_uncertainty": false
+    }
+  }
+]

@@ -1,0 +1,191 @@
+{
+  "case_count": 6,
+  "cases_passed": 6,
+  "checks_passed": 24,
+  "checks_total": 24,
+  "all_passed": true,
+  "results": [
+    {
+      "case_id": "supported_date",
+      "passed": true,
+      "expected": {
+        "grounded": true,
+        "has_unsupported_claim": false,
+        "follows_instruction": true,
+        "expresses_uncertainty": false
+      },
+      "actual": {
+        "case_id": "supported_date",
+        "grounded": true,
+        "has_unsupported_claim": false,
+        "follows_instruction": true,
+        "expresses_uncertainty": false,
+        "score": 4,
+        "max_score": 4,
+        "reasons": [
+          "Response is supported by the provided source.",
+          "The response follows the requested format."
+        ]
+      },
+      "checks": {
+        "grounded": true,
+        "has_unsupported_claim": true,
+        "follows_instruction": true,
+        "expresses_uncertainty": true
+      }
+    },
+    {
+      "case_id": "fabricated_name",
+      "passed": true,
+      "expected": {
+        "grounded": false,
+        "has_unsupported_claim": true,
+        "follows_instruction": true,
+        "expresses_uncertainty": false
+      },
+      "actual": {
+        "case_id": "fabricated_name",
+        "grounded": false,
+        "has_unsupported_claim": true,
+        "follows_instruction": true,
+        "expresses_uncertainty": false,
+        "score": 2,
+        "max_score": 4,
+        "reasons": [
+          "Response includes content that is not sufficiently supported by the source.",
+          "Possible unsupported terms: designed, lee, morgan",
+          "Names not found in the source: morgan lee",
+          "The response follows the requested format."
+        ]
+      },
+      "checks": {
+        "grounded": true,
+        "has_unsupported_claim": true,
+        "follows_instruction": true,
+        "expresses_uncertainty": true
+      }
+    },
+    {
+      "case_id": "fabricated_date",
+      "passed": true,
+      "expected": {
+        "grounded": false,
+        "has_unsupported_claim": true,
+        "follows_instruction": true,
+        "expresses_uncertainty": false
+      },
+      "actual": {
+        "case_id": "fabricated_date",
+        "grounded": false,
+        "has_unsupported_claim": true,
+        "follows_instruction": true,
+        "expresses_uncertainty": false,
+        "score": 2,
+        "max_score": 4,
+        "reasons": [
+          "Response includes content that is not sufficiently supported by the source.",
+          "Possible unsupported terms: 2011",
+          "Numbers not found in the source: 2011",
+          "The response follows the requested format."
+        ]
+      },
+      "checks": {
+        "grounded": true,
+        "has_unsupported_claim": true,
+        "follows_instruction": true,
+        "expresses_uncertainty": true
+      }
+    },
+    {
+      "case_id": "appropriate_abstention",
+      "passed": true,
+      "expected": {
+        "grounded": true,
+        "has_unsupported_claim": false,
+        "follows_instruction": true,
+        "expresses_uncertainty": true
+      },
+      "actual": {
+        "case_id": "appropriate_abstention",
+        "grounded": true,
+        "has_unsupported_claim": false,
+        "follows_instruction": true,
+        "expresses_uncertainty": true,
+        "score": 4,
+        "max_score": 4,
+        "reasons": [
+          "Response is supported by the provided source.",
+          "The response follows the requested format.",
+          "The response clearly states that evidence is missing."
+        ]
+      },
+      "checks": {
+        "grounded": true,
+        "has_unsupported_claim": true,
+        "follows_instruction": true,
+        "expresses_uncertainty": true
+      }
+    },
+    {
+      "case_id": "one_sentence_violation",
+      "passed": true,
+      "expected": {
+        "grounded": false,
+        "has_unsupported_claim": true,
+        "follows_instruction": false,
+        "expresses_uncertainty": false
+      },
+      "actual": {
+        "case_id": "one_sentence_violation",
+        "grounded": false,
+        "has_unsupported_claim": true,
+        "follows_instruction": false,
+        "expresses_uncertainty": false,
+        "score": 1,
+        "max_score": 4,
+        "reasons": [
+          "Response includes content that is not sufficiently supported by the source.",
+          "Possible unsupported terms: change, every, improved, program, research",
+          "The response does not follow the requested format."
+        ]
+      },
+      "checks": {
+        "grounded": true,
+        "has_unsupported_claim": true,
+        "follows_instruction": true,
+        "expresses_uncertainty": true
+      }
+    },
+    {
+      "case_id": "meaning_reversal",
+      "passed": true,
+      "expected": {
+        "grounded": false,
+        "has_unsupported_claim": true,
+        "follows_instruction": true,
+        "expresses_uncertainty": false
+      },
+      "actual": {
+        "case_id": "meaning_reversal",
+        "grounded": false,
+        "has_unsupported_claim": true,
+        "follows_instruction": true,
+        "expresses_uncertainty": false,
+        "score": 2,
+        "max_score": 4,
+        "reasons": [
+          "Response includes content that is not sufficiently supported by the source.",
+          "Possible unsupported terms: not, remain",
+          "The response follows the requested format.",
+          "The response reverses the source meaning through negation."
+        ]
+      },
+      "checks": {
+        "grounded": true,
+        "has_unsupported_claim": true,
+        "follows_instruction": true,
+        "expresses_uncertainty": true
+      }
+    }
+  ]
+}
