@@ -1,0 +1,26 @@
+[
+  {
+    "function_id": "F-001",
+    "component_id": "request_manager"
+  },
+  {
+    "function_id": "F-002",
+    "component_id": "schedule_service"
+  },
+  {
+    "function_id": "F-003",
+    "component_id": "instrument_controller"
+  },
+  {
+    "function_id": "F-004",
+    "component_id": "acquisition_service"
+  },
+  {
+    "function_id": "F-005",
+    "component_id": "calibration_service"
+  },
+  {
+    "function_id": "F-006",
+    "component_id": "archive_adapter"
+  }
+]

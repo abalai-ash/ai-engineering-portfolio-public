@@ -1,0 +1,92 @@
+[
+  {
+    "id": "CR-014",
+    "title": "tighten comparison threshold",
+    "status": "approved",
+    "rationale": "Reduce measurement-model difference while preserving the structured review configuration.",
+    "affected_items": [
+      "CI-001",
+      "CI-002"
+    ],
+    "dependencies": [
+      "model reference compatibility",
+      "monitoring readiness review"
+    ],
+    "proposed_changes": [
+      {
+        "configuration_item_id": "CI-001",
+        "field": "comparison_threshold_percent",
+        "previous_value": 0.80,
+        "proposed_value": 0.65
+      },
+      {
+        "configuration_item_id": "CI-002",
+        "field": "model_version",
+        "previous_value": "MODEL-2.3",
+        "proposed_value": "MODEL-2.4"
+      },
+      {
+        "configuration_item_id": "CI-002",
+        "field": "valid_from",
+        "previous_value": "2026-06-28",
+        "proposed_value": "2026-07-20"
+      }
+    ],
+    "verification_evidence": [
+      "EV-MODEL-024",
+      "EV-COMPAT-011"
+    ]
+  },
+  {
+    "id": "CR-015",
+    "title": "raise processing quality floor",
+    "status": "approved",
+    "rationale": "Exclude low-confidence records identified during processing review.",
+    "affected_items": [
+      "CI-004"
+    ],
+    "dependencies": [
+      "flagging rule update",
+      "historical comparison"
+    ],
+    "proposed_changes": [
+      {
+        "configuration_item_id": "CI-004",
+        "field": "quality_floor",
+        "previous_value": 0.91,
+        "proposed_value": 0.93
+      },
+      {
+        "configuration_item_id": "CI-004",
+        "field": "flagging_version",
+        "previous_value": "FLAG-5",
+        "proposed_value": "FLAG-6"
+      }
+    ],
+    "verification_evidence": [
+      "EV-QUALITY-018"
+    ]
+  },
+  {
+    "id": "CR-016",
+    "title": "increase monitoring record count",
+    "status": "proposed",
+    "rationale": "Evaluate whether additional records improve statistical stability.",
+    "affected_items": [
+      "CI-003"
+    ],
+    "dependencies": [
+      "storage estimate",
+      "sequence-duration review"
+    ],
+    "proposed_changes": [
+      {
+        "configuration_item_id": "CI-003",
+        "field": "record_count",
+        "previous_value": 24,
+        "proposed_value": 30
+      }
+    ],
+    "verification_evidence": []
+  }
+]

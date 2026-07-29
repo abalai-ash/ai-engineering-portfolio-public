@@ -1,0 +1,22 @@
+[
+  {
+    "id": "operations_node",
+    "type": "compute",
+    "capacity_units": 8
+  },
+  {
+    "id": "instrument_node",
+    "type": "instrument-control",
+    "capacity_units": 4
+  },
+  {
+    "id": "processing_node",
+    "type": "compute",
+    "capacity_units": 12
+  },
+  {
+    "id": "local_storage",
+    "type": "storage",
+    "capacity_units": 20
+  }
+]

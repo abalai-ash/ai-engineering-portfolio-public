@@ -1,0 +1,58 @@
+[
+  {
+    "id": "IF-001",
+    "source": "request_manager",
+    "target": "schedule_service",
+    "data": "validated_request",
+    "required_fields": [
+      "request_id",
+      "monitoring_area",
+      "sampling_interval",
+      "priority"
+    ]
+  },
+  {
+    "id": "IF-002",
+    "source": "schedule_service",
+    "target": "instrument_controller",
+    "data": "monitoring_plan",
+    "required_fields": [
+      "request_id",
+      "collection_window",
+      "configuration_id"
+    ]
+  },
+  {
+    "id": "IF-003",
+    "source": "instrument_controller",
+    "target": "acquisition_service",
+    "data": "instrument_configuration",
+    "required_fields": [
+      "configuration_id",
+      "sensor_mode",
+      "sampling_interval"
+    ]
+  },
+  {
+    "id": "IF-004",
+    "source": "acquisition_service",
+    "target": "calibration_service",
+    "data": "raw_measurements",
+    "required_fields": [
+      "request_id",
+      "measurement_ids",
+      "timestamps"
+    ]
+  },
+  {
+    "id": "IF-005",
+    "source": "calibration_service",
+    "target": "archive_adapter",
+    "data": "validated_measurement_product",
+    "required_fields": [
+      "request_id",
+      "product_id",
+      "validation_version"
+    ]
+  }
+]

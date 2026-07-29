@@ -89,6 +89,32 @@ DOMAIN_ARCHITECTURES = {
             "documented implementation decision",
         ],
     },
+    "environmental_monitoring": {
+        "components": [
+            "measurement record loader",
+            "model estimate loader",
+            "historical record index",
+            "source and provenance tracker",
+            "uncertainty comparison",
+            "data-gap detector",
+            "technical review queue",
+            "versioned analysis output",
+        ],
+        "evaluation_checks": [
+            "source traceability",
+            "measurement-model agreement",
+            "uncertainty reporting",
+            "data-gap detection",
+            "reproducibility",
+            "human-review coverage",
+        ],
+        "deployment_path": [
+            "synthetic comparison cases",
+            "repeatable local analysis",
+            "independent technical review",
+            "documented investigation recommendation",
+        ],
+    },
 }
 
 
@@ -208,6 +234,33 @@ def build_risk_register(report: dict[str, Any]) -> list[dict[str, str]]:
                     "mitigation": (
                         "Repeat runs and record hardware, software, and seed "
                         "information."
+                    ),
+                },
+            ]
+        )
+
+    elif domain == "environmental_monitoring":
+        risks.extend(
+            [
+                {
+                    "risk": "Measurement and model evidence disagree",
+                    "mitigation": (
+                        "Report residuals, uncertainty, and conflicting records "
+                        "before forming a recommendation."
+                    ),
+                },
+                {
+                    "risk": "Incomplete provenance weakens technical review",
+                    "mitigation": (
+                        "Preserve source identifiers, versions, timestamps, and "
+                        "review status with each comparison."
+                    ),
+                },
+                {
+                    "risk": "Data gaps are interpreted as evidence",
+                    "mitigation": (
+                        "Route incomplete cases to additional investigation and "
+                        "human review."
                     ),
                 },
             ]

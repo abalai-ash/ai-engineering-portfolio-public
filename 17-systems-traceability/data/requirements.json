@@ -1,0 +1,56 @@
+[
+  {
+    "id": "SYS-001",
+    "level": "system",
+    "parent": "NEED-001",
+    "text": "The system shall publish an instrument-health state at least once every 5 seconds.",
+    "component": "health_processor",
+    "verification_method": "test",
+    "status": "approved"
+  },
+  {
+    "id": "SYS-002",
+    "level": "system",
+    "parent": "NEED-002",
+    "text": "The system shall flag detector measurements outside configured operating limits.",
+    "component": "measurement_validator",
+    "verification_method": "test",
+    "status": "approved"
+  },
+  {
+    "id": "SYS-003",
+    "level": "system",
+    "parent": "NEED-003",
+    "text": "The system shall retain observation and diagnostic records for at least 30 days.",
+    "component": "record_store",
+    "verification_method": "inspection",
+    "status": "approved"
+  },
+  {
+    "id": "SUB-001",
+    "level": "subsystem",
+    "parent": "SYS-001",
+    "text": "The health processor shall calculate each health state within 4 seconds.",
+    "component": "health_processor",
+    "verification_method": "test",
+    "status": "approved"
+  },
+  {
+    "id": "SUB-002",
+    "level": "subsystem",
+    "parent": "SYS-002",
+    "text": "The measurement validator shall reject nonnumeric detector measurements before processing.",
+    "component": "measurement_validator",
+    "verification_method": "test",
+    "status": "approved"
+  },
+  {
+    "id": "SUB-003",
+    "level": "subsystem",
+    "parent": "SYS-003",
+    "text": "The record store shall preserve timestamps, observation identifiers, health states, and diagnostic flags.",
+    "component": "record_store",
+    "verification_method": "inspection",
+    "status": "approved"
+  }
+]

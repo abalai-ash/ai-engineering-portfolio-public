@@ -1,0 +1,33 @@
+[
+  {
+    "id": "REL-009",
+    "baseline_id": "BL-002",
+    "version": "2.3",
+    "status": "retired",
+    "released_at": "2026-06-29T09:00:00Z",
+    "included_change_requests": [],
+    "manifest_items": [
+      "CI-001@4",
+      "CI-002@7",
+      "CI-003@3",
+      "CI-004@5"
+    ]
+  },
+  {
+    "id": "REL-010",
+    "baseline_id": "BL-003",
+    "version": "2.4",
+    "status": "released",
+    "released_at": "2026-07-21T09:00:00Z",
+    "included_change_requests": [
+      "CR-014",
+      "CR-015"
+    ],
+    "manifest_items": [
+      "CI-001@5",
+      "CI-002@8",
+      "CI-003@3",
+      "CI-004@6"
+    ]
+  }
+]

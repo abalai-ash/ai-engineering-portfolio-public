@@ -1,12 +1,12 @@
 {
-  "passed": 9,
-  "total": 9,
+  "passed": 10,
+  "total": 10,
   "all_passed": true,
   "results": [
     {
       "name": "all requests reach solution planning",
       "passed": true,
-      "details": "3 reports checked"
+      "details": "4 reports checked"
     },
     {
       "name": "restricted enterprise sources are detected",
@@ -35,6 +35,11 @@
     },
     {
       "name": "scientific_workload_benchmark recommendation",
+      "passed": true,
+      "details": "expected=needs_review actual=needs_review"
+    },
+    {
+      "name": "environmental_monitoring_review recommendation",
       "passed": true,
       "details": "expected=needs_review actual=needs_review"
     },

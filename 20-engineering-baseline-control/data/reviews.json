@@ -1,0 +1,61 @@
+[
+  {
+    "id": "REV-021",
+    "change_request_id": "CR-014",
+    "review_type": "technical",
+    "status": "complete",
+    "decision": "recommend approval",
+    "reviewed_items": [
+      "CI-001",
+      "CI-002"
+    ],
+    "findings": []
+  },
+  {
+    "id": "REV-022",
+    "change_request_id": "CR-014",
+    "review_type": "configuration",
+    "status": "complete",
+    "decision": "approve",
+    "reviewed_items": [
+      "CI-001",
+      "CI-002"
+    ],
+    "findings": []
+  },
+  {
+    "id": "REV-023",
+    "change_request_id": "CR-015",
+    "review_type": "technical",
+    "status": "complete",
+    "decision": "recommend approval",
+    "reviewed_items": [
+      "CI-004"
+    ],
+    "findings": []
+  },
+  {
+    "id": "REV-024",
+    "change_request_id": "CR-015",
+    "review_type": "configuration",
+    "status": "complete",
+    "decision": "approve",
+    "reviewed_items": [
+      "CI-004"
+    ],
+    "findings": []
+  },
+  {
+    "id": "REV-025",
+    "change_request_id": "CR-016",
+    "review_type": "technical",
+    "status": "in_progress",
+    "decision": null,
+    "reviewed_items": [
+      "CI-003"
+    ],
+    "findings": [
+      "Storage and duration estimates remain open."
+    ]
+  }
+]

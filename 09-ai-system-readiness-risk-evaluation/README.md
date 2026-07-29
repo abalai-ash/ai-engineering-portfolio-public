@@ -37,8 +37,13 @@ The included examples cover:
 2. a clinical-style summarization helper
 3. an automated financial decision system
 4. a multi-step support agent
+5. an environmental-monitoring review assistant
 
-All examples are fictional and use synthetic configuration data.
+The environmental case compares synthetic sensor readings, model estimates,
+and historical records. It requires source evidence, uncertainty handling,
+human review, monitoring, rollback planning, and clear ownership.
+
+All examples use synthetic configuration data.
 
 ## Run the evaluator
 
@@ -62,7 +67,7 @@ python3 09-ai-system-readiness-risk-evaluation/eval/evaluate.py
 Current result:
 
 ```text
-Evaluation complete: 4/4 passed
+Evaluation complete: 5/5 passed
 ```
 
 ## Project structure
@@ -94,11 +99,11 @@ Evaluation complete: 4/4 passed
 - JSON and Markdown report generation
 - automated behavior evaluation
 
-## Limitations
+## Scope
 
-This is a local portfolio prototype. It is not a production security scanner, compliance system, medical device, clinical review tool, financial decision system, or substitute for qualified human review.
-
-The current scoring rules are hand-written and intentionally simple. A production system would require domain experts, broader testing, policy review, real monitoring, access-control validation, and organization-specific launch standards.
+The current scoring rules are hand-written and intentionally small. The
+project focuses on transparent findings, repeatable behavior, and review
+criteria that can be inspected directly.
 
 ## Version 2: Controlled stress testing
 
@@ -120,9 +125,9 @@ It includes:
 Run Version 2 from the repository root:
 
 ```bash
-python3 09-ai-system-readiness-risk-evaluation/src/readiness_evaluator_v2.py
+python3 09-ai-system-readiness-risk-evaluation/src/stress_test_v2.py
 python3 09-ai-system-readiness-risk-evaluation/eval/evaluate_v2.py
 ```
 
-Version 2 remains a local, synthetic, rule-based portfolio demonstration.
-It is not a production security, compliance, clinical, or financial review system.
+Version 2 uses the same synthetic proposals and adds controlled safeguard
+changes, malformed-input checks, and repeatability tests.

@@ -116,5 +116,45 @@
       "rollback_plan"
     ],
     "status": "ready_for_solution_planning"
+  },
+  {
+    "request_id": "environmental_monitoring_review",
+    "domain": "environmental_monitoring",
+    "goal": "Compare synthetic field measurements, model estimates, and historical records to support technical investigation planning.",
+    "users": [
+      "environmental engineers",
+      "technical reviewers"
+    ],
+    "data_summary": {
+      "source_count": 3,
+      "source_types": {
+        "sensor": 1,
+        "simulation": 1,
+        "structured": 1
+      },
+      "sensitive_sources": []
+    },
+    "success_metrics": [
+      "measurement and model differences are clearly reported",
+      "uncertainty and data gaps are visible",
+      "recommendations remain tied to source records",
+      "technical reviewers can reproduce the comparison"
+    ],
+    "open_questions": [
+      "Which measurements, model estimates, and historical records are authoritative?",
+      "How will uncertainty and conflicting evidence be reported?",
+      "Which source and provenance fields must remain attached to each result?",
+      "What data gap should trigger additional investigation instead of a recommendation?",
+      "Who reviews and approves the final technical interpretation?",
+      "Who owns the system after launch?",
+      "Which metric determines whether the project is successful?",
+      "What failure would require stopping or rolling back the system?",
+      "Which logs and outputs must be retained?",
+      "Which assumptions still need to be validated?"
+    ],
+    "missing_controls": [
+      "rollback_plan"
+    ],
+    "status": "ready_for_solution_planning"
   }
 ]

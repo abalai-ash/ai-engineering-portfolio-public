@@ -1,0 +1,38 @@
+{
+  "case_count": 4,
+  "pass_count": 1,
+  "review_count": 1,
+  "fail_count": 2,
+  "all_expected_checks_passed": true,
+  "results": [
+    {
+      "case_id": "baseline-small-step",
+      "status": "pass",
+      "maximum_error": 3.2996845533705965e-09,
+      "sample_count": 801,
+      "reason": "Compared numerical output with the reference solution."
+    },
+    {
+      "case_id": "coarse-step-review",
+      "status": "review",
+      "maximum_error": 0.0223179145724098,
+      "sample_count": 17,
+      "reason": "Compared numerical output with the reference solution."
+    },
+    {
+      "case_id": "unstable-step-fail",
+      "status": "fail",
+      "maximum_error": 0.5316585690097936,
+      "sample_count": 13,
+      "reason": "Compared numerical output with the reference solution."
+    },
+    {
+      "case_id": "invalid-time-step",
+      "status": "fail",
+      "maximum_error": null,
+      "sample_count": 0,
+      "reason": "time_step must be positive."
+    }
+  ],
+  "scope": "Synthetic damped-oscillator validation workflow."
+}

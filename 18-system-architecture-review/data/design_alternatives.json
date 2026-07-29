@@ -1,0 +1,32 @@
+[
+  {
+    "id": "ALT-001",
+    "name": "central processing",
+    "scores": {
+      "integration": 5,
+      "maintainability": 4,
+      "resilience": 2,
+      "resource_efficiency": 4
+    }
+  },
+  {
+    "id": "ALT-002",
+    "name": "separated acquisition and processing",
+    "scores": {
+      "integration": 4,
+      "maintainability": 4,
+      "resilience": 4,
+      "resource_efficiency": 3
+    }
+  },
+  {
+    "id": "ALT-003",
+    "name": "distributed services",
+    "scores": {
+      "integration": 3,
+      "maintainability": 3,
+      "resilience": 5,
+      "resource_efficiency": 2
+    }
+  }
+]

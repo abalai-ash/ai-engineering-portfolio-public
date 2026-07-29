@@ -1,0 +1,11 @@
+[
+  {
+    "id": "CR-001",
+    "title": "Shorter health-reporting interval",
+    "description": "Reduce the maximum reporting interval from 5 seconds to 3 seconds.",
+    "changed_requirements": [
+      "SYS-001"
+    ],
+    "reason": "Support faster recognition of changing instrument conditions."
+  }
+]

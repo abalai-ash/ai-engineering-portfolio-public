@@ -48,6 +48,6 @@ Controlled changes are applied to synthetic proposals to show how specific safeg
 - grounding: 1
 - ownership: 1
 
-## Limitations
+## Scope
 
-These are local rule-based stress tests using synthetic configuration data. They are not production security, compliance, medical, or financial evaluations.
+The stress tests use synthetic configuration data and repeatable, rule-based comparisons.

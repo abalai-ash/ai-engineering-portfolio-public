@@ -1,0 +1,22 @@
+[
+  {
+    "requirement_id": "REQ-001",
+    "requested_status": "closed"
+  },
+  {
+    "requirement_id": "REQ-002",
+    "requested_status": "closed"
+  },
+  {
+    "requirement_id": "REQ-003",
+    "requested_status": "closed"
+  },
+  {
+    "requirement_id": "REQ-004",
+    "requested_status": "closed"
+  },
+  {
+    "requirement_id": "REQ-005",
+    "requested_status": "closed"
+  }
+]

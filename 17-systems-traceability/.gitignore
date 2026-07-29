@@ -1,4 +1,7 @@
 __pycache__/
 *.pyc
 .DS_Store
-reports/
+reports/*.db
+reports/*.csv
+reports/*.json
+reports/*.md

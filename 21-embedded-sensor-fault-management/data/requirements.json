@@ -1,0 +1,75 @@
+{
+  "system": "host-simulated embedded sensor controller",
+  "requirements": [
+    {
+      "requirement_id": "REQ-001",
+      "title": "Nominal measurement acceptance",
+      "statement": "The controller shall accept a sensor measurement when its value is within the configured operating range and its timestamp is current.",
+      "verification_method": "test",
+      "acceptance_criteria": "The measurement is marked valid and the controller remains in the monitoring state."
+    },
+    {
+      "requirement_id": "REQ-002",
+      "title": "Out-of-range detection",
+      "statement": "The controller shall identify a measurement that falls outside the configured operating range.",
+      "verification_method": "test",
+      "acceptance_criteria": "A range fault is recorded and the invalid measurement is not used as a valid controller input."
+    },
+    {
+      "requirement_id": "REQ-003",
+      "title": "Rate-of-change detection",
+      "statement": "The controller shall identify a measurement whose change from the previous valid measurement exceeds the configured rate limit.",
+      "verification_method": "test",
+      "acceptance_criteria": "A rate fault is recorded and the measurement is classified as invalid."
+    },
+    {
+      "requirement_id": "REQ-004",
+      "title": "Stale-data detection",
+      "statement": "The controller shall identify a measurement whose age exceeds the configured stale-data limit.",
+      "verification_method": "test",
+      "acceptance_criteria": "A stale-data fault is recorded and the controller does not treat the measurement as current."
+    },
+    {
+      "requirement_id": "REQ-005",
+      "title": "Missing-update detection",
+      "statement": "The controller shall detect when no sensor update is received within the configured watchdog interval.",
+      "verification_method": "test",
+      "acceptance_criteria": "A watchdog fault is recorded after the allowed interval is exceeded."
+    },
+    {
+      "requirement_id": "REQ-006",
+      "title": "Safe-state transition",
+      "statement": "The controller shall enter the safe state when a critical fault is detected.",
+      "verification_method": "test",
+      "acceptance_criteria": "The controller state changes to safe and the triggering fault remains available for review."
+    },
+    {
+      "requirement_id": "REQ-007",
+      "title": "Fault latching",
+      "statement": "The controller shall retain a critical fault until an explicit reset is requested after valid recovery conditions are met.",
+      "verification_method": "test",
+      "acceptance_criteria": "The fault remains active across later processing cycles until a permitted reset occurs."
+    },
+    {
+      "requirement_id": "REQ-008",
+      "title": "Controlled recovery",
+      "statement": "The controller shall leave the safe state only after an explicit reset and receipt of a valid current measurement.",
+      "verification_method": "test",
+      "acceptance_criteria": "A reset without valid recovery evidence is rejected; a reset with valid evidence returns the controller to monitoring."
+    },
+    {
+      "requirement_id": "REQ-009",
+      "title": "Deterministic behavior",
+      "statement": "The controller shall produce the same states and fault records when given the same ordered input sequence and configuration.",
+      "verification_method": "test",
+      "acceptance_criteria": "Repeated executions produce identical controller results."
+    },
+    {
+      "requirement_id": "REQ-010",
+      "title": "Traceable output",
+      "statement": "The controller evaluation shall connect each verification case to a requirement and recorded outcome.",
+      "verification_method": "inspection",
+      "acceptance_criteria": "Every requirement has at least one linked verification case and a documented result."
+    }
+  ]
+}

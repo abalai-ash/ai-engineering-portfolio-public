@@ -1,0 +1,27 @@
+[
+  {
+    "id": "REQ-001",
+    "text": "The monitoring workflow shall calculate measurement-model difference within 0.8 percent.",
+    "verification_method": "analysis"
+  },
+  {
+    "id": "REQ-002",
+    "text": "The monitoring record set shall contain no missing measurement identifiers.",
+    "verification_method": "test"
+  },
+  {
+    "id": "REQ-003",
+    "text": "The validation record shall preserve the source version, timestamp, and review configuration.",
+    "verification_method": "inspection"
+  },
+  {
+    "id": "REQ-004",
+    "text": "The review-readiness display shall identify whether monitoring evidence is current.",
+    "verification_method": "demonstration"
+  },
+  {
+    "id": "REQ-005",
+    "text": "The workflow shall prevent closure while a critical monitoring anomaly remains unresolved.",
+    "verification_method": "test"
+  }
+]

@@ -170,5 +170,29 @@
         "points": 1
       }
     ]
+  },
+  {
+    "id": "environmental_monitoring_review",
+    "name": "Environmental Monitoring Review Assistant",
+    "domain": "environmental_monitoring",
+    "risk_score": 2,
+    "recommendation": "needs_review",
+    "finding_count": 2,
+    "findings": [
+      {
+        "category": "performance",
+        "severity": "low",
+        "message": "No latency target is defined.",
+        "recommended_action": "Set and measure an acceptable response-time target.",
+        "points": 1
+      },
+      {
+        "category": "evidence",
+        "severity": "low",
+        "message": "Evidence is usable but still limited.",
+        "recommended_action": "Expand evaluation coverage and document remaining gaps.",
+        "points": 1
+      }
+    ]
   }
 ]

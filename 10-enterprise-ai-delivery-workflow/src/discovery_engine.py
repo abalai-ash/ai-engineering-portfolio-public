@@ -31,6 +31,13 @@ DOMAIN_QUESTIONS = {
         "How will uncertainty and numerical error be reported?",
         "What evidence is required before selecting a method?",
     ],
+    "environmental_monitoring": [
+        "Which measurements, model estimates, and historical records are authoritative?",
+        "How will uncertainty and conflicting evidence be reported?",
+        "Which source and provenance fields must remain attached to each result?",
+        "What data gap should trigger additional investigation instead of a recommendation?",
+        "Who reviews and approves the final technical interpretation?",
+    ],
 }
 
 

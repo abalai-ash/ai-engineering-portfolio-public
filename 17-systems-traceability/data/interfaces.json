@@ -1,0 +1,39 @@
+[
+  {
+    "id": "IF-001",
+    "source": "measurement_adapter",
+    "target": "measurement_validator",
+    "data": "raw_measurement",
+    "required_fields": [
+      "timestamp",
+      "observation_id",
+      "channel",
+      "value"
+    ]
+  },
+  {
+    "id": "IF-002",
+    "source": "measurement_validator",
+    "target": "health_processor",
+    "data": "validated_measurement",
+    "required_fields": [
+      "timestamp",
+      "observation_id",
+      "channel",
+      "value",
+      "range_state"
+    ]
+  },
+  {
+    "id": "IF-003",
+    "source": "health_processor",
+    "target": "record_store",
+    "data": "instrument_health_record",
+    "required_fields": [
+      "timestamp",
+      "observation_id",
+      "health_state",
+      "diagnostic_flags"
+    ]
+  }
+]

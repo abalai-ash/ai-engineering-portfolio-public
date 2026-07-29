@@ -1,0 +1,10 @@
+[
+  {
+    "id": "RT-001",
+    "anomaly_id": "ANOM-001",
+    "plan_id": "VP-005",
+    "status": "pass",
+    "evidence_id": "EV-005",
+    "notes": "Closure remained blocked until the critical anomaly was marked resolved."
+  }
+]

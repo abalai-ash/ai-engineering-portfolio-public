@@ -396,11 +396,10 @@ def main() -> int:
     lines.extend(
         [
             "",
-            "## Limitations",
+            "## Scope",
             "",
-            "These are local rule-based stress tests using synthetic "
-            "configuration data. They are not production security, "
-            "compliance, medical, or financial evaluations.",
+            "The stress tests use synthetic configuration data and "
+            "repeatable, rule-based comparisons.",
             "",
         ]
     )

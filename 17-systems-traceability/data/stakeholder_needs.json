@@ -1,0 +1,20 @@
+[
+  {
+    "id": "NEED-001",
+    "text": "Observers need timely instrument-health information during data collection.",
+    "source": "observation operations",
+    "priority": "high"
+  },
+  {
+    "id": "NEED-002",
+    "text": "Invalid detector measurements must be identified before they affect recorded data.",
+    "source": "data quality",
+    "priority": "high"
+  },
+  {
+    "id": "NEED-003",
+    "text": "Observation and diagnostic records must support later technical review.",
+    "source": "instrument engineering",
+    "priority": "medium"
+  }
+]

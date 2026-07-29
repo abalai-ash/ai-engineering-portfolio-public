@@ -1,0 +1,71 @@
+[
+  {
+    "id": "F-001",
+    "name": "validate monitoring request",
+    "parent": null,
+    "required_inputs": [
+      "monitoring_request"
+    ],
+    "produced_outputs": [
+      "validated_request"
+    ]
+  },
+  {
+    "id": "F-002",
+    "name": "create monitoring plan",
+    "parent": null,
+    "required_inputs": [
+      "validated_request",
+      "condition_forecast"
+    ],
+    "produced_outputs": [
+      "monitoring_plan"
+    ]
+  },
+  {
+    "id": "F-003",
+    "name": "configure instrument",
+    "parent": null,
+    "required_inputs": [
+      "monitoring_plan"
+    ],
+    "produced_outputs": [
+      "instrument_configuration"
+    ]
+  },
+  {
+    "id": "F-004",
+    "name": "collect monitoring measurements",
+    "parent": null,
+    "required_inputs": [
+      "instrument_configuration",
+      "monitoring_plan"
+    ],
+    "produced_outputs": [
+      "raw_measurements"
+    ]
+  },
+  {
+    "id": "F-005",
+    "name": "apply calibration",
+    "parent": null,
+    "required_inputs": [
+      "raw_measurements",
+      "calibration_reference"
+    ],
+    "produced_outputs": [
+      "validated_measurement_product"
+    ]
+  },
+  {
+    "id": "F-006",
+    "name": "transfer monitoring product",
+    "parent": null,
+    "required_inputs": [
+      "validated_measurement_product"
+    ],
+    "produced_outputs": [
+      "repository_receipt"
+    ]
+  }
+]

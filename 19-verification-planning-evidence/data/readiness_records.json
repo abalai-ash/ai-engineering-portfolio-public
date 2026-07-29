@@ -1,0 +1,37 @@
+[
+  {
+    "plan_id": "VP-001",
+    "condition_results": {
+      "monitoring dataset available": true,
+      "review configuration recorded": true,
+      "analysis script version recorded": true
+    }
+  },
+  {
+    "plan_id": "VP-002",
+    "condition_results": {
+      "monitoring records available": true,
+      "review configuration approved": true
+    }
+  },
+  {
+    "plan_id": "VP-003",
+    "condition_results": {
+      "validation record generated": true
+    }
+  },
+  {
+    "plan_id": "VP-004",
+    "condition_results": {
+      "current monitoring evidence available": true,
+      "expired monitoring evidence available": true
+    }
+  },
+  {
+    "plan_id": "VP-005",
+    "condition_results": {
+      "critical anomaly record available": true,
+      "closure workflow available": true
+    }
+  }
+]

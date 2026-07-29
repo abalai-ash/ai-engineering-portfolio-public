@@ -27,6 +27,7 @@ EXPECTED = {
     "clinical_summary_incomplete": "block",
     "financial_risk_high": "block",
     "agent_workflow_review": "needs_review",
+    "environmental_monitoring_review": "needs_review",
 }
 
 

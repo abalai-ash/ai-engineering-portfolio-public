@@ -54,6 +54,16 @@ No launch-blocking gaps were found by the current checks.
 - **low / performance**: No latency target is defined. Action: Set and measure an acceptable response-time target.
 - **low / evidence**: Evidence is usable but still limited. Action: Expand evaluation coverage and document remaining gaps.
 
-## Limitations
+## Environmental Monitoring Review Assistant
 
-This is a local portfolio prototype. It is not a production security, compliance, clinical, or financial review system.
+- Domain: `environmental_monitoring`
+- Recommendation: **needs_review**
+- Risk score: **2**
+- Findings: **2**
+
+- **low / performance**: No latency target is defined. Action: Set and measure an acceptable response-time target.
+- **low / evidence**: Evidence is usable but still limited. Action: Expand evaluation coverage and document remaining gaps.
+
+## Scope
+
+The report uses synthetic proposals and transparent, rule-based readiness checks.

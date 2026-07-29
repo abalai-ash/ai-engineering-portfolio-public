@@ -84,6 +84,25 @@ Current evaluation result:
 Passed 4/4 checks.
 ```
 
-## What this project does not claim
+## Scope
 
-This is not a production search engine, recommendation engine, or optimized numerical library. It does not use SciPy, GPU acceleration, distributed computation, or a large dataset. It is a small educational engineering demo showing the basic structure of sparse matrix computation and iterative ranking.
+The project focuses on coordinate-format sparse storage, matrix-vector multiplication, and small iterative numerical examples that can be checked directly.
+
+## Synthetic subsurface inverse problem
+
+The project also includes a small scientific inverse problem. A sparse
+sensitivity matrix connects five synthetic measurements to four subsurface
+cells. The solver estimates the cell values, compares its prediction with the
+measurements, and reports the remaining error.
+
+Run it with:
+
+    python src/synthetic_subsurface_inverse.py
+    python eval/evaluate_subsurface_inverse.py
+
+This part of the project covers sparse matrix-vector multiplication, a
+transpose operation, regularization, iterative updates, residual checking, and
+repeatable evaluation.
+
+The matrix and solver are intentionally small so the numerical steps and
+evaluation results are easy to inspect.

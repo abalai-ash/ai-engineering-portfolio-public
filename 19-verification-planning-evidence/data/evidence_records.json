@@ -1,0 +1,54 @@
+[
+  {
+    "id": "EV-001",
+    "plan_id": "VP-001",
+    "dataset_id": "SYN-MON-014",
+    "script_version": "2.1",
+    "metric_value": 0.62,
+    "reviewer": "technical review",
+    "recorded_at": "2026-07-18T14:00:00Z"
+  },
+  {
+    "id": "EV-002",
+    "plan_id": "VP-002",
+    "run_id": "SYN-REC-008",
+    "configuration_id": "CFG-REV-03",
+    "metric_value": 0,
+    "reviewer": "test review",
+    "recorded_at": "2026-07-18T15:00:00Z"
+  },
+  {
+    "id": "EV-003",
+    "plan_id": "VP-003",
+    "record_id": "VAL-REC-021",
+    "inspected_fields": [
+      "source_version",
+      "timestamp",
+      "review_configuration"
+    ],
+    "metric_value": 3,
+    "reviewer": "record review",
+    "recorded_at": "2026-07-18T16:00:00Z"
+  },
+  {
+    "id": "EV-004",
+    "plan_id": "VP-004",
+    "demonstration_id": "DEMO-006",
+    "observed_states": [
+      "current",
+      "expired"
+    ],
+    "metric_value": 2,
+    "reviewer": "demonstration review",
+    "recorded_at": "2026-07-18T17:00:00Z"
+  },
+  {
+    "id": "EV-005",
+    "plan_id": "VP-005",
+    "run_id": "SYN-CLOSE-004",
+    "anomaly_id": "ANOM-001",
+    "metric_value": 1,
+    "reviewer": "test review",
+    "recorded_at": "2026-07-19T11:00:00Z"
+  }
+]

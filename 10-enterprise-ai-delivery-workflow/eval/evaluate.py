@@ -93,6 +93,7 @@ def main() -> None:
         "enterprise_knowledge_assistant": "needs_review",
         "robot_localization_support": "pilot_ready",
         "scientific_workload_benchmark": "needs_review",
+        "environmental_monitoring_review": "needs_review",
     }
 
     for request_id, expected in expected_recommendations.items():
@@ -168,9 +169,9 @@ def main() -> None:
             "",
             (
                 "This evaluation uses synthetic requests and local, "
-                "rule-based planning logic. It does not represent a "
-                "production deployment, customer engagement, robotics "
-                "system, or quantum hardware benchmark."
+                "rule-based planning logic to test discovery coverage, "
+                "risk decisions, recommendation behavior, invalid-input "
+                "handling, and deterministic output."
             ),
             "",
         ]

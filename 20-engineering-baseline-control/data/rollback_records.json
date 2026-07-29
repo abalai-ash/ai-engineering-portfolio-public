@@ -1,0 +1,19 @@
+[
+  {
+    "release_id": "REL-010",
+    "target_release_id": "REL-009",
+    "status": "ready",
+    "required_artifacts": [
+      "REL-009 manifest",
+      "BL-002 baseline",
+      "configuration backup",
+      "rollback verification checklist"
+    ],
+    "available_artifacts": [
+      "REL-009 manifest",
+      "BL-002 baseline",
+      "configuration backup",
+      "rollback verification checklist"
+    ]
+  }
+]

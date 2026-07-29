@@ -1,0 +1,48 @@
+{
+  "id": "BL-002",
+  "version": "2.3",
+  "status": "superseded",
+  "approved_at": "2026-06-28T16:00:00Z",
+  "items": [
+    {
+      "configuration_item_id": "CI-001",
+      "revision": "4",
+      "values": {
+        "review_mode": "structured",
+        "record_format": "tabular",
+        "comparison_threshold_percent": 0.80
+      }
+    },
+    {
+      "configuration_item_id": "CI-002",
+      "revision": "7",
+      "values": {
+        "model_version": "MODEL-2.3",
+        "valid_from": "2026-06-28",
+        "review_profile": "structured_tabular"
+      }
+    },
+    {
+      "configuration_item_id": "CI-003",
+      "revision": "3",
+      "values": {
+        "sampling_interval_minutes": 18,
+        "record_count": 24,
+        "sequence_order": [
+          "ingest",
+          "compare",
+          "review"
+        ]
+      }
+    },
+    {
+      "configuration_item_id": "CI-004",
+      "revision": "5",
+      "values": {
+        "quality_floor": 0.91,
+        "uncertainty_limit": 0.12,
+        "flagging_version": "FLAG-5"
+      }
+    }
+  ]
+}

@@ -70,5 +70,23 @@
     "has_latency_target": false,
     "has_owner": true,
     "evidence_quality": "medium"
+  },
+  {
+    "id": "environmental_monitoring_review",
+    "name": "Environmental Monitoring Review Assistant",
+    "domain": "environmental_monitoring",
+    "description": "A decision-support tool that compares synthetic sensor readings, model estimates, and historical records for technical review.",
+    "uses_sensitive_data": false,
+    "requires_human_review": true,
+    "has_source_citations": true,
+    "has_abstention": true,
+    "has_monitoring": true,
+    "has_rollback_plan": true,
+    "has_access_controls": true,
+    "logs_sensitive_content": false,
+    "has_prompt_injection_checks": true,
+    "has_latency_target": false,
+    "has_owner": true,
+    "evidence_quality": "medium"
   }
 ]

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "SYS-001",
+    "text": "The system shall publish an instrument-health state at least once every 8 seconds.",
+    "status": "approved"
+  },
+  {
+    "id": "SYS-002",
+    "text": "The system shall flag detector measurements outside configured operating limits.",
+    "status": "approved"
+  },
+  {
+    "id": "SYS-003",
+    "text": "The system shall retain observation and diagnostic records for at least 30 days.",
+    "status": "approved"
+  }
+]

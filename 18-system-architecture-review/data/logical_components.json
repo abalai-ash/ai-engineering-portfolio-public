@@ -1,0 +1,26 @@
+[
+  {
+    "id": "request_manager",
+    "responsibility": "Validate and track monitoring requests"
+  },
+  {
+    "id": "schedule_service",
+    "responsibility": "Create monitoring plans using requests and conditions"
+  },
+  {
+    "id": "instrument_controller",
+    "responsibility": "Configure the synthetic sensor and collection state"
+  },
+  {
+    "id": "acquisition_service",
+    "responsibility": "Collect environmental measurement records"
+  },
+  {
+    "id": "calibration_service",
+    "responsibility": "Apply calibration and validation references"
+  },
+  {
+    "id": "archive_adapter",
+    "responsibility": "Transfer validated products to an evidence repository"
+  }
+]

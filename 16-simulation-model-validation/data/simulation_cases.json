@@ -1,0 +1,54 @@
+{
+  "model": "damped oscillator",
+  "equation": "x'' + 2*zeta*omega*x' + omega^2*x = 0",
+  "cases": [
+    {
+      "case_id": "baseline-small-step",
+      "omega": 2.0,
+      "zeta": 0.15,
+      "initial_position": 1.0,
+      "initial_velocity": 0.0,
+      "duration": 8.0,
+      "time_step": 0.01,
+      "pass_tolerance": 0.01,
+      "review_tolerance": 0.03,
+      "expected_status": "pass"
+    },
+    {
+      "case_id": "coarse-step-review",
+      "omega": 2.0,
+      "zeta": 0.15,
+      "initial_position": 1.0,
+      "initial_velocity": 0.0,
+      "duration": 8.0,
+      "time_step": 0.5,
+      "pass_tolerance": 0.01,
+      "review_tolerance": 0.08,
+      "expected_status": "review"
+    },
+    {
+      "case_id": "unstable-step-fail",
+      "omega": 5.0,
+      "zeta": 0.05,
+      "initial_position": 1.0,
+      "initial_velocity": 0.0,
+      "duration": 6.0,
+      "time_step": 0.5,
+      "pass_tolerance": 0.02,
+      "review_tolerance": 0.1,
+      "expected_status": "fail"
+    },
+    {
+      "case_id": "invalid-time-step",
+      "omega": 2.0,
+      "zeta": 0.15,
+      "initial_position": 1.0,
+      "initial_velocity": 0.0,
+      "duration": 8.0,
+      "time_step": 0.0,
+      "pass_tolerance": 0.01,
+      "review_tolerance": 0.03,
+      "expected_status": "fail"
+    }
+  ]
+}

@@ -161,14 +161,13 @@ def build_report(plans: list[dict[str, Any]]) -> str:
 
     lines.extend(
         [
-            "## Limitations",
+            "## Scope",
             "",
             (
-                "This is a local portfolio demonstration using synthetic "
-                "requests and transparent rule-based logic. It is not a "
-                "production deployment, real customer engagement, operating "
-                "robotics system, clinical system, financial system, or "
-                "quantum hardware experiment."
+                "The report uses synthetic requests and transparent "
+                "rule-based planning logic to demonstrate technical "
+                "discovery, architecture decisions, risk review, "
+                "evaluation planning, and stakeholder communication."
             ),
             "",
         ]

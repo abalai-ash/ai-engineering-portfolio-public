@@ -1,0 +1,40 @@
+[
+  {
+    "id": "TEST-001",
+    "requirement_ids": [
+      "SYS-001",
+      "SUB-001"
+    ],
+    "method": "test",
+    "description": "Measure processing and reporting time for a sequence of valid measurements.",
+    "success_criteria": "Every health calculation completes within 4 seconds and a state is published within 5 seconds."
+  },
+  {
+    "id": "TEST-002",
+    "requirement_ids": [
+      "SYS-002"
+    ],
+    "method": "test",
+    "description": "Submit measurements below, within, and above configured operating limits.",
+    "success_criteria": "Every out-of-range measurement is flagged and every in-range measurement remains unflagged."
+  },
+  {
+    "id": "TEST-003",
+    "requirement_ids": [
+      "SUB-002"
+    ],
+    "method": "test",
+    "description": "Submit missing and nonnumeric detector measurements.",
+    "success_criteria": "Invalid measurements are rejected before health-state calculation."
+  },
+  {
+    "id": "INSP-001",
+    "requirement_ids": [
+      "SYS-003",
+      "SUB-003"
+    ],
+    "method": "inspection",
+    "description": "Inspect stored records and retention configuration.",
+    "success_criteria": "Required fields are present and the configured retention period is at least 30 days."
+  }
+]

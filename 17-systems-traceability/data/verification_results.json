@@ -1,0 +1,22 @@
+[
+  {
+    "case_id": "TEST-001",
+    "status": "pass",
+    "evidence": "Maximum observed processing time was 3.4 seconds."
+  },
+  {
+    "case_id": "TEST-002",
+    "status": "pass",
+    "evidence": "All boundary and out-of-range samples produced the expected state."
+  },
+  {
+    "case_id": "TEST-003",
+    "status": "review",
+    "evidence": "Invalid values were rejected, but one diagnostic message omitted the detector channel."
+  },
+  {
+    "case_id": "INSP-001",
+    "status": "pass",
+    "evidence": "Required record fields and 30-day retention configuration were present."
+  }
+]

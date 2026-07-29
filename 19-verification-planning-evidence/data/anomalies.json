@@ -1,0 +1,18 @@
+[
+  {
+    "id": "ANOM-001",
+    "plan_id": "VP-005",
+    "severity": "critical",
+    "status": "resolved",
+    "description": "An early workflow revision allowed a closure request to proceed before anomaly review completed.",
+    "corrective_action_id": "CA-001"
+  },
+  {
+    "id": "ANOM-002",
+    "plan_id": "VP-002",
+    "severity": "minor",
+    "status": "open",
+    "description": "One diagnostic message used an abbreviated review configuration label.",
+    "corrective_action_id": "CA-002"
+  }
+]

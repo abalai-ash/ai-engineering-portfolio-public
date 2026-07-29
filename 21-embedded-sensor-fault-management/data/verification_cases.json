@@ -1,0 +1,53 @@
+{
+  "verification_cases": [
+    {
+      "test_id": "TC-001",
+      "requirement_ids": ["REQ-001", "REQ-009"],
+      "description": "Accept a valid initial measurement and enter monitoring.",
+      "expected_result": "Measurement accepted and controller state becomes monitoring.",
+      "status": "pass"
+    },
+    {
+      "test_id": "TC-002",
+      "requirement_ids": ["REQ-002", "REQ-006", "REQ-007"],
+      "description": "Reject an out-of-range measurement.",
+      "expected_result": "Range fault recorded and safe-state behavior available.",
+      "status": "pass"
+    },
+    {
+      "test_id": "TC-003",
+      "requirement_ids": ["REQ-003", "REQ-006", "REQ-007"],
+      "description": "Reject excessive measurement change.",
+      "expected_result": "Rate-of-change fault recorded and controller enters safe state.",
+      "status": "pass"
+    },
+    {
+      "test_id": "TC-004",
+      "requirement_ids": ["REQ-004"],
+      "description": "Reject stale sensor data.",
+      "expected_result": "Stale-data fault returned.",
+      "status": "pass"
+    },
+    {
+      "test_id": "TC-005",
+      "requirement_ids": ["REQ-005", "REQ-006", "REQ-007"],
+      "description": "Detect a missing update after the watchdog limit.",
+      "expected_result": "Watchdog fault recorded and controller enters safe state.",
+      "status": "pass"
+    },
+    {
+      "test_id": "TC-006",
+      "requirement_ids": ["REQ-008"],
+      "description": "Recover only after an explicit request with valid data.",
+      "expected_result": "Active faults clear and controller returns to monitoring.",
+      "status": "pass"
+    },
+    {
+      "test_id": "TC-007",
+      "requirement_ids": ["REQ-009", "REQ-010"],
+      "description": "Repeat the deterministic controller test executable.",
+      "expected_result": "The same ordered test outcomes are produced.",
+      "status": "pass"
+    }
+  ]
+}

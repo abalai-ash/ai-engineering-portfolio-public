@@ -1,0 +1,21 @@
+{
+  "system": "observatory_instrument_monitor",
+  "components": [
+    {
+      "id": "measurement_adapter",
+      "responsibility": "Accept synthetic detector and environmental measurements"
+    },
+    {
+      "id": "measurement_validator",
+      "responsibility": "Check measurement type, range, and completeness"
+    },
+    {
+      "id": "health_processor",
+      "responsibility": "Calculate instrument-health states"
+    },
+    {
+      "id": "record_store",
+      "responsibility": "Retain observation and diagnostic records"
+    }
+  ]
+}

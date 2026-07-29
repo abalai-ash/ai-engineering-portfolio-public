@@ -1,0 +1,6 @@
+{
+  "integration": 0.3,
+  "maintainability": 0.25,
+  "resilience": 0.3,
+  "resource_efficiency": 0.15
+}

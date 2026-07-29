@@ -1,0 +1,117 @@
+[
+  {
+    "id": "VP-001",
+    "requirement_ids": [
+      "REQ-001"
+    ],
+    "objective": "Assess measurement-model agreement.",
+    "method": "analysis",
+    "entry_conditions": [
+      "monitoring dataset available",
+      "review configuration recorded",
+      "analysis script version recorded"
+    ],
+    "acceptance_criteria": {
+      "metric": "maximum_measurement_model_difference_percent",
+      "operator": "<=",
+      "threshold": 0.8
+    },
+    "required_evidence_fields": [
+      "dataset_id",
+      "script_version",
+      "metric_value",
+      "reviewer"
+    ]
+  },
+  {
+    "id": "VP-002",
+    "requirement_ids": [
+      "REQ-002"
+    ],
+    "objective": "Verify monitoring-record completeness.",
+    "method": "test",
+    "entry_conditions": [
+      "monitoring records available",
+      "review configuration approved"
+    ],
+    "acceptance_criteria": {
+      "metric": "missing_measurement_id_count",
+      "operator": "==",
+      "threshold": 0
+    },
+    "required_evidence_fields": [
+      "run_id",
+      "configuration_id",
+      "metric_value",
+      "reviewer"
+    ]
+  },
+  {
+    "id": "VP-003",
+    "requirement_ids": [
+      "REQ-003"
+    ],
+    "objective": "Inspect validation-record contents.",
+    "method": "inspection",
+    "entry_conditions": [
+      "validation record generated"
+    ],
+    "acceptance_criteria": {
+      "metric": "required_field_count",
+      "operator": ">=",
+      "threshold": 3
+    },
+    "required_evidence_fields": [
+      "record_id",
+      "inspected_fields",
+      "metric_value",
+      "reviewer"
+    ]
+  },
+  {
+    "id": "VP-004",
+    "requirement_ids": [
+      "REQ-004"
+    ],
+    "objective": "Demonstrate readiness-state reporting.",
+    "method": "demonstration",
+    "entry_conditions": [
+      "current monitoring evidence available",
+      "expired monitoring evidence available"
+    ],
+    "acceptance_criteria": {
+      "metric": "correct_state_count",
+      "operator": "==",
+      "threshold": 2
+    },
+    "required_evidence_fields": [
+      "demonstration_id",
+      "observed_states",
+      "metric_value",
+      "reviewer"
+    ]
+  },
+  {
+    "id": "VP-005",
+    "requirement_ids": [
+      "REQ-005"
+    ],
+    "objective": "Verify anomaly-based closure blocking.",
+    "method": "test",
+    "entry_conditions": [
+      "critical anomaly record available",
+      "closure workflow available"
+    ],
+    "acceptance_criteria": {
+      "metric": "blocked_closure_attempts",
+      "operator": "==",
+      "threshold": 1
+    },
+    "required_evidence_fields": [
+      "run_id",
+      "anomaly_id",
+      "metric_value",
+      "reviewer"
+    ]
+  }
+]

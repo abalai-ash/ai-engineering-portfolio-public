@@ -126,5 +126,46 @@
       "reported uncertainty",
       "documented performance tradeoffs"
     ]
+  },
+  {
+    "request_id": "environmental_monitoring_review",
+    "domain": "environmental_monitoring",
+    "goal": "Compare synthetic field measurements, model estimates, and historical records to support technical investigation planning.",
+    "users": [
+      "environmental engineers",
+      "technical reviewers"
+    ],
+    "data_sources": [
+      {
+        "name": "synthetic sensor measurements",
+        "type": "sensor",
+        "sensitivity": "public_safe"
+      },
+      {
+        "name": "synthetic transport-model estimates",
+        "type": "simulation",
+        "sensitivity": "public_safe"
+      },
+      {
+        "name": "synthetic historical monitoring records",
+        "type": "structured",
+        "sensitivity": "public_safe"
+      }
+    ],
+    "requirements": {
+      "source_traceability": true,
+      "uncertainty_reporting": true,
+      "human_review": true,
+      "provenance_tracking": true,
+      "reproducible_analysis": true,
+      "monitoring": true,
+      "rollback_plan": false
+    },
+    "success_metrics": [
+      "measurement and model differences are clearly reported",
+      "uncertainty and data gaps are visible",
+      "recommendations remain tied to source records",
+      "technical reviewers can reproduce the comparison"
+    ]
   }
 ]

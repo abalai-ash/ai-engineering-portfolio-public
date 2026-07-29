@@ -1,0 +1,16 @@
+[
+  {
+    "id": "CA-001",
+    "anomaly_id": "ANOM-001",
+    "action": "Require anomaly-state validation before closure.",
+    "status": "completed",
+    "retest_id": "RT-001"
+  },
+  {
+    "id": "CA-002",
+    "anomaly_id": "ANOM-002",
+    "action": "Replace the abbreviated configuration label.",
+    "status": "planned",
+    "retest_id": null
+  }
+]

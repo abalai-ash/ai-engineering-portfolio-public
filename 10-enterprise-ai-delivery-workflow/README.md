@@ -2,13 +2,16 @@
 
 This project demonstrates how an unclear technical request can be turned into a structured delivery plan.
 
-It uses three synthetic cases:
+It uses four synthetic cases:
 
 - an enterprise knowledge assistant using structured and unstructured data
 - a robot localization system using sensor and map inputs
 - a scientific algorithm benchmarking workflow
+- an environmental-monitoring review using synthetic measurements, model estimates, and historical records
 
-The project is intentionally local and transparent. It does not claim production deployment, real customer work, operational robotics experience, or quantum hardware experience.
+## Scope
+
+The project uses local, synthetic inputs to demonstrate technical discovery, architecture planning, risk review, evaluation design, and stakeholder-facing reporting.
 
 ## What it demonstrates
 

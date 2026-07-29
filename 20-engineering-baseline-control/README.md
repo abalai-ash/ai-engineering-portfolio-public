@@ -1,29 +1,54 @@
-# 20. Engineering Baseline Control
+# Engineering Baseline Control
 
-A compact configuration-baseline demonstration for a synthetic scientific instrument.
+A synthetic environmental-monitoring configuration is followed through baseline
+creation, proposed changes, technical review, approval, release comparison,
+and rollback preparation.
 
-The example compares a proposed configuration with an approved baseline, records affected items, checks approvals and rollback readiness, and summarizes release status.
+The implementation checks whether configuration records are complete, whether
+proposed changes identify their rationale and affected items, whether required
+reviews are recorded, and whether a release can be reconstructed from its
+approved baseline.
 
 ## Included work
 
+- versioned configuration items
 - approved baseline records
-- proposed configuration changes
-- affected-item tracking
-- approval checks
-- release comparison
+- proposed engineering changes
+- affected-item and dependency review
+- technical and approval records
+- baseline comparison
+- release reconstruction checks
 - rollback readiness
-- synthetic records only
+- JSON, CSV, and Markdown reports
+- automated tests
+
+## Scope
+
+The project uses synthetic monitoring configurations, model references,
+processing thresholds, change requests, approvals, releases, and rollback
+records to demonstrate controlled engineering baseline management.
 
 ## Run
 
-```bash
-python3 src/baseline_demo.py
-```
+    python3 eval/evaluate.py
+    python3 -m unittest discover -s tests -v
 
-## Test
+Generated reports are written locally to reports/.
 
-```bash
-python3 -m unittest discover -s tests -v
-```
+## Goals
 
-This public version demonstrates the main baseline-control behavior while the broader review process remains private.
+- Keep technical configurations reproducible as controlled changes are reviewed.
+- Identify incomplete approvals, affected records, and rollback limitations.
+
+## Lessons
+
+- A version number alone is not a sufficient engineering baseline.
+- Change review is stronger when rationale, dependencies, evidence, and approval
+  remain connected.
+
+## Accomplishments
+
+- Structured baseline creation, change review, release comparison, and rollback
+  preparation for a synthetic environmental-monitoring configuration.
+- Defined automated checks for configuration completeness, approvals, impact,
+  reconstruction, and recovery readiness.

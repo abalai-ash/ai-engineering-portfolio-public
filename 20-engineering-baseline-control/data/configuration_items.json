@@ -1,0 +1,46 @@
+[
+  {
+    "id": "CI-001",
+    "name": "monitoring review profile",
+    "type": "configuration",
+    "owner": "monitoring operations",
+    "required_fields": [
+      "review_mode",
+      "record_format",
+      "comparison_threshold_percent"
+    ]
+  },
+  {
+    "id": "CI-002",
+    "name": "model reference set",
+    "type": "data",
+    "owner": "model validation",
+    "required_fields": [
+      "model_version",
+      "valid_from",
+      "review_profile"
+    ]
+  },
+  {
+    "id": "CI-003",
+    "name": "monitoring record sequence",
+    "type": "procedure",
+    "owner": "record processing",
+    "required_fields": [
+      "sampling_interval_minutes",
+      "record_count",
+      "sequence_order"
+    ]
+  },
+  {
+    "id": "CI-004",
+    "name": "processing threshold set",
+    "type": "parameter",
+    "owner": "technical review",
+    "required_fields": [
+      "quality_floor",
+      "uncertainty_limit",
+      "flagging_version"
+    ]
+  }
+]

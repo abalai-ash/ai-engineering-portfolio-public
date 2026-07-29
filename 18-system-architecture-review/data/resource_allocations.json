@@ -1,0 +1,32 @@
+[
+  {
+    "component_id": "request_manager",
+    "resource_id": "operations_node",
+    "required_units": 1
+  },
+  {
+    "component_id": "schedule_service",
+    "resource_id": "operations_node",
+    "required_units": 2
+  },
+  {
+    "component_id": "instrument_controller",
+    "resource_id": "instrument_node",
+    "required_units": 2
+  },
+  {
+    "component_id": "acquisition_service",
+    "resource_id": "instrument_node",
+    "required_units": 2
+  },
+  {
+    "component_id": "calibration_service",
+    "resource_id": "processing_node",
+    "required_units": 5
+  },
+  {
+    "component_id": "archive_adapter",
+    "resource_id": "processing_node",
+    "required_units": 1
+  }
+]

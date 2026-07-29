@@ -1,33 +1,33 @@
-# Automated Measurement Validation
+# Automated Measurement and Validation System
 
-This project demonstrates a compact Python workflow for evaluating synthetic
-measurement data against engineering limits.
+This project is a small Python workflow for collecting simulated instrument
+readings, checking them against engineering limits, and reporting problems
+that need attention.
 
-It collects repeatable readings, identifies drift, handles interrupted
-measurements, and returns clear pass, review, or fail outcomes.
+The workflow uses synthetic measurements to demonstrate repeatable
+collection, validation, fault handling, and reporting.
 
-## Demonstrated work
+## What it does
 
-- deterministic measurement collection;
-- threshold-based validation;
-- drift detection;
-- incomplete-run handling;
-- structured evaluation output;
-- automated tests for expected behavior.
+- simulates connecting to measurement instruments;
+- collects repeatable synthetic readings across electrical and environmental channels;
+- handles connection failures, timeouts, invalid responses, and missing samples;
+- checks readings against warning and failure limits;
+- detects drift and outliers;
+- evaluates conductivity, moisture, and temperature cases alongside the original measurement set;
+- writes JSON and Markdown reports with concise case summaries.
 
-## Included cases
+## Project structure
 
-- stable readings that remain within limits;
-- gradual drift that requires review;
-- an interrupted measurement that fails safely.
+- `data/measurement_cases.json` contains synthetic test cases.
+- `src/measurement_system.py` contains instrument and validation logic.
+- `eval/evaluate.py` runs the full evaluation.
+- `tests/test_measurement_system.py` contains unit tests.
 
-The examples are synthetic and do not represent real hardware or private
-research data.
+## Run the tests
 
-## Run
-
-    python evaluate.py
     python -m unittest discover -s tests -v
 
-This public version is intentionally limited. The broader instrument-control
-design, full edge-case suite, and detailed development workflow remain private.
+## Run the evaluation
+
+    python eval/evaluate.py

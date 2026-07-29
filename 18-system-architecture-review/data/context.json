@@ -1,0 +1,18 @@
+{
+  "system": "environmental_monitoring_system",
+  "purpose": "Coordinate a synthetic environmental monitoring request from planning through measurement collection, validation, and technical-review transfer.",
+  "external_actors": [
+    {
+      "id": "technical_reviewer",
+      "interaction": "submits monitoring and investigation requests"
+    },
+    {
+      "id": "condition_service",
+      "interaction": "provides environmental-condition data"
+    },
+    {
+      "id": "evidence_repository",
+      "interaction": "accepts validated monitoring products"
+    }
+  ]
+}

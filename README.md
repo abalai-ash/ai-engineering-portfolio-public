@@ -43,7 +43,7 @@ Run the main local evaluation checks from the repository root:
 python3 run_portfolio_checks.py
 ```
 
-This runs the primary public-safe evaluation scripts across the projects and reports a pass/fail summary. It does not call external APIs, use credentials, or require private data.
+The portfolio check runs the primary local evaluation scripts across the projects using repository data and reports a pass/fail summary.
 
 ## Projects
 
@@ -73,7 +73,7 @@ A reinforcement-learning-style agent evaluation demo focused on action selection
 
 ### 07. Sparse Linear Algebra Engine
 
-A sparse matrix and iterative ranking project covering coordinate-format storage, matrix-vector multiplication, PageRank-style scoring, convergence checks, dense-versus-sparse comparison, and evaluation of numerical behavior.
+A sparse linear algebra project covering coordinate-format storage, matrix-vector multiplication, PageRank-style scoring, convergence checks, dense-versus-sparse comparison, and a synthetic subsurface inverse problem with regularized reconstruction and numerical evaluation.
 
 ### 08. LLM Knowledge and Failure Evaluation
 
@@ -81,7 +81,7 @@ A small evaluation framework for checking whether an AI answer is supported by a
 
 ### 09. AI System Readiness and Risk Evaluation
 
-A transparent rule-based framework that reviews synthetic AI and machine-learning system proposals for grounding, evidence quality, sensitive-data handling, human review, monitoring, rollback planning, ownership, performance targets, and launch readiness. It produces explainable `approve`, `needs_review`, or `block` recommendations with structured remediation steps.
+A transparent rule-based framework that reviews synthetic AI and machine-learning system proposals for grounding, evidence quality, sensitive-data handling, human review, monitoring, rollback planning, ownership, performance targets, and launch readiness. The evaluation set includes an environmental-monitoring readiness proposal with measurement-quality, uncertainty, escalation, and operational-control checks. It produces explainable `approve`, `needs_review`, or `block` recommendations with structured remediation steps.
 
 ## What I am practicing
 
@@ -101,9 +101,9 @@ A transparent rule-based framework that reviews synthetic AI and machine-learnin
 
 ## Safety and Data Notes
 
-This repo uses synthetic data, public datasets, or small demo examples. Private data, credentials, API keys, unpublished research files, and private account information are intentionally kept out.
+This repository uses synthetic data, public datasets, and small demonstration examples selected for safe professional review.
 
-The projects are learning and portfolio demonstrations. Their READMEs document current limitations and distinguish local rule-based prototypes from production-trained models or externally deployed services.
+The projects are local prototypes and evaluation workflows. Their READMEs describe the implemented scope, evaluation methods, current capabilities, and operating assumptions.
 
 ## 10. Enterprise AI Delivery Workflow
 
@@ -114,15 +114,10 @@ staged deployment decisions, and a stakeholder-facing report.
 The included cases cover:
 
 - enterprise retrieval across structured and unstructured data
-- robot localization, calibration, sensor failure, and map mismatch planning
+- environmental-monitoring investigation planning with measurement quality, uncertainty, and escalation checks
 - scientific algorithm benchmarking, uncertainty, and reproducibility
 
-The project demonstrates technical discovery, solution planning,
-evaluation, operational safeguards, deterministic testing, and clear
-technical communication.
-
-It does not claim a real customer deployment, production SLAM system,
-or quantum-hardware implementation.
+The workflow uses synthetic requests and deterministic planning records to demonstrate technical discovery, solution planning, risk review, staged delivery decisions, operational safeguards, evaluation, testing, and stakeholder communication.
 
 See
 [`10-enterprise-ai-delivery-workflow/README.md`]
@@ -135,9 +130,7 @@ checks changes in accuracy, precision, recall, latency, error rate, and the
 positive-prediction rate. The alerts are then used to choose whether to
 continue, review the change, or roll it back.
 
-The example uses synthetic metrics and fixed rules so the same input produces
-the same result each time. It is a local exercise, not a live monitoring
-service.
+The example uses synthetic metrics and fixed rules so the same input produces the same result each time. It demonstrates repeatable local monitoring, alert generation, review, and rollback decisions.
 
 See
 [`11-ml-monitoring-incident-evaluation/README.md`](11-ml-monitoring-incident-evaluation/README.md).
@@ -164,7 +157,7 @@ See
 These original portfolio projects were created and maintained by the
 repository owner. This repository is publicly viewable for professional review. No license or reuse permission is granted.
 
-<!-- day-13-project-entry -->
+<!-- project-13-entry -->
 ## 13. AI Response Evaluation
 
 A small deterministic review workflow for checking evidence support, direct
@@ -173,17 +166,12 @@ disagreement.
 
 Project directory: [`13-ai-response-evaluation`](13-ai-response-evaluation)
 
-<!-- day-14-project-entry -->
-## 14. Automated Measurement Validation
+<!-- project-14-entry -->
+## 14. Automated Measurement and Validation
 
-A compact synthetic measurement-validation example that classifies stable
-readings, identifies gradual drift, and fails safely when a measurement is
-interrupted.
+A synthetic multichannel measurement-validation workflow for conductivity, moisture, and temperature data. It validates readings against warning and failure limits and reports drift, outliers, missing samples, connection failures, timeouts, and invalid responses.
 
-The public version is intentionally limited and demonstrates deterministic
-collection, engineering limits, structured outcomes, and automated testing
-without exposing the complete instrument-control design or full validation
-process.
+The implementation includes 11 deterministic cases, detailed failure handling, generated evaluation summaries, and 16 passing automated tests.
 
 Project directory:
 [`14-automated-measurement-validation`](14-automated-measurement-validation)
@@ -203,48 +191,51 @@ Project directory:
 <!-- project-16-entry -->
 ## 16. Simulation Model Validation
 
-A compact synthetic example that compares a numerical damped-motion simulation
-with a reference solution and classifies the result as pass, review, or fail.
+A synthetic damped-motion simulation that compares numerical output with an analytical reference solution, measures numerical error, and documents how the same validation structure transfers to environmental and subsurface models.
 
-The public version demonstrates deterministic simulation, numerical error
-measurement, invalid-input handling, and automated testing.
+The implementation includes four validation cases, RK4 integration, invalid-input handling, tolerance-based outcomes, generated reports, and nine passing automated tests.
 
 Project directory:
 [`16-simulation-model-validation`](16-simulation-model-validation)
 
 ## 17. Systems Traceability
 
-A compact requirements-traceability demonstration for a synthetic monitoring system. It connects stakeholder needs, system requirements, subsystem requirements, verification cases, and recorded outcomes while identifying missing links and incomplete coverage.
+A synthetic environmental-monitoring workflow that connects stakeholder needs, system and subsystem requirements, component allocations, interfaces, verification cases, and recorded evidence.
+
+The implementation checks requirement wording, parent-child relationships, verification coverage, missing links, baseline differences, and the effects of proposed changes. It produces structured JSON, CSV, and Markdown review records.
 
 Project directory: [`17-systems-traceability`](17-systems-traceability)
 
 ## 18. System Architecture Review
 
-A synthetic architecture-review example that maps system functions to logical components and physical resources. It checks component allocations, interfaces, dependencies, and incomplete architecture records.
+A synthetic environmental-monitoring architecture model for reviewing system functions, logical components, physical resources, interfaces, dependencies, and design alternatives.
+
+The review identifies incomplete allocations, unsupported interfaces, dependency concerns, and sensitivity to weighting assumptions. It produces structured architecture findings and comparison reports.
 
 Project directory: [`18-system-architecture-review`](18-system-architecture-review)
 
 ## 19. Verification Planning and Evidence
 
-A compact verification workflow connecting requirements to methods, planned cases, acceptance criteria, observations, anomalies, and closure status. It reports unresolved evidence and incomplete verification work.
+A synthetic environmental-monitoring workflow for connecting requirements to verification methods, planned cases, acceptance criteria, recorded evidence, anomalies, retesting, and closure status.
+
+The implementation checks coverage, evidence completeness, unresolved findings, readiness conditions, and requirement-level outcomes. It generates traceable JSON, CSV, and Markdown summaries.
 
 Project directory: [`19-verification-planning-evidence`](19-verification-planning-evidence)
 
 ## 20. Engineering Baseline Control
 
-A synthetic configuration-control example that compares an approved baseline with a proposed release. It checks changed items, affected records, required approvals, rollback readiness, and release status.
+A synthetic environmental-monitoring configuration workflow covering baseline creation, proposed changes, review decisions, approvals, release comparison, and rollback readiness.
+
+The implementation checks record completeness, documented differences, affected items, approval status, release conditions, and rollback artifacts. It produces structured comparison and review reports.
 
 Project directory: [`20-engineering-baseline-control`](20-engineering-baseline-control)
 
 <!-- project-21-entry -->
 ## 21. Embedded Sensor Fault Management
 
-A compact C++17 demonstration of an embedded-style sensor controller using
-synthetic measurements.
+A deterministic C++17 host simulation of an embedded-style sensor controller covering measurement validation, watchdog timing, fault latching, safe-state entry, and controlled recovery.
 
-The public version checks nominal values, invalid and non-finite input,
-excessive measurement changes, safe-state entry, blocked processing while safe,
-and explicit recovery with valid data.
+The implementation includes structured requirements, design notes, an Agile backlog, requirement-to-test mappings, verification records, and 36 passing automated checks covering nominal behavior, boundary conditions, invalid and non-finite data, watchdog faults, safe-state blocking, and recovery behavior.
 
 Project directory:
 [`21-embedded-sensor-fault-management`](21-embedded-sensor-fault-management)

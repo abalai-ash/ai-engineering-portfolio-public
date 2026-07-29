@@ -167,7 +167,7 @@ def evaluate_system(proposal: dict[str, Any]) -> dict[str, Any]:
 
     if critical_count >= 1 or score >= 12:
         recommendation = "block"
-    elif high_count >= 1 or score >= 4:
+    elif high_count >= 1 or score >= 2:
         recommendation = "needs_review"
     else:
         recommendation = "approve"
@@ -224,10 +224,10 @@ def build_markdown(results: list[dict[str, Any]]) -> str:
 
     lines.extend(
         [
-            "## Limitations",
+            "## Scope",
             "",
-            "This is a local portfolio prototype. It is not a production "
-            "security, compliance, clinical, or financial review system.",
+            "The report uses synthetic proposals and transparent, "
+            "rule-based readiness checks.",
             "",
         ]
     )

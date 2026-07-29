@@ -1,0 +1,525 @@
+{
+  "case_count": 11,
+  "pass_count": 2,
+  "warning_count": 2,
+  "fail_count": 7,
+  "instrument_error_count": 4,
+  "all_expected_checks_passed": true,
+  "results": [
+    {
+      "case_id": "nominal-voltage",
+      "instrument": "voltage-monitor",
+      "connected": true,
+      "requested_samples": 8,
+      "collected_samples": 8,
+      "missing_samples": 0,
+      "errors": [],
+      "readings": [
+        3.318292,
+        3.314529,
+        3.279435,
+        3.270918,
+        3.298475,
+        3.311428,
+        3.297802,
+        3.278123
+      ],
+      "mean": 3.296125,
+      "minimum": 3.270918,
+      "maximum": 3.318292,
+      "reading_statuses": [
+        "pass",
+        "pass",
+        "pass",
+        "pass",
+        "pass",
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "warning_count": 0,
+      "failure_count": 0,
+      "outlier_indices": [],
+      "drift": {
+        "total_drift": -0.040169,
+        "average_step": -0.005738,
+        "drift_detected": false
+      },
+      "status": "pass",
+      "summary": "The test passed because all readings stayed within the allowed limits.",
+      "expected_status": "pass",
+      "expected_check_passed": true
+    },
+    {
+      "case_id": "temperature-warning",
+      "instrument": "thermal-monitor",
+      "connected": true,
+      "requested_samples": 10,
+      "collected_samples": 10,
+      "missing_samples": 0,
+      "errors": [],
+      "readings": [
+        40.037371,
+        40.311706,
+        40.627111,
+        40.813943,
+        41.325961,
+        41.596045,
+        42.194793,
+        41.980295,
+        43.207533,
+        42.070104
+      ],
+      "mean": 41.416486,
+      "minimum": 40.037371,
+      "maximum": 43.207533,
+      "reading_statuses": [
+        "pass",
+        "pass",
+        "pass",
+        "pass",
+        "pass",
+        "pass",
+        "warning",
+        "pass",
+        "warning",
+        "warning"
+      ],
+      "warning_count": 3,
+      "failure_count": 0,
+      "outlier_indices": [],
+      "drift": {
+        "total_drift": 2.032733,
+        "average_step": 0.225859,
+        "drift_detected": true
+      },
+      "status": "warning",
+      "summary": "The test needs review because the readings showed measurable drift.",
+      "expected_status": "warning",
+      "expected_check_passed": true
+    },
+    {
+      "case_id": "current-failure",
+      "instrument": "current-monitor",
+      "connected": true,
+      "requested_samples": 10,
+      "collected_samples": 10,
+      "missing_samples": 0,
+      "errors": [],
+      "readings": [
+        1.185242,
+        1.262495,
+        1.271134,
+        1.345847,
+        1.355321,
+        1.440767,
+        1.468421,
+        1.543351,
+        1.576927,
+        1.606079
+      ],
+      "mean": 1.405558,
+      "minimum": 1.185242,
+      "maximum": 1.606079,
+      "reading_statuses": [
+        "pass",
+        "pass",
+        "pass",
+        "warning",
+        "warning",
+        "fail",
+        "fail",
+        "fail",
+        "fail",
+        "fail"
+      ],
+      "warning_count": 2,
+      "failure_count": 5,
+      "outlier_indices": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "drift": {
+        "total_drift": 0.420837,
+        "average_step": 0.04676,
+        "drift_detected": true
+      },
+      "status": "fail",
+      "summary": "The test failed because one or more readings exceeded the failure tolerance.",
+      "expected_status": "fail",
+      "expected_check_passed": true
+    },
+    {
+      "case_id": "frequency-outlier",
+      "instrument": "frequency-counter",
+      "connected": true,
+      "requested_samples": 9,
+      "collected_samples": 9,
+      "missing_samples": 0,
+      "errors": [],
+      "readings": [
+        99.55107,
+        99.937592,
+        100.200413,
+        99.949206,
+        100.039425,
+        103.811782,
+        99.936168,
+        99.897458,
+        100.24265
+      ],
+      "mean": 100.396196,
+      "minimum": 99.55107,
+      "maximum": 103.811782,
+      "reading_statuses": [
+        "pass",
+        "pass",
+        "pass",
+        "pass",
+        "pass",
+        "fail",
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "warning_count": 0,
+      "failure_count": 1,
+      "outlier_indices": [
+        5
+      ],
+      "drift": {
+        "total_drift": 0.69158,
+        "average_step": 0.086448,
+        "drift_detected": false
+      },
+      "status": "fail",
+      "summary": "The test failed because one or more readings exceeded the failure tolerance.",
+      "expected_status": "fail",
+      "expected_check_passed": true
+    },
+    {
+      "case_id": "stable-signal",
+      "instrument": "signal-monitor",
+      "connected": true,
+      "requested_samples": 12,
+      "collected_samples": 12,
+      "missing_samples": 0,
+      "errors": [],
+      "readings": [
+        -11.926075,
+        -11.819606,
+        -12.000382,
+        -11.871285,
+        -12.059771,
+        -11.890779,
+        -12.011809,
+        -11.843157,
+        -11.848372,
+        -11.728559,
+        -11.837955,
+        -11.879273
+      ],
+      "mean": -11.893085,
+      "minimum": -12.059771,
+      "maximum": -11.728559,
+      "reading_statuses": [
+        "pass",
+        "pass",
+        "pass",
+        "pass",
+        "pass",
+        "pass",
+        "pass",
+        "pass",
+        "pass",
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "warning_count": 0,
+      "failure_count": 0,
+      "outlier_indices": [],
+      "drift": {
+        "total_drift": 0.046802,
+        "average_step": 0.004255,
+        "drift_detected": false
+      },
+      "status": "pass",
+      "summary": "The test passed because all readings stayed within the allowed limits.",
+      "expected_status": "pass",
+      "expected_check_passed": true
+    },
+    {
+      "case_id": "instrument-connection-failure",
+      "instrument": "spectrum-monitor",
+      "connected": false,
+      "requested_samples": 6,
+      "collected_samples": 0,
+      "missing_samples": 6,
+      "errors": [
+        {
+          "sample_index": null,
+          "error_type": "connection",
+          "message": "Could not connect to spectrum-monitor"
+        }
+      ],
+      "readings": [],
+      "mean": null,
+      "minimum": null,
+      "maximum": null,
+      "reading_statuses": [],
+      "warning_count": 0,
+      "failure_count": 0,
+      "outlier_indices": [],
+      "drift": {
+        "total_drift": 0.0,
+        "average_step": 0.0,
+        "drift_detected": false
+      },
+      "status": "fail",
+      "summary": "The test failed because the instrument connection could not be established.",
+      "expected_status": "fail",
+      "expected_check_passed": true
+    },
+    {
+      "case_id": "instrument-timeout",
+      "instrument": "power-monitor",
+      "connected": true,
+      "requested_samples": 7,
+      "collected_samples": 6,
+      "missing_samples": 1,
+      "errors": [
+        {
+          "sample_index": 3,
+          "error_type": "timeout",
+          "message": "Timed out while reading sample 3"
+        }
+      ],
+      "readings": [
+        5.037883,
+        4.974477,
+        5.006734,
+        4.935313,
+        4.997369,
+        5.042554
+      ],
+      "mean": 4.999055,
+      "minimum": 4.935313,
+      "maximum": 5.042554,
+      "reading_statuses": [
+        "pass",
+        "pass",
+        "pass",
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "warning_count": 0,
+      "failure_count": 0,
+      "outlier_indices": [],
+      "drift": {
+        "total_drift": 0.004671,
+        "average_step": 0.000934,
+        "drift_detected": false
+      },
+      "status": "fail",
+      "summary": "The test failed because one or more instrument responses were missing or invalid.",
+      "expected_status": "fail",
+      "expected_check_passed": true
+    },
+    {
+      "case_id": "invalid-instrument-response",
+      "instrument": "phase-monitor",
+      "connected": true,
+      "requested_samples": 7,
+      "collected_samples": 6,
+      "missing_samples": 1,
+      "errors": [
+        {
+          "sample_index": 4,
+          "error_type": "invalid-sample",
+          "message": "Invalid response at sample 4"
+        }
+      ],
+      "readings": [
+        0.038962,
+        0.065834,
+        -0.037764,
+        -0.042835,
+        0.018796,
+        0.086678
+      ],
+      "mean": 0.021612,
+      "minimum": -0.042835,
+      "maximum": 0.086678,
+      "reading_statuses": [
+        "pass",
+        "pass",
+        "pass",
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "warning_count": 0,
+      "failure_count": 0,
+      "outlier_indices": [],
+      "drift": {
+        "total_drift": 0.047716,
+        "average_step": 0.009543,
+        "drift_detected": false
+      },
+      "status": "fail",
+      "summary": "The test failed because one or more instrument responses were missing or invalid.",
+      "expected_status": "fail",
+      "expected_check_passed": true
+    },
+    {
+      "case_id": "conductivity-drift-warning",
+      "instrument": "conductivity-monitor",
+      "connected": true,
+      "requested_samples": 9,
+      "collected_samples": 9,
+      "missing_samples": 0,
+      "errors": [],
+      "readings": [
+        1.813279,
+        1.831431,
+        1.959787,
+        1.918422,
+        1.945088,
+        1.986608,
+        1.996633,
+        2.026253,
+        2.093955
+      ],
+      "mean": 1.952384,
+      "minimum": 1.813279,
+      "maximum": 2.093955,
+      "reading_statuses": [
+        "pass",
+        "pass",
+        "pass",
+        "pass",
+        "pass",
+        "warning",
+        "warning",
+        "warning",
+        "warning"
+      ],
+      "warning_count": 4,
+      "failure_count": 0,
+      "outlier_indices": [],
+      "drift": {
+        "total_drift": 0.280676,
+        "average_step": 0.035084,
+        "drift_detected": true
+      },
+      "status": "warning",
+      "summary": "The test needs review because the readings showed measurable drift.",
+      "expected_status": "warning",
+      "expected_check_passed": true
+    },
+    {
+      "case_id": "moisture-timeout-failure",
+      "instrument": "moisture-monitor",
+      "connected": true,
+      "requested_samples": 8,
+      "collected_samples": 7,
+      "missing_samples": 1,
+      "errors": [
+        {
+          "sample_index": 4,
+          "error_type": "timeout",
+          "message": "Timed out while reading sample 4"
+        }
+      ],
+      "readings": [
+        0.3417,
+        0.30892,
+        0.323259,
+        0.317387,
+        0.311207,
+        0.314262,
+        0.31481
+      ],
+      "mean": 0.318792,
+      "minimum": 0.30892,
+      "maximum": 0.3417,
+      "reading_statuses": [
+        "pass",
+        "pass",
+        "pass",
+        "pass",
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "warning_count": 0,
+      "failure_count": 0,
+      "outlier_indices": [],
+      "drift": {
+        "total_drift": -0.02689,
+        "average_step": -0.004482,
+        "drift_detected": false
+      },
+      "status": "fail",
+      "summary": "The test failed because one or more instrument responses were missing or invalid.",
+      "expected_status": "fail",
+      "expected_check_passed": true
+    },
+    {
+      "case_id": "temperature-outlier-failure",
+      "instrument": "environment-temperature-monitor",
+      "connected": true,
+      "requested_samples": 10,
+      "collected_samples": 10,
+      "missing_samples": 0,
+      "errors": [],
+      "readings": [
+        21.910279,
+        21.677902,
+        22.393319,
+        22.800631,
+        22.302596,
+        22.529968,
+        25.982306,
+        22.533635,
+        22.582012,
+        22.704871
+      ],
+      "mean": 22.741752,
+      "minimum": 21.677902,
+      "maximum": 25.982306,
+      "reading_statuses": [
+        "pass",
+        "pass",
+        "pass",
+        "pass",
+        "pass",
+        "pass",
+        "fail",
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "warning_count": 0,
+      "failure_count": 1,
+      "outlier_indices": [
+        6
+      ],
+      "drift": {
+        "total_drift": 0.794592,
+        "average_step": 0.088288,
+        "drift_detected": false
+      },
+      "status": "fail",
+      "summary": "The test failed because one or more readings exceeded the failure tolerance.",
+      "expected_status": "fail",
+      "expected_check_passed": true
+    }
+  ],
+  "scope": "Synthetic measurement data used for a portfolio-scale engineering workflow."
+}

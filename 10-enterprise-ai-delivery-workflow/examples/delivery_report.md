@@ -176,6 +176,64 @@ The proposal needs additional controls or decisions before a pilot should begin.
 - Run offline evaluation before any pilot.
 - Document rollback or stopping conditions.
 
-## Limitations
+## Environmental Monitoring Review
 
-This is a local portfolio demonstration using synthetic requests and transparent rule-based logic. It is not a production deployment, real customer engagement, operating robotics system, clinical system, financial system, or quantum hardware experiment.
+**Domain:** Environmental Monitoring
+
+**Goal:** Compare synthetic field measurements, model estimates, and historical records to support technical investigation planning.
+
+**Risk level:** Medium
+
+**Recommendation:** Needs Review
+
+The proposal needs additional controls or decisions before a pilot should begin.
+
+### Proposed components
+
+- measurement record loader
+- model estimate loader
+- historical record index
+- source and provenance tracker
+- uncertainty comparison
+- data-gap detector
+- technical review queue
+- versioned analysis output
+
+### Evaluation plan
+
+- source traceability
+- measurement-model agreement
+- uncertainty reporting
+- data-gap detection
+- reproducibility
+- human-review coverage
+
+### Delivery path
+
+1. synthetic comparison cases
+2. repeatable local analysis
+3. independent technical review
+4. documented investigation recommendation
+
+### Main risks and mitigations
+
+- **Risk:** Missing required control: rollback_plan
+  - **Mitigation:** Define and test rollback_plan before launch.
+- **Risk:** Measurement and model evidence disagree
+  - **Mitigation:** Report residuals, uncertainty, and conflicting records before forming a recommendation.
+- **Risk:** Incomplete provenance weakens technical review
+  - **Mitigation:** Preserve source identifiers, versions, timestamps, and review status with each comparison.
+- **Risk:** Data gaps are interpreted as evidence
+  - **Mitigation:** Route incomplete cases to additional investigation and human review.
+
+### Next actions
+
+- Resolve open discovery questions.
+- Confirm measurable success thresholds.
+- Build the smallest testable prototype.
+- Run offline evaluation before any pilot.
+- Document rollback or stopping conditions.
+
+## Scope
+
+The report uses synthetic requests and transparent rule-based planning logic to demonstrate technical discovery, architecture decisions, risk review, evaluation planning, and stakeholder communication.
