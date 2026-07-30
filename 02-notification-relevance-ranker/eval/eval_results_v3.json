@@ -36,6 +36,146 @@
     "predictions_are_deterministic": true
   },
   "deterministic_predictions": true,
+  "error_analysis": {
+    "baseline_correct_on_model_errors": 4,
+    "error_rate": 0.155556,
+    "errors": [
+      {
+        "baseline_correct": false,
+        "baseline_top_notification_id": "q0001_n5",
+        "expected_notification_id": "q0001_n2",
+        "expected_relevance": 3,
+        "expected_score": 1.258786,
+        "feature_differences": {
+          "channel_match": 1.0,
+          "freshness": 0.259874,
+          "interest_match": -0.467546,
+          "urgency": 0.123039
+        },
+        "predicted_notification_id": "q0001_n5",
+        "predicted_relevance": 2,
+        "predicted_score": 1.346354,
+        "query_id": "q0001",
+        "score_margin": 0.087569
+      },
+      {
+        "baseline_correct": false,
+        "baseline_top_notification_id": "q0026_n4",
+        "expected_notification_id": "q0026_n3",
+        "expected_relevance": 3,
+        "expected_score": 1.178094,
+        "feature_differences": {
+          "channel_match": 1.0,
+          "freshness": -0.371395,
+          "interest_match": -0.152187,
+          "urgency": 0.035098
+        },
+        "predicted_notification_id": "q0026_n4",
+        "predicted_relevance": 2,
+        "predicted_score": 1.306893,
+        "query_id": "q0026",
+        "score_margin": 0.128799
+      },
+      {
+        "baseline_correct": true,
+        "baseline_top_notification_id": "q0087_n2",
+        "expected_notification_id": "q0087_n2",
+        "expected_relevance": 3,
+        "expected_score": 0.619882,
+        "feature_differences": {
+          "channel_match": 0.0,
+          "freshness": 0.065261,
+          "interest_match": -0.460184,
+          "urgency": 0.595128
+        },
+        "predicted_notification_id": "q0087_n3",
+        "predicted_relevance": 2,
+        "predicted_score": 0.771261,
+        "query_id": "q0087",
+        "score_margin": 0.151379
+      },
+      {
+        "baseline_correct": true,
+        "baseline_top_notification_id": "q0152_n1",
+        "expected_notification_id": "q0152_n1",
+        "expected_relevance": 3,
+        "expected_score": 0.542114,
+        "feature_differences": {
+          "channel_match": -1.0,
+          "freshness": -0.422394,
+          "interest_match": 0.373284,
+          "urgency": -0.039056
+        },
+        "predicted_notification_id": "q0152_n5",
+        "predicted_relevance": 2,
+        "predicted_score": 0.57303,
+        "query_id": "q0152",
+        "score_margin": 0.030916
+      },
+      {
+        "baseline_correct": true,
+        "baseline_top_notification_id": "q0154_n0",
+        "expected_notification_id": "q0154_n0",
+        "expected_relevance": 3,
+        "expected_score": -0.323668,
+        "feature_differences": {
+          "channel_match": 1.0,
+          "freshness": -0.300963,
+          "interest_match": 0.168179,
+          "urgency": -0.681668
+        },
+        "predicted_notification_id": "q0154_n2",
+        "predicted_relevance": 2,
+        "predicted_score": -0.248689,
+        "query_id": "q0154",
+        "score_margin": 0.074979
+      },
+      {
+        "baseline_correct": true,
+        "baseline_top_notification_id": "q0163_n1",
+        "expected_notification_id": "q0163_n1",
+        "expected_relevance": 3,
+        "expected_score": 2.063147,
+        "feature_differences": {
+          "channel_match": 0.0,
+          "freshness": 0.011862,
+          "interest_match": 0.095186,
+          "urgency": -0.169471
+        },
+        "predicted_notification_id": "q0163_n4",
+        "predicted_relevance": 2,
+        "predicted_score": 2.064898,
+        "query_id": "q0163",
+        "score_margin": 0.001751
+      },
+      {
+        "baseline_correct": false,
+        "baseline_top_notification_id": "q0177_n0",
+        "expected_notification_id": "q0177_n4",
+        "expected_relevance": 3,
+        "expected_score": -0.522558,
+        "feature_differences": {
+          "channel_match": -1.0,
+          "freshness": -0.649624,
+          "interest_match": 0.124173,
+          "urgency": 0.733701
+        },
+        "predicted_notification_id": "q0177_n0",
+        "predicted_relevance": 2,
+        "predicted_score": -0.269681,
+        "query_id": "q0177",
+        "score_margin": 0.252878
+      }
+    ],
+    "misranked_queries": 7,
+    "predicted_higher_feature_counts": {
+      "channel_match": 3,
+      "freshness": 3,
+      "interest_match": 4,
+      "urgency": 4
+    },
+    "query_count": 45
+  },
   "feature_importance": {
     "channel_match": 0.277692,
     "freshness": 0.162091,
@@ -60,11 +200,11 @@
   ],
   "model": "XGBoost rank:pairwise",
   "passed_checks": 6,
-  "prediction_latency_ms": 0.001844,
+  "prediction_latency_ms": 0.006772,
   "project": "Notification Relevance Ranker Version 3",
   "seed": 42,
   "test_queries": 45,
   "total_checks": 6,
   "training_queries": 135,
-  "training_seconds": 0.013052
+  "training_seconds": 0.037041
 }

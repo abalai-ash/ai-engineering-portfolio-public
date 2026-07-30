@@ -104,6 +104,7 @@ It demonstrates:
 - Top-1 accuracy, MRR, and NDCG@3
 - comparison against a non-personalized baseline
 - feature-importance and feature-ablation analysis
+- held-out ranking-error analysis with candidate-level comparisons
 - deterministic repeated predictions
 - local training and prediction latency measurements
 
@@ -111,10 +112,12 @@ In the current held-out evaluation, the learned ranker improves over the hand-wr
 
 The public project reports the experiment design and measured results without presenting it as a production ranking recipe or a model trained on real users.
 
-Run the evaluation:
+Run the evaluation in an environment with NumPy, XGBoost, and scikit-learn installed:
 
 ```bash
-python3 eval/evaluate_v3.py
+python3 -m venv .venv
+.venv/bin/python -m pip install numpy xgboost scikit-learn
+.venv/bin/python eval/evaluate_v3_xgboost.py
 ```
 
 See `model_card_v3.md` and `eval/eval_results_v3.md` for scope, results, and limitations.

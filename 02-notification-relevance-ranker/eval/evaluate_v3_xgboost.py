@@ -19,8 +19,10 @@ from ranker_v3_xgboost import (  # noqa: E402
     evaluate_rankings,
     feature_importance,
     generate_synthetic_examples,
+    group_by_query,
     model_scores_with_ablation,
     predict_scores,
+    rank_query,
     split_examples_by_query,
     train_ranker,
 )
@@ -33,6 +35,94 @@ def rounded_difference(
     return {
         name: round(learned[name] - baseline[name], 6)
         for name in ("top1_accuracy", "mrr", "ndcg_at_3")
+    }
+
+
+def build_error_analysis(
+    examples: list[Any],
+    learned_scores: dict[str, float],
+    baseline_score_values: dict[str, float],
+) -> dict[str, Any]:
+    grouped = group_by_query(examples)
+    errors: list[dict[str, Any]] = []
+    predicted_higher_counts = {name: 0 for name in FEATURE_NAMES}
+    baseline_correct_on_errors = 0
+
+    for query_id in sorted(grouped):
+        query_examples = grouped[query_id]
+        learned_ranking = rank_query(query_examples, learned_scores)
+        ideal_ranking = sorted(
+            query_examples,
+            key=lambda item: (item.relevance, item.notification_id),
+            reverse=True,
+        )
+
+        expected = ideal_ranking[0]
+        predicted = learned_ranking[0]
+
+        if predicted.relevance == expected.relevance:
+            continue
+
+        baseline_ranking = rank_query(
+            query_examples,
+            baseline_score_values,
+        )
+        baseline_top = baseline_ranking[0]
+        baseline_correct = baseline_top.relevance == expected.relevance
+
+        if baseline_correct:
+            baseline_correct_on_errors += 1
+
+        feature_differences = {}
+        for feature_name in FEATURE_NAMES:
+            difference = round(
+                predicted.features[feature_name]
+                - expected.features[feature_name],
+                6,
+            )
+            feature_differences[feature_name] = difference
+
+            if difference > 0.0:
+                predicted_higher_counts[feature_name] += 1
+
+        errors.append(
+            {
+                "query_id": query_id,
+                "expected_notification_id": expected.notification_id,
+                "expected_relevance": expected.relevance,
+                "expected_score": round(
+                    learned_scores[expected.notification_id],
+                    6,
+                ),
+                "predicted_notification_id": predicted.notification_id,
+                "predicted_relevance": predicted.relevance,
+                "predicted_score": round(
+                    learned_scores[predicted.notification_id],
+                    6,
+                ),
+                "score_margin": round(
+                    learned_scores[predicted.notification_id]
+                    - learned_scores[expected.notification_id],
+                    6,
+                ),
+                "baseline_top_notification_id": baseline_top.notification_id,
+                "baseline_correct": baseline_correct,
+                "feature_differences": feature_differences,
+            }
+        )
+
+    query_count = len(grouped)
+
+    return {
+        "misranked_queries": len(errors),
+        "query_count": query_count,
+        "error_rate": round(
+            len(errors) / max(query_count, 1),
+            6,
+        ),
+        "baseline_correct_on_model_errors": baseline_correct_on_errors,
+        "predicted_higher_feature_counts": predicted_higher_counts,
+        "errors": errors,
     }
 
 
@@ -100,6 +190,57 @@ def make_markdown(report: dict[str, Any]) -> str:
             f"{metrics['ndcg_at_3']:.3f} |"
         )
 
+    error_analysis = report["error_analysis"]
+
+    lines.extend(
+        [
+            "",
+            "## Held-out error analysis",
+            "",
+            f"- Misranked queries: {error_analysis['misranked_queries']}/{error_analysis['query_count']}",
+            f"- Error rate: {error_analysis['error_rate']:.3f}",
+            f"- Baseline correct on model errors: {error_analysis['baseline_correct_on_model_errors']}",
+            "",
+            "### Features higher in the incorrectly selected candidate",
+            "",
+        ]
+    )
+
+    for name, count in error_analysis["predicted_higher_feature_counts"].items():
+        lines.append(f"- {name}: {count} errors")
+
+    lines.extend(
+        [
+            "",
+            "### Misranked queries",
+            "",
+            "| Query | Expected | Predicted | Predicted relevance | Score margin | Baseline correct |",
+            "|---|---|---|---:|---:|---|",
+        ]
+    )
+
+    for error in error_analysis["errors"]:
+        lines.append(
+            f"| {error['query_id']} | "
+            f"{error['expected_notification_id']} | "
+            f"{error['predicted_notification_id']} | "
+            f"{error['predicted_relevance']} | "
+            f"{error['score_margin']:+.3f} | "
+            f"{error['baseline_correct']} |"
+        )
+
+    lines.extend(
+        [
+            "",
+            "### Interpretation",
+            "",
+            f"- {error_analysis['baseline_correct_on_model_errors']} model errors were cases where the hand-written baseline selected the correct candidate.",
+            "- Incorrect selections frequently had higher interest-match or urgency values, indicating that strong individual signals can outweigh the better overall candidate.",
+            "- Several errors had small score margins, suggesting ranking uncertainty near the top of the list.",
+            "- The error cases support retaining baseline comparison and candidate-level review alongside aggregate ranking metrics.",
+        ]
+    )
+
     lines.extend(
         [
             "",
@@ -153,9 +294,17 @@ def main() -> None:
         learned_scores,
     )
 
+    baseline_score_values = baseline_scores(test_examples)
+
     baseline_metrics = evaluate_rankings(
         test_examples,
-        baseline_scores(test_examples),
+        baseline_score_values,
+    )
+
+    error_analysis = build_error_analysis(
+        test_examples,
+        learned_scores,
+        baseline_score_values,
     )
 
     ablation_metrics = {}
@@ -223,6 +372,7 @@ def main() -> None:
         ),
         "feature_importance": feature_importance(model),
         "ablation_metrics": ablation_metrics,
+        "error_analysis": error_analysis,
         "training_seconds": round(training_seconds, 6),
         "prediction_latency_ms": round(prediction_latency_ms, 6),
         "deterministic_predictions": deterministic_predictions,
