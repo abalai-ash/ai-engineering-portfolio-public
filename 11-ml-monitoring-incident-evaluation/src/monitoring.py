@@ -153,3 +153,76 @@ def choose_action(alerts: list[dict[str, Any]]) -> dict[str, Any]:
         "medium_alerts": medium_count,
         "alert_count": len(alerts),
     }
+
+
+def build_incident_response(
+    alerts: list[dict[str, Any]],
+    decision: dict[str, Any],
+    current_version: str,
+) -> dict[str, Any]:
+    """Create an operational response record from monitoring results."""
+
+    action = decision["action"]
+
+    if action == "rollback":
+        severity = "critical"
+        owner = "ml_platform_operations"
+        immediate_response = [
+            "stop candidate promotion",
+            "restore the approved baseline version",
+            "preserve metrics and alert evidence",
+        ]
+        recovery_checks = [
+            "baseline version restored",
+            "quality metrics within limits",
+            "latency and error rate within limits",
+            "no new high-severity alerts",
+        ]
+        closure_status = "blocked_pending_recovery"
+    elif action == "hold_and_review":
+        severity = "high"
+        owner = "model_reliability_review"
+        immediate_response = [
+            "pause deployment",
+            "review affected metrics",
+            "compare recent changes with the approved baseline",
+        ]
+        recovery_checks = [
+            "root cause documented",
+            "review decision recorded",
+            "affected metrics re-evaluated",
+        ]
+        closure_status = "blocked_pending_review"
+    elif action == "continue_with_monitoring":
+        severity = "medium"
+        owner = "ml_platform_operations"
+        immediate_response = [
+            "continue monitored operation",
+            "increase review frequency",
+        ]
+        recovery_checks = [
+            "alert trend remains stable",
+            "no escalation to high severity",
+        ]
+        closure_status = "open_monitoring"
+    else:
+        severity = "none"
+        owner = "ml_platform_operations"
+        immediate_response = ["continue normal operation"]
+        recovery_checks = ["scheduled monitoring completed"]
+        closure_status = "no_incident"
+
+    return {
+        "model_version": current_version,
+        "severity": severity,
+        "owner": owner,
+        "action": action,
+        "alert_count": len(alerts),
+        "affected_metrics": sorted(
+            {alert["metric"] for alert in alerts}
+        ),
+        "immediate_response": immediate_response,
+        "recovery_checks": recovery_checks,
+        "rollback_required": action == "rollback",
+        "closure_status": closure_status,
+    }

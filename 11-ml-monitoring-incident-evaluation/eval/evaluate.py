@@ -12,7 +12,12 @@ SRC_DIR = PROJECT_DIR / "src"
 
 sys.path.insert(0, str(SRC_DIR))
 
-from monitoring import choose_action, compare_metrics, load_metrics
+from monitoring import (
+    build_incident_response,
+    choose_action,
+    compare_metrics,
+    load_metrics,
+)
 
 
 def main() -> None:
@@ -26,18 +31,44 @@ def main() -> None:
 
     alerts = compare_metrics(baseline, current)
     decision = choose_action(alerts)
+    incident_response = build_incident_response(
+        alerts,
+        decision,
+        current["model_version"],
+    )
+
+    checks = {
+        "critical_incident_detected": (
+            incident_response["severity"] == "critical"
+        ),
+        "rollback_required": incident_response["rollback_required"],
+        "response_owner_assigned": bool(incident_response["owner"]),
+        "recovery_checks_defined": (
+            len(incident_response["recovery_checks"]) >= 3
+        ),
+        "closure_blocked_until_recovery": (
+            incident_response["closure_status"]
+            == "blocked_pending_recovery"
+        ),
+    }
 
     results = {
         "baseline_version": baseline["model_version"],
         "current_version": current["model_version"],
         "alerts": alerts,
         "decision": decision,
+        "incident_response": incident_response,
+        "checks": checks,
         "scope": (
             "This local example uses synthetic metrics. "
             "It demonstrates monitoring rules and incident decisions. "
             "It is not a production monitoring service."
         ),
     }
+
+    if not all(checks.values()):
+        failed = [name for name, passed in checks.items() if not passed]
+        raise AssertionError(f"Failed checks: {failed}")
 
     output_path = PROJECT_DIR / "eval" / "evaluation_results.json"
 

@@ -39,5 +39,40 @@
     "medium_alerts": 2,
     "alert_count": 6
   },
+  "incident_response": {
+    "model_version": "candidate-v2",
+    "severity": "critical",
+    "owner": "ml_platform_operations",
+    "action": "rollback",
+    "alert_count": 6,
+    "affected_metrics": [
+      "accuracy",
+      "error_rate",
+      "p95_latency_ms",
+      "positive_prediction_rate",
+      "precision",
+      "recall"
+    ],
+    "immediate_response": [
+      "stop candidate promotion",
+      "restore the approved baseline version",
+      "preserve metrics and alert evidence"
+    ],
+    "recovery_checks": [
+      "baseline version restored",
+      "quality metrics within limits",
+      "latency and error rate within limits",
+      "no new high-severity alerts"
+    ],
+    "rollback_required": true,
+    "closure_status": "blocked_pending_recovery"
+  },
+  "checks": {
+    "critical_incident_detected": true,
+    "rollback_required": true,
+    "response_owner_assigned": true,
+    "recovery_checks_defined": true,
+    "closure_blocked_until_recovery": true
+  },
   "scope": "This local example uses synthetic metrics. It demonstrates monitoring rules and incident decisions. It is not a production monitoring service."
 }
